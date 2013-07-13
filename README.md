@@ -33,3 +33,8 @@ simple installation or you go the old fashion way:
   colorscheme cubuntu
   ```
 4. Restart Vim
+
+
+## TODOs
+- [ ] adjust 255 based colors
+- [ ] add some screenshots
