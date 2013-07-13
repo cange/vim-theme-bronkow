@@ -77,7 +77,7 @@ let g:ctGreen    = "106 "
 let g:ctGreenL   = "148 "
 let g:ctGreenLr  = "149 "
 " Grey
-let g:black      = "#000000 "
+let g:black      = "#12120F "
 let g:greyDst    = "#191917 "
 let g:greyDr     = "#1C1C1C "
 let g:greyD      = "#262523 "
@@ -184,6 +184,8 @@ let g:fgPurpleL  = "guifg=".g:purpleL ." ctermfg=".g:ctPurpleL
 let g:bgPurpleLr = "guibg=".g:purpleLr." ctermbg=".g:ctPurpleLr
 let g:fgPurpleLr = "guifg=".g:purpleLr." ctermfg=".g:ctPurpleLr
 
+let g:bgBlack    = "guibg=".g:black   ." ctermbg=".g:ctBlack
+let g:fgBlack    = "guifg=".g:black   ." ctermfg=".g:ctBlack
 let g:bgGreyDst  = "guibg=".g:greyDst ." ctermbg=".g:ctGreyDst
 let g:fgGreyDst  = "guifg=".g:greyDst ." ctermfg=".g:ctGreyDst
 let g:bgGreyDr   = "guibg=".g:greyDr  ." ctermbg=".g:ctGreyDr

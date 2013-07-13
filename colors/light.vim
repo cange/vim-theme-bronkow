@@ -43,7 +43,7 @@ exe "hi! Search        " . g:bgGreenDr      . g:fgGreenD     . g:none
 exe "hi! PMenu         " . g:bgGreyLr       . g:fgGreyL      . g:none
 exe "hi! PmenuSel      " . g:bgGreyL        . g:fgGreyLst    . g:none
 exe "hi! PMenuSbar     " . g:bgGreyL                         . g:none
-xe "hi! PMenuThumb    " . g:bgRedD                          . g:none
+exe "hi! PMenuThumb    " . g:bgRedD                          . g:none
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyLst      . g:fgYellowD    . g:none
 exe "hi! FoldColumn    " . g:bgGreyL        . g:fgGreyD      . g:none

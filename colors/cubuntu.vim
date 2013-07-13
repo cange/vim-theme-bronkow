@@ -74,10 +74,14 @@ if exists("g:cubuntu_style")
   if g:cubuntu_style == "light"
     set background=light
   endif
-  ru colors/light.vim
 else
   let g:cubuntu_style="dark"
+endif
+
+if g:cubuntu_style == "dark"
   ru colors/dark.vim
+else
+  ru colors/light.vim
 endif
 
 " #############################################################################
@@ -88,6 +92,6 @@ set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 " ############################# POWERLINE THEMES ##############################
-let g:Powerline_colorscheme = 'cange'
+let g:Powerline_colorscheme = 'cubuntu'
 let g:Powerline_theme       = 'cange'
 let g:Powerline_symbols     = 'fancy'
