@@ -29,7 +29,7 @@ exe "hi! CursorIM      " . g:bgGreen       . g:fgInvert      . g:none
 exe "hi! CursorColumn  " . g:bgRed         . g:fgNone        . g:none
 exe "hi! CursorLine    " . g:bgBlack       . g:fgNone        . g:none
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenD      . g:fgGreyDr
+exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyDr
 exe "hi! iCursor       " . g:bgModeInsert  . g:none
 exe "hi! rCursor       " . g:bgModeInsert  . g:none
 exe "hi! vCursor       " . g:bgModeVisual  . g:fgInvert      . g:none
