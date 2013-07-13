@@ -41,4 +41,4 @@ simple installation or you go the old fashion way:
 
 ## Extras
 
-![dark colors for iTerm 2](https://github.com/cange/vim-theme-cange/raw/master/extras/Cubuntu dark.itermcolors)
+![dark colors for iTerm 2](https://github.com/cange/vim-theme-cubuntu/blob/master/extras/Cubuntu%20dark.itermcolors)
