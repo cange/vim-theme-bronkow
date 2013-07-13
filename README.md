@@ -36,5 +36,9 @@ simple installation or you go the old fashion way:
 
 
 ## TODOs
-- [ ] adjust 255 based colors
-- [ ] add some screenshots
+- adjust 256 based colors
+- add some screenshots
+
+## Extras
+
+![dark colors for iTerm 2](https://github.com/cange/vim-theme-cange/raw/master/extras/Cubuntu dark.itermcolors)
