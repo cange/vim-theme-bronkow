@@ -36,7 +36,7 @@ exe "hi! rCursor       " . g:bgModeInsert  . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgOrangeD     . g:fgGreyLr      . g:none
 exe "hi! VisualNOS     " . g:bgNone        . g:fgOrangeLr    . g:underline
-exe "hi! IncSearch     " . g:bgGreenL      . g:fgInvert      . g:none
+exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreyDr      . g:none
 exe "hi! Search        " . g:bgGreenDr     . g:fgGreen       . g:none
 " == UI ==
 " -- autocompletion dropdown --
@@ -63,18 +63,18 @@ exe "hi! SpellCap      " . g:bgNone        . g:fgNone        . g:undercurl . g:s
 exe "hi! SpellRare     " . g:bgNone        . g:fgNone        . g:undercurl . g:spYellowLr
 exe "hi! SpellLocal    " . g:bgNone        . g:fgNone        . g:undercurl . g:spYellowDr
 " == Diff ==
-exe "hi! DiffAdd       " . g:bgGreenD      . g:fgGreenLr     . g:none
-exe "hi! DiffChange    " . g:bgBlueDr      . g:fgBlueLr      . g:none
-exe "hi! DiffDelete    " . g:bgRedDr       . g:fgRedLr       . g:none
-exe "hi! DiffText      " . g:bgOrangeD     . g:fgOrangeL     . g:none
+exe "hi! DiffAdd       " . g:bgGreenDr     . g:fgGreyLr      . g:none
+exe "hi! DiffChange    " . g:bgBlueDr      . g:fgGreyLr      . g:none
+exe "hi! DiffDelete    " . g:bgRedDr       . g:fgGreyLr      . g:none
+exe "hi! DiffText      " . g:bgOrangeDr    . g:fgGreyLr      . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone        . g:fgBlueLr      . g:none
+exe "hi! Directory     " . g:bgNone        . g:fgBlueD       . g:none
 exe "hi! SignColumn    " . g:bgGreyD       . g:fgGreyLr      . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueL       . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit     . g:none
 exe "hi! ErrorMsg      " . g:bgInherit     . g:fgRed         . g:none
 exe "hi! WarningMsg    " . g:bgInherit     . g:fgOrangeL     . g:none
-exe "hi! Question      " . g:bgNone        . g:fgGreenL      . g:none
+exe "hi! Question      " . g:bgNone        . g:fgGreenD      . g:none
 exe "hi! WildMenu      " . g:bgNone        . g:fgBlueDr      . g:none
 exe "hi! Ignore        "                   . g:fgInvert
 " == custom types by cange ==
