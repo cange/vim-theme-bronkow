@@ -1,4 +1,10 @@
-" ============================== define cursor ================================
+let g:Powerline_colorscheme = 'cubuntuDark'
+" on the fly theme reload
+if exists('g:Powerline_loaded')
+  call Pl#ReloadColorscheme()
+endif
+
+" " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
   let &t_SI                       = "\<Esc>]12;".g:white       . "\x7"
   let &t_EI                       = "\<Esc>]12;".g:modeNormal  . "\x7"
