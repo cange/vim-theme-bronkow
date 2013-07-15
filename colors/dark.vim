@@ -14,13 +14,13 @@ endif
 
 exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyL       . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGrey        . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurple      . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgPurpleL     . g:none
 " NERDTree bookmark
-exe "hi! Identifier    " . g:bgNone        . g:fgBlueD       . g:none
-exe "hi! Statement     " . g:bgNone        . g:fgCyanD       . g:bold
-exe "hi! PreProc       " . g:bgNone        . g:fgYellowD     . g:none
-exe "hi! Type          " . g:bgNone        . g:fgGreenDr      . g:none
-exe "hi! Special       " . g:bgNone        . g:fgBlue        . g:none
+exe "hi! Identifier    " . g:bgNone        . g:fgBlue        . g:none
+exe "hi! Statement     " . g:bgNone        . g:fgCyan        . g:bold
+exe "hi! PreProc       " . g:bgNone        . g:fgYellow      . g:none
+exe "hi! Type          " . g:bgNone        . g:fgGreenD      . g:none
+exe "hi! Special       " . g:bgNone        . g:fgBlueL       . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit     . g:underline
 exe "hi! Error         " . g:bgRedD        . g:fgGreyLr      . g:none
@@ -86,4 +86,4 @@ exe "hi! Ignore        "                   . g:fgInvert
 " == custom types by cange ==
 exe "hi! String        " . g:bgNone        . g:fgRedD        . g:none
 exe "hi! BString       " . g:bgNone        . g:fgRedD        . g:bold
-exe "hi! Function      " . g:bgNone        . g:fgCyanDr       . g:bold
+exe "hi! Function      " . g:bgNone        . g:fgCyanD       . g:bold
