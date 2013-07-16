@@ -12,18 +12,18 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:greyDst     . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyLst      . g:fgGrey       . g:none
+exe "hi! Normal        " . g:bgGreyLst      . g:fgGreyDr     . g:none
 exe "hi! Comment       " . g:bgNone         . g:fgGreyL      . g:none
-exe "hi! Constant      " . g:bgNone         . g:fgPurpleLr   . g:none
+exe "hi! Constant      " . g:bgNone         . g:fgPurple     . g:none
 " NERDTree bookmark
-exe "hi! Identifier    " . g:bgNone         . g:fgBlueD      . g:none
+exe "hi! Identifier    " . g:bgNone         . g:fgBlueDr     . g:none
 exe "hi! Statement     " . g:bgNone         . g:fgCyan       . g:bold
-exe "hi! PreProc       " . g:bgNone         . g:fgYellowD    . g:none
-exe "hi! Type          " . g:bgNone         . g:fgGreenDr    . g:none
+exe "hi! PreProc       " . g:bgNone         . g:fgYellowDr   . g:none
+exe "hi! Type          " . g:bgNone         . g:fgGreenD     . g:none
 exe "hi! Special       " . g:bgNone         . g:fgCyanDr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit      . g:fgInherit    . g:underline
-exe "hi! Error         " . g:bgRedD         . g:fgGreyLr     . g:none
+exe "hi! Error         " . g:bgRedD         . g:fgGreyLst    . g:none
 exe "hi! Todo          " . g:bgYellowL      . g:fgGreyD      . g:none
 exe "hi! MatchParen    " . g:bgCyan         . g:fgInvert     . g:bold
 " Invisible character colors
@@ -36,20 +36,20 @@ exe "hi! CursorColumn  " . g:bgYellowLr     . g:fgNone       . g:none
 exe "hi! CursorLine    " . g:bgGreyLr       . g:fgNone       . g:none
 " == Cursors ==
 exe "hi! Cursor        " . g:bgGreenD                        . g:none
-exe "hi! iCursor       " . g:bgBlueD                         . g:none
+exe "hi! iCursor       " . g:bgBlueDr                        . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
-exe "hi! vCursor       " . g:bgOrangeLr     . g:fgInvert     . g:none
+exe "hi! vCursor       " . g:bgOrangeL      . g:fgGreyDst    . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeL      . g:fgGreyLst    . g:none
-exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeL    . g:underline
+exe "hi! Visual        " . g:bgOrangeD      . g:fgWhite      . g:none
+exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeDr   . g:underline
 exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
-exe "hi! Search        " . g:bgGreenD       . g:fgGreenDr    . g:none
+exe "hi! Search        " . g:bgGreen        . g:fgGreenDr    . g:none
 " == UI ==
 " -- autocompletion dropdown --
-exe "hi! PMenu         " . g:bgGreyLr       . g:fgGreyL      . g:none
-exe "hi! PmenuSel      " . g:bgBlue         . g:fgGreyLst    . g:none
-exe "hi! PMenuSbar     " . g:bgGrey                          . g:none
-exe "hi! PMenuThumb    " . g:bgBlueD                         . g:none
+exe "hi! PMenu         " . g:bgGreyLr       . g:fgGrey       . g:none
+exe "hi! PmenuSel      " . g:bgBlueD        . g:fgGreyLst    . g:none
+exe "hi! PMenuSbar     " . g:bgGreyL                         . g:none
+exe "hi! PMenuThumb    " . g:bgBlueDr                        . g:none
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyLst      . g:fgYellowD    . g:none
 exe "hi! FoldColumn    " . g:bgGreyL        . g:fgGreyD      . g:none
@@ -78,12 +78,12 @@ exe "hi! Directory     " . g:bgNone         . g:fgGreenDr    . g:none
 exe "hi! SignColumn    " . g:bgGreyL        . g:fgGreyDr     . g:none
 exe "hi! MoreMsg       " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! ModeMsg       " . g:bgNone         . g:fgInherit    . g:none
-exe "hi! ErrorMsg      " . g:bgRedL         . g:fgGreyLst    . g:none
+exe "hi! ErrorMsg      " . g:bgRedDr        . g:fgGreyLst    . g:none
 exe "hi! WarningMsg    " . g:bgInherit      . g:fgOrange     . g:none
 exe "hi! Question      " . g:bgGreenD       . g:fgWhite      . g:none
 exe "hi! WildMenu      " . g:bgNone         . g:fgBlue       . g:none
 exe "hi! Ignore        "                    . g:fgInvert
 " == custom types by enterprise ==
-exe "hi! String        " . g:bgNone         . g:fgRedD       . g:none
-exe "hi! BString       " . g:bgNone         . g:fgRedD       . g:bold
-exe "hi! Function      " . g:bgNone         . g:fgCyanL      . g:bold
+exe "hi! String        " . g:bgNone         . g:fgRedDr      . g:none
+exe "hi! BString       " . g:bgNone         . g:fgRedDr      . g:bold
+exe "hi! Function      " . g:bgNone         . g:fgCyanD      . g:bold
