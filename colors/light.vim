@@ -13,14 +13,14 @@ if &term =~ "xterm\\|rxvt"
 endif
 
 exe "hi! Normal        " . g:bgGreyLst      . g:fgGrey       . g:none
-exe "hi! Comment       " . g:bgNone         . g:fgGreyLr     . g:none
+exe "hi! Comment       " . g:bgNone         . g:fgGreyL      . g:none
 exe "hi! Constant      " . g:bgNone         . g:fgPurpleLr   . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! Statement     " . g:bgNone         . g:fgCyan       . g:bold
-exe "hi! PreProc       " . g:bgNone         . g:fgYellow     . g:none
+exe "hi! PreProc       " . g:bgNone         . g:fgYellowD    . g:none
 exe "hi! Type          " . g:bgNone         . g:fgGreenDr    . g:none
-exe "hi! Special       " . g:bgNone         . g:fgCyan       . g:none
+exe "hi! Special       " . g:bgNone         . g:fgCyanDr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit      . g:fgInherit    . g:underline
 exe "hi! Error         " . g:bgRedD         . g:fgGreyLr     . g:none
@@ -33,30 +33,30 @@ exe "hi! Title         " . g:bgNone         . g:fgBlueD      . g:bold
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen        . g:fgInvert     . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr     . g:fgNone       . g:none
-exe "hi! CursorLine    " . g:bgWhite        . g:fgNone       . g:none
+exe "hi! CursorLine    " . g:bgGreyLr       . g:fgNone       . g:none
 " == Cursors ==
 exe "hi! Cursor        " . g:bgGreenD                        . g:none
 exe "hi! iCursor       " . g:bgBlueD                         . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
-exe "hi! vCursor       " . g:bgOrangeL      . g:fgInvert     . g:none
+exe "hi! vCursor       " . g:bgOrangeLr     . g:fgInvert     . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeLr     . g:fgGreyLst    . g:none
+exe "hi! Visual        " . g:bgOrangeL      . g:fgGreyLst    . g:none
 exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeL    . g:underline
-exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreenLr    . g:none
-exe "hi! Search        " . g:bgGreenDr      . g:fgGreenD     . g:none
+exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
+exe "hi! Search        " . g:bgGreenD       . g:fgGreenDr    . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyLr       . g:fgGreyL      . g:none
-exe "hi! PmenuSel      " . g:bgGreyL        . g:fgGreyLst    . g:none
-exe "hi! PMenuSbar     " . g:bgGreyL                         . g:none
-exe "hi! PMenuThumb    " . g:bgRedD                          . g:none
+exe "hi! PmenuSel      " . g:bgBlue         . g:fgGreyLst    . g:none
+exe "hi! PMenuSbar     " . g:bgGrey                          . g:none
+exe "hi! PMenuThumb    " . g:bgBlueD                         . g:none
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyLst      . g:fgYellowD    . g:none
 exe "hi! FoldColumn    " . g:bgGreyL        . g:fgGreyD      . g:none
 exe "hi! VertSplit     " . g:bgGreyLr       . g:fgGreyLr     . g:none
 exe "hi! LineNr        " . g:bgGreyL        . g:fgGreyLr     . g:none
-exe "hi! CursorLineNr  " . g:bgGreyLr       . g:fgGreyLst    . g:none
-exe "hi! ColorColumn   " . g:bgWhite        . g:fgNone       . g:none
+exe "hi! CursorLineNr  " . g:bgGrey         . g:fgGreyLst    . g:bold
+exe "hi! ColorColumn   " . g:bgGreyLr       . g:fgNone       . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGreyLr       . g:fgInherit    . g:none
 exe "hi! StatusLineNC  " . g:bgGreyLr       . g:fgNone       . g:none
@@ -74,7 +74,7 @@ exe "hi! DiffChange    " . g:bgBlueLr       . g:fgBlueD      . g:none
 exe "hi! DiffDelete    " . g:bgRedLr        . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone         . g:fgGreenD     . g:none
+exe "hi! Directory     " . g:bgNone         . g:fgGreenDr    . g:none
 exe "hi! SignColumn    " . g:bgGreyL        . g:fgGreyDr     . g:none
 exe "hi! MoreMsg       " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! ModeMsg       " . g:bgNone         . g:fgInherit    . g:none

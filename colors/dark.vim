@@ -12,20 +12,20 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:greyL       . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyL       . g:none
-exe "hi! Comment       " . g:bgNone        . g:fgGrey        . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurpleL     . g:none
+exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyLr      . g:none
+exe "hi! Comment       " . g:bgNone        . g:fgGreyL       . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgPurpleLr    . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlue        . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgCyan        . g:bold
 exe "hi! PreProc       " . g:bgNone        . g:fgYellow      . g:none
 exe "hi! Type          " . g:bgNone        . g:fgGreenD      . g:none
-exe "hi! Special       " . g:bgNone        . g:fgBlueL       . g:none
+exe "hi! Special       " . g:bgNone        . g:fgCyanL       . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit     . g:underline
 exe "hi! Error         " . g:bgRedD        . g:fgGreyLr      . g:none
 exe "hi! Todo          " . g:bgYellowD     . g:fgGreyD       . g:none
-exe "hi! MatchParen    " . g:bgPurpleDr    . g:fgPurpleLr    . g:bold
+exe "hi! MatchParen    " . g:bgCyanDr      . g:fgGreyLr      . g:bold
 " Invisible character colors
 exe "hi! NonText       " . g:bgNone        . g:fgGreyD       . g:none
 exe "hi! SpecialKey    " . g:bgNone        . g:fgGreyD       . g:none
@@ -40,16 +40,16 @@ exe "hi! iCursor       " . g:bgGreyLr      . g:none
 exe "hi! vCursor       " . g:bgOrangeLr    . g:fgWhite       . g:none
 exe "hi! rCursor       " . g:bgModeInsert  . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeD     . g:fgGreyLr      . g:none
+exe "hi! Visual        " . g:bgOrangeD     . g:fgGreyLr
 exe "hi! VisualNOS     " . g:bgNone        . g:fgOrangeLr    . g:underline
-exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreyDr      . g:none
-exe "hi! Search        " . g:bgGreenDr     . g:fgGreen       . g:none
+exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreyDr
+exe "hi! Search        " . g:bgGreenDr     . g:fgGreyLr
 " == UI ==
 " -- autocompletion dropdown --
-exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyL       . g:none
-exe "hi! PmenuSel      " . g:bgGreyDr      . g:fgRed         . g:none
-exe "hi! PMenuSbar     " . g:bgGreyDr      . g:none
-exe "hi! PMenuThumb    " . g:bgRedD        . g:none
+exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyL
+exe "hi! PmenuSel      " . g:bgBlueDr      . g:fgGreyLr
+exe "hi! PMenuSbar     " . g:bgGrey
+exe "hi! PMenuThumb    " . g:bgBlueD
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyD       . g:fgGreyL       . g:none
 exe "hi! FoldColumn    " . g:bgGreyD       . g:fgGreyL       . g:none
@@ -74,7 +74,7 @@ exe "hi! DiffChange    " . g:bgBlueDr      . g:fgGreyLr      . g:none
 exe "hi! DiffDelete    " . g:bgRedDr       . g:fgGreyLr      . g:none
 exe "hi! DiffText      " . g:bgOrangeDr    . g:fgGreyLr      . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone        . g:fgBlueD       . g:none
+exe "hi! Directory     " . g:bgNone        . g:fgBlue        . g:none
 exe "hi! SignColumn    " . g:bgGreyD       . g:fgGreyLr      . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueL       . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit     . g:none
