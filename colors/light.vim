@@ -74,14 +74,14 @@ exe "hi! DiffChange    " . g:bgBlueLr       . g:fgBlueD      . g:none
 exe "hi! DiffDelete    " . g:bgRedLr        . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone         . g:fgGreenDr    . g:none
+exe "hi! Directory     " . g:bgNone         . g:fgBlueD      . g:bold
 exe "hi! SignColumn    " . g:bgGreyL        . g:fgGreyDr     . g:none
 exe "hi! MoreMsg       " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! ModeMsg       " . g:bgNone         . g:fgInherit    . g:none
 exe "hi! ErrorMsg      " . g:bgRedDr        . g:fgGreyLst    . g:none
 exe "hi! WarningMsg    " . g:bgInherit      . g:fgOrange     . g:none
 exe "hi! Question      " . g:bgGreenD       . g:fgWhite      . g:none
-exe "hi! WildMenu      " . g:bgNone         . g:fgBlue       . g:none
+exe "hi! WildMenu      " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! Ignore        "                    . g:fgInvert
 " == custom types by enterprise ==
 exe "hi! String        " . g:bgNone         . g:fgRedDr      . g:none

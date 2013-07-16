@@ -56,7 +56,7 @@ exe "hi! FoldColumn    " . g:bgGreyD       . g:fgGreyL       . g:none
 exe "hi! VertSplit     " . g:bgGrey        . g:fgGrey        . g:none
 exe "hi! LineNr        " . g:bgGreyD       . g:fgGreyL       . g:none
 exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLr      . g:bold
-exe "hi! ColorColumn   " . g:bgBlack       . g:fgNone        . g:none
+exe "hi! ColorColumn   " . g:bgGreyDst     . g:fgNone        . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGrey        . g:fgInherit     . g:none
 exe "hi! StatusLineNC  " . g:bgGrey        . g:fgNone        . g:none
@@ -74,14 +74,14 @@ exe "hi! DiffChange    " . g:bgBlueL       . g:fgBlueDr      . g:none
 exe "hi! DiffDelete    " . g:bgRedLr       . g:fgRedDr       . g:none
 exe "hi! DiffText      " . g:bgOrangeLr    . g:fgOrangeDr    . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone        . g:fgBlue        . g:none
+exe "hi! Directory     " . g:bgNone        . g:fgBlueD       . g:bold
 exe "hi! SignColumn    " . g:bgGreyD       . g:fgGreyLr      . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueL       . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit     . g:none
 exe "hi! ErrorMsg      " . g:bgInherit     . g:fgRed         . g:none
 exe "hi! WarningMsg    " . g:bgInherit     . g:fgOrangeL     . g:none
 exe "hi! Question      " . g:bgNone        . g:fgGreenD      . g:none
-exe "hi! WildMenu      " . g:bgNone        . g:fgBlueDr      . g:none
+exe "hi! WildMenu      " . g:bgNone        . g:fgBlue        . g:none
 exe "hi! Ignore        "                   . g:fgInvert
 " == custom types by cange ==
 exe "hi! String        " . g:bgNone        . g:fgRedD        . g:none
