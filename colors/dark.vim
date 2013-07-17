@@ -6,10 +6,10 @@ endif
 
 " " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
-  let &t_SI                       = "\<Esc>]12;".g:white       . "\x7"
-  let &t_EI                       = "\<Esc>]12;".g:modeNormal  . "\x7"
-  silent                    !echo -ne "\033]12;".g:greyL       . "\007"
-  autocmd VimLeave * silent !echo -ne    "\033]".g:greyL       . "\007"
+  let &t_SI                       = "\<Esc>]12;".g:colors.white.hex       . "\x7"
+  let &t_EI                       = "\<Esc>]12;".g:modeNormal             . "\x7"
+  silent                    !echo -ne "\033]12;".g:colors.grey.light.hex  . "\007"
+  autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.light.hex  . "\007"
 endif
 
 exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyLr      . g:none
