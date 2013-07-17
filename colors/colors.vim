@@ -1,4 +1,5 @@
 " ############################### BASIC COLORS ################################
+let g:colors = {}
 let g:colors = {
   \'red': {
     \'darker':   { 'cterm': ' 52 ', 'hex': '#611b0e ' },
@@ -58,125 +59,53 @@ let g:colors = {
     \'lighter':  { 'cterm': '250 ', 'hex': '#B2AFA4 ' },
     \'lightest': { 'cterm': '254 ', 'hex': '#D9D4C8 ' }
   \},
-  \'black':      { 'cterm': '  0 ', 'hex': '#12120f ' },
-  \'white':      { 'cterm': '255 ', 'hex': '#F9F9F9 ' }
+  \'black': {
+    \'default':  {'cterm': '  0 ', 'hex': '#12120f ' }
+  \},
+  \'white': {
+    \'default':  {'cterm': '255 ', 'hex': '#F9F9F9 ' }
+  \}
 \}
-"
+
+fun! colors#capitalize(string)
+  let first = toupper(a:string[0])
+  let rest = a:string[1:-1]
+  return first.''.rest
+endfun
+
+let s:toneLabels = {
+      \'darkest':  'Dst',
+      \'darker':   'Dr',
+      \'dark':     'D',
+      \'default':  '',
+      \'light':    'L',
+      \'lighter':  'Lr',
+      \'lightest': 'Lst'
+\}
+
+" #############################################################################
+for col in keys(g:colors)
+  let c_d = g:colors[col]
+  let g:colors[col].fg = {}
+  let g:colors[col].bg = {}
+  for tone in keys(c_d)
+    let t_d = c_d[tone]
+    if !(tone == 'fg' || tone == 'bg')
+      let name =  colors#capitalize(col)
+      let label = s:toneLabels[tone]
+      let g:['fg'.name.label] = "guifg=". t_d.hex ."ctermfg=". t_d.cterm
+      let g:['bg'.name.label] = "guibg=". t_d.hex ."ctermbg=". t_d.cterm
+    endif
+  endfor
+endfor
 " #############################################################################
 let color = g:colors.red
-let g:fgRedDr    = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgRedDr    = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgRedD     = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgRedD     = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgRed      = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgRed      = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgRedL     = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgRedL     = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgRedLr    = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgRedLr    = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
 let g:spRed      = "guisp=".color.default.hex
 
-let color = g:colors.orange
-let g:fgOrangeDr = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgOrangeDr = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgOrangeD  = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgOrangeD  = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgOrange   = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgOrange   = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgOrangeL  = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgOrangeL  = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgOrangeLr = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgOrangeLr = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
 let color = g:colors.yellow
-let g:fgYellowDr = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgYellowDr = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgYellowD  = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgYellowD  = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgYellow   = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgYellow   = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgYellowL  = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgYellowL  = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgYellowLr = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgYellowLr = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
 let g:spYellowDr = "guisp=".color.darker.hex
 let g:spYellowD  = "guisp=".color.default.hex
 let g:spYellowLr = "guisp=".color.lighter.hex
-
-let color = g:colors.green
-let g:fgGreenDr  = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgGreenDr  = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgGreenD   = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgGreenD   = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgGreen    = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgGreen    = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgGreenL   = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgGreenL   = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgGreenLr  = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgGreenLr  = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
-let color = g:colors.cyan
-let g:fgCyanDr   = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgCyanDr   = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgCyanD    = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgCyanD    = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgCyan     = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgCyan     = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgCyanL    = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgCyanL    = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgCyanLr   = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgCyanLr   = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
-let color = g:colors.blue
-let g:fgBlueDr   = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgBlueDr   = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgBlueD    = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgBlueD    = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgBlue     = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgBlue     = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgBlueL    = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgBlueL    = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgBlueLr   = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgBlueLr   = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
-let color = g:colors.purple
-let g:fgPurpleDr = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgPurpleDr = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgPurpleD  = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgPurpleD  = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgPurple   = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgPurple   = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgPurpleL  = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgPurpleL  = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgPurpleLr = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgPurpleLr = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-
-let color = g:colors.grey
-let g:fgGreyDst  = "guifg=".color.darkest.hex ." ctermfg=".color.darkest.cterm
-let g:bgGreyDst  = "guibg=".color.darkest.hex ." ctermbg=".color.darkest.cterm
-let g:fgGreyDr   = "guifg=".color.darker.hex  ." ctermfg=".color.darker.cterm
-let g:bgGreyDr   = "guibg=".color.darker.hex  ." ctermbg=".color.darker.cterm
-let g:bgGreyD    = "guibg=".color.dark.hex    ." ctermbg=".color.dark.cterm
-let g:fgGreyD    = "guifg=".color.dark.hex    ." ctermfg=".color.dark.cterm
-let g:bgGrey     = "guibg=".color.default.hex ." ctermbg=".color.default.cterm
-let g:fgGrey     = "guifg=".color.default.hex ." ctermfg=".color.default.cterm
-let g:bgGreyL    = "guibg=".color.light.hex   ." ctermbg=".color.light.cterm
-let g:fgGreyL    = "guifg=".color.light.hex   ." ctermfg=".color.light.cterm
-let g:bgGreyLr   = "guibg=".color.lighter.hex ." ctermbg=".color.lighter.cterm
-let g:fgGreyLr   = "guifg=".color.lighter.hex ." ctermfg=".color.lighter.cterm
-let g:bgGreyLst  = "guibg=".color.lightest.hex." ctermbg=".color.lightest.cterm
-let g:fgGreyLst  = "guifg=".color.lightest.hex." ctermfg=".color.lightest.cterm
-
-let color = g:colors.white
-let g:bgWhite    = "guibg=".color.hex         ." ctermbg=".color.cterm
-let g:fgWhite    = "guifg=".color.hex         ." ctermfg=".color.cterm
-
-let color = g:colors.black
-let g:bgBlack    = "guibg=".color.hex         ." ctermbg=".color.cterm
-let g:fgBlack    = "guifg=".color.hex         ." ctermfg=".color.cterm
-
 " ################################# FORMATS ###################################
 let g:bgNone     = "guibg=NONE     ctermbg=NONE "
 let g:fgNone     = "guifg=NONE     ctermfg=NONE "
@@ -190,31 +119,3 @@ let g:italicBold = "gui=ITALIC,BOLD cterm=ITALIC,BOLD "
 let g:none       = "gui=NONE       cterm=NONE   "
 let g:underline  = "gui=UNDERLINE  cterm=UNDERLINE "
 let g:undercurl  = "gui=UNDERCURL  cterm=UNDERCURL "
-" ################################## MODES ####################################
-let g:modeNormalD   = "#2F331D "
-let g:modeNormal    = "#AFD700 "
-let g:modeNormalL   = "#EFF7CC "
-let g:ctModeNormalD = "58 "
-let g:ctModeNormal  = "148 "
-let g:ctModeNormalL = "192 "
-
-let g:bgModeNormalD = "guibg=".g:modeNormalD ." ctermbg=".g:ctModeNormalD
-let g:fgModeNormalD = "guifg=".g:modeNormalD ." ctermfg=".g:ctModeNormalD
-let g:bgModeNormal  = "guibg=".g:modeNormal  ." ctermbg=".g:ctModeNormal
-let g:fgModeNormal  = "guifg=".g:modeNormal  ." ctermfg=".g:ctModeNormal
-let g:bgModeNormalL = "guibg=".g:modeNormalL ." ctermbg=".g:ctModeNormalL
-let g:fgModeNormalL = "guifg=".g:modeNormalL ." ctermfg=".g:ctModeNormalL
-
-let g:bgModeInsertD = g:bgBlueDr
-let g:fgModeInsertD = g:fgBlueDr
-let g:bgModeInsertL = g:bgBlueD
-let g:fgModeInsertL = g:fgBlueD
-
-let g:bgModeVisualD = g:bgOrangeDr
-let g:fgModeVisualD = g:fgOrangeDr
-let g:bgModeVisual  = g:bgOrange
-let g:fgModeVisual  = g:fgOrange
-let g:bgModeVisualL = g:bgOrangeL
-let g:fgModeVisualL = g:fgOrangeL
-let g:bgModeInsert  = g:bgWhite
-let g:fgModeInsert  = g:fgWhite

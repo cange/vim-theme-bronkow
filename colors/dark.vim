@@ -6,10 +6,10 @@ endif
 
 " " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
-  let &t_SI                       = "\<Esc>]12;".g:colors.white.hex       . "\x7"
-  let &t_EI                       = "\<Esc>]12;".g:modeNormal             . "\x7"
-  silent                    !echo -ne "\033]12;".g:colors.grey.light.hex  . "\007"
-  autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.light.hex  . "\007"
+  let &t_SI                       = "\<Esc>]12;".g:colors.white.default.hex . "\x7"
+  let &t_EI                       = "\<Esc>]12;".g:colors.green.dark.hex    . "\x7"
+  silent                    !echo -ne "\033]12;".g:colors.grey.light.hex    . "\007"
+  autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.light.hex    . "\007"
 endif
 
 exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyLr      . g:none
@@ -38,7 +38,7 @@ exe "hi! CursorLine    " . g:bgBlack       . g:fgNone        . g:none
 exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyLr
 exe "hi! iCursor       " . g:bgGreyLr      . g:none
 exe "hi! vCursor       " . g:bgOrangeLr    . g:fgWhite       . g:none
-exe "hi! rCursor       " . g:bgModeInsert  . g:none
+exe "hi! rCursor       " . g:bgWhite       . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgOrangeD     . g:fgGreyLr
 exe "hi! VisualNOS     " . g:bgNone        . g:fgOrangeLr    . g:underline
