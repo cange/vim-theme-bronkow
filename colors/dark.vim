@@ -14,7 +14,7 @@ endif
 
 exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyLst     . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGreyL       . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurpleL     . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgPurpleLr    . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlue        . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgCyan        . g:bold
@@ -40,14 +40,14 @@ exe "hi! iCursor       " . g:bgBlue        . g:fgWhite
 exe "hi! vCursor       " . g:bgOrange      . g:fgWhite       . g:none
 exe "hi! rCursor       " . g:bgGreyLr      . g:fgBlueDr
 " == Selections ==
-exe "hi! Visual        " . g:bgGreyD       . g:fgOrangeD
+exe "hi! Visual        " . g:bgGreyD       . g:fgOrangeD     . g:none
 exe "hi! VisualNOS     " . g:bgGreyD       . g:fgOrange      . g:none
-exe "hi! IncSearch     " . g:bgGreyLst     . g:fgGreenD
-exe "hi! Search        " . g:bgGreenD      . g:fgWhite
+exe "hi! IncSearch     " . g:bgGreenD      . g:fgWhite       . g:none
+exe "hi! Search        " . g:bgGreenDr     . g:fgGreyLst
 " == UI ==
 " -- autocompletion dropdown --
-exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyL
-exe "hi! PmenuSel      " . g:bgBlueDr      . g:fgGreyLr
+exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyLr
+exe "hi! PmenuSel      " . g:bgBlueDr      . g:fgGreyLst
 exe "hi! PMenuSbar     " . g:bgGrey
 exe "hi! PMenuThumb    " . g:bgBlueD
 " -- vertical separator line --

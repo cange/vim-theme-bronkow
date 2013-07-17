@@ -14,13 +14,13 @@ endif
 
 exe "hi! Normal        " . g:bgGreyLst      . g:fgGreyDr     . g:none
 exe "hi! Comment       " . g:bgNone         . g:fgGreyL      . g:none
-exe "hi! Constant      " . g:bgNone         . g:fgPurple     . g:none
+exe "hi! Constant      " . g:bgNone         . g:fgPurpleD    . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone         . g:fgBlueDr     . g:none
 exe "hi! Statement     " . g:bgNone         . g:fgCyan       . g:bold
 exe "hi! PreProc       " . g:bgNone         . g:fgYellowDr   . g:none
-exe "hi! Type          " . g:bgNone         . g:fgGreenD     . g:none
-exe "hi! Special       " . g:bgNone         . g:fgCyanDr     . g:none
+exe "hi! Type          " . g:bgNone         . g:fgGreenDr    . g:none
+exe "hi! Special       " . g:bgNone         . g:fgCyan       . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit      . g:fgInherit    . g:underline
 exe "hi! Error         " . g:bgRedD         . g:fgGreyLst    . g:none
@@ -40,10 +40,10 @@ exe "hi! iCursor       " . g:bgBlueDr                        . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
 exe "hi! vCursor       " . g:bgOrangeL      . g:fgGreyDst    . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeD      . g:fgWhite      . g:none
-exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeDr   . g:underline
+exe "hi! Visual        " . g:bgOrangeLr     . g:fgOrangeD    . g:none
+exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeD    . g:underline
 exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
-exe "hi! Search        " . g:bgGreen        . g:fgGreenDr    . g:none
+exe "hi! Search        " . g:bgGreenD       . g:fgGreyD      . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyLr       . g:fgGrey       . g:none
