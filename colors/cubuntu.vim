@@ -1,5 +1,5 @@
 " Maintainer: Christian Angermann
-" Version: 1.0.4
+" Version: 1.0.5
 
 " Cubuntu Colorscheme for Vim
 "
@@ -92,5 +92,5 @@ set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 " ############################# POWERLINE THEMES ##############################
-let g:Powerline_theme       = 'cange'
+let g:Powerline_theme       = 'cubuntu'
 let g:Powerline_symbols     = 'fancy'
