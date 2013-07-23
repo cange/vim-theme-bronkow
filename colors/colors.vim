@@ -50,19 +50,19 @@ let g:colors = {
     \'lighter':  { 'cterm': '189 ', 'hex': '#71458e ', 'group': [189, 0x71458e] }
   \},
   \'grey': {
-    \'darkest':  { 'cterm': '233 ', 'hex': '#1A1918 ', 'group': [233, 0x1A1918] },
-    \'darker':   { 'cterm': '234 ', 'hex': '#1C1C1C ', 'group': [234, 0x1C1C1C] },
-    \'dark':     { 'cterm': '236 ', 'hex': '#262523 ', 'group': [236, 0x262523] },
-    \'default':  { 'cterm': '238 ', 'hex': '#33322f ', 'group': [238, 0x33322f] },
-    \'light':    { 'cterm': '243 ', 'hex': '#595752 ', 'group': [243, 0x595752] },
-    \'lighter':  { 'cterm': '250 ', 'hex': '#B2AFA4 ', 'group': [250, 0xB2AFA4] },
-    \'lightest': { 'cterm': '254 ', 'hex': '#D9D4C8 ', 'group': [254, 0xD9D4C8] }
+    \'darkest':  { 'cterm': '233 ', 'hex': '#12110F ', 'group': [233, 0x12110F] },
+    \'darker':   { 'cterm': '234 ', 'hex': '#24221E ', 'group': [234, 0x24221E] },
+    \'dark':     { 'cterm': '236 ', 'hex': '#36332D ', 'group': [236, 0x36332D] },
+    \'default':  { 'cterm': '238 ', 'hex': '#565248 ', 'group': [238, 0x565248] },
+    \'light':    { 'cterm': '243 ', 'hex': '#787265 ', 'group': [243, 0x787265] },
+    \'lighter':  { 'cterm': '250 ', 'hex': '#999281 ', 'group': [250, 0x999281] },
+    \'lightest': { 'cterm': '254 ', 'hex': '#BDB49F ', 'group': [254, 0xBDB49F] }
   \},
   \'black': {
-    \'default':  { 'cterm': '  0 ', 'hex': '#12120f ', 'group': [  0, 0x12120f] }
+    \'default':  { 'cterm': '  0 ', 'hex': '#000000 ', 'group': [  0, 0x12120f] }
   \},
   \'white': {
-    \'default':  { 'cterm': '255 ', 'hex': '#F9F9F9 ', 'group': [255, 0xF9F9F9] }
+    \'default':  { 'cterm': '255 ', 'hex': '#EEEEEE ', 'group': [255, 0xEEEEEE] }
   \}
 \}
 

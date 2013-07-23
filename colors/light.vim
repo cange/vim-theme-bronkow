@@ -23,7 +23,7 @@ exe "hi! Type          " . g:bgNone         . g:fgGreenDr    . g:none
 exe "hi! Special       " . g:bgNone         . g:fgCyanDr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit      . g:fgInherit    . g:underline
-exe "hi! Error         " . g:bgRedD         . g:fgGreyLr     . g:none
+exe "hi! Error         " . g:bgRedD         . g:fgWhite      . g:none
 exe "hi! Todo          " . g:bgYellowL      . g:fgGreyD      . g:none
 exe "hi! MatchParen    " . g:bgCyan         . g:fgInvert     . g:bold
 " Invisible character colors
@@ -31,16 +31,16 @@ exe "hi! NonText       " . g:bgNone         . g:fgGreyLr     . g:none
 exe "hi! SpecialKey    " . g:bgNone         . g:fgGreyLr     . g:none
 exe "hi! Title         " . g:bgNone         . g:fgBlueD      . g:bold
 " == Text Selection ==
-exe "hi! CursorIM      " . g:bgGreen        . g:fgInvert     . g:none
+exe "hi! CursorIM      " . g:bgGreen        . g:fgGreenDr    . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr     . g:fgNone       . g:none
 exe "hi! CursorLine    " . g:bgGreyLr       . g:fgNone       . g:none
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenD                        . g:none
+exe "hi! Cursor        " . g:bgGreenD       . g:fgGreyLst    . g:none
 exe "hi! iCursor       " . g:bgBlueD                         . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
 exe "hi! vCursor       " . g:bgOrangeLr     . g:fgInvert     . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeL      . g:fgGreyLst    . g:none
+exe "hi! Visual        " . g:bgOrangeDr     . g:fgGreyLst    . g:none
 exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeL    . g:underline
 exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
 exe "hi! Search        " . g:bgGreenD       . g:fgGreenDr    . g:none
@@ -70,7 +70,7 @@ exe "hi! SpellRare     " . g:bgNone         . g:fgNone       . g:undercurl . g:s
 exe "hi! SpellLocal    " . g:bgNone         . g:fgNone       . g:undercurl . g:spYellowDr
 "  == Diff ==
 exe "hi! DiffAdd       " . g:bgGreenLr      . g:fgGreenDr    . g:none
-exe "hi! DiffChange    " . g:bgBlueLr       . g:fgBlueD      . g:none
+exe "hi! DiffChange    " . g:bgBlueLr       . g:fgBlueDr     . g:none
 exe "hi! DiffDelete    " . g:bgRedLr        . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
 " == Misc ==

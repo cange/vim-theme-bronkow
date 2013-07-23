@@ -54,8 +54,8 @@ exe "hi! PMenuThumb    " . g:bgBlueD
 exe "hi! Folded        " . g:bgGreyD       . g:fgGreyL       . g:none
 exe "hi! FoldColumn    " . g:bgGreyD       . g:fgGreyL       . g:none
 exe "hi! VertSplit     " . g:bgGrey        . g:fgGrey        . g:none
-exe "hi! LineNr        " . g:bgGreyD       . g:fgGreyL       . g:none
-exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLr      . g:bold
+exe "hi! LineNr        " . g:bgGreyDr      . g:fgGreyL       . g:none
+exe "hi! CursorLineNr  " . g:bgGreyD       . g:fgGreyLr      . g:bold
 exe "hi! ColorColumn   " . g:bgBlack       . g:fgNone        . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGrey        . g:fgInherit     . g:none
