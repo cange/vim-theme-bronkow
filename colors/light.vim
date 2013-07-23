@@ -46,7 +46,7 @@ exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
 exe "hi! Search        " . g:bgGreenD       . g:fgGreenDr    . g:none
 " == UI ==
 " -- autocompletion dropdown --
-exe "hi! PMenu         " . g:bgGreyLr       . g:fgGreyL      . g:none
+exe "hi! PMenu         " . g:bgGreyLr       . g:fgGrey       . g:none
 exe "hi! PmenuSel      " . g:bgBlue         . g:fgGreyLst    . g:none
 exe "hi! PMenuSbar     " . g:bgGrey                          . g:none
 exe "hi! PMenuThumb    " . g:bgBlueD                         . g:none
@@ -58,8 +58,9 @@ exe "hi! LineNr        " . g:bgGreyL        . g:fgGreyLr     . g:none
 exe "hi! CursorLineNr  " . g:bgGrey         . g:fgGreyLst    . g:bold
 exe "hi! ColorColumn   " . g:bgGreyLr       . g:fgNone       . g:none
 " -- Status bars --
-exe "hi! StatusLine    " . g:bgGreyLr       . g:fgInherit    . g:none
+exe "hi! StatusLine    " . g:bgGreyLr       . g:fgGrey       . g:none
 exe "hi! StatusLineNC  " . g:bgGreyLr       . g:fgNone       . g:none
+exe "hi! WildMenu      " . g:bgBlue         . g:fgGreyLst    . g:none
 exe "hi! TabLine       " . g:bgGreyDst      . g:fgGreyLst    . g:none
 exe "hi! TabLineFill   " . g:bgGreyDst      . g:fgGrey       . g:none
 exe "hi! TabLineSel    " . g:bgBlueDr       . g:fgGreyLst    . g:none
@@ -81,7 +82,6 @@ exe "hi! ModeMsg       " . g:bgNone         . g:fgInherit    . g:none
 exe "hi! ErrorMsg      " . g:bgRedL         . g:fgGreyLst    . g:none
 exe "hi! WarningMsg    " . g:bgInherit      . g:fgOrange     . g:none
 exe "hi! Question      " . g:bgGreenD       . g:fgWhite      . g:none
-exe "hi! WildMenu      " . g:bgNone         . g:fgBlue       . g:none
 exe "hi! Ignore        "                    . g:fgInvert
 " == custom types by enterprise ==
 exe "hi! String        " . g:bgNone         . g:fgRedD       . g:none
