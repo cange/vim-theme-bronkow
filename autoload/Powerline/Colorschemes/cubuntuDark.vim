@@ -88,8 +88,8 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['nerdtree:raw.name', 'lustyexplorer:static_str.name', 'minibufexplorer:static_str.name', 'tagbar:static_str.name'], {
-		\ 'n': ['greenDr' , 'greyD'   ],
-		\ 'N': ['greyDst' , 'greyD'   ],
+		\ 'n': ['greyL'   , 'greyD'   ],
+		\ 'N': ['grey'    , 'greyD'   ],
 		\ }),
 	\ Pl#Hi#Segments(['nerdtree:SPLIT', 'lustyexplorer:SPLIT', 'minibufexplorer:SPLIT', 'tagbar:SPLIT'], {
 		\ 'n': ['greyL'   , 'greyDr'  ],
@@ -101,13 +101,13 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['ctrlp:prev', 'ctrlp:next'], {
-		\ 'n': ['cyanD' , 'grey'   ],
+		\ 'n': ['cyanD'   , 'grey'    ],
 		\ }),
 	\ Pl#Hi#Segments(['ctrlp:item'], {
-		\ 'n': ['cyanLr', 'cyanDr' , ['bold']],
+		\ 'n': ['cyanLr'  , 'cyanDr'   , ['bold']],
 		\ }),
 	\ Pl#Hi#Segments(['ctrlp:marked'], {
-		\ 'n': ['cyan'  , 'greyD'    , ['bold']],
+		\ 'n': ['cyan'    , 'greyD'    , ['bold']],
 		\ }),
 	\ Pl#Hi#Segments(['ctrlp:SPLIT'], {
 		\ 'n': ['greyLr'  , 'greyDr'  ],

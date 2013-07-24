@@ -14,7 +14,8 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo.filepath'], {
-		\ 'n': ['greyLr' ],
+		\ 'n': ['greyLst'],
+		\ 'N': ['greyLr' ],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
