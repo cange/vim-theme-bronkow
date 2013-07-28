@@ -33,17 +33,17 @@ exe "hi! Title         " . g:bgNone         . g:fgBlueD      . g:bold
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen        . g:fgGreenDr    . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr     . g:fgNone       . g:none
-exe "hi! CursorLine    " . g:bgGreyLr       . g:fgNone       . g:none
+exe "hi! CursorLine    " . g:bgGreyLst      . g:fgNone       . g:none
 " == Cursors ==
 exe "hi! Cursor        " . g:bgGreenD       . g:fgGreyLst    . g:none
 exe "hi! iCursor       " . g:bgBlueD                         . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
-exe "hi! vCursor       " . g:bgOrangeLr     . g:fgInvert     . g:none
+exe "hi! vCursor       " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeDr     . g:fgGreyLst    . g:none
+exe "hi! Visual        " . g:bgOrange       . g:fgGreyLst    . g:none
 exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeL    . g:underline
-exe "hi! IncSearch     " . g:bgGreenD       . g:fgGreyLst    . g:none
-exe "hi! Search        " . g:bgGreenD       . g:fgGreenDr    . g:none
+exe "hi! IncSearch     " . g:bgGreenD       . g:fgWhite    . g:none
+exe "hi! Search        " . g:bgGreenDr      . g:fgGreyLst    . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyLr       . g:fgGrey       . g:none
@@ -79,7 +79,7 @@ exe "hi! Directory     " . g:bgNone         . g:fgGreenDr    . g:none
 exe "hi! SignColumn    " . g:bgGreyL        . g:fgGreyDr     . g:none
 exe "hi! MoreMsg       " . g:bgNone         . g:fgBlueD      . g:none
 exe "hi! ModeMsg       " . g:bgNone         . g:fgInherit    . g:none
-exe "hi! ErrorMsg      " . g:bgRedL         . g:fgGreyLst    . g:none
+exe "hi! ErrorMsg      " . g:bgRedD         . g:fgGreyLst    . g:none
 exe "hi! WarningMsg    " . g:bgInherit      . g:fgOrange     . g:none
 exe "hi! Question      " . g:bgGreenD       . g:fgWhite      . g:none
 exe "hi! Ignore        "                    . g:fgInvert

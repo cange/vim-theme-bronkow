@@ -6,9 +6,9 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['greyLst' , 'greenD'  ],
-    \ 'i': ['greyLst' , 'blue'    ],
-    \ 'v': ['greyLst' , 'orangeLr'],
+    \ 'n': ['white'   , 'greenD'  ],
+    \ 'i': ['white'   , 'blue'    ],
+    \ 'v': ['white'   , 'orangeLr'],
     \ 'r': ['greyLr'  , 'redL'    ],
     \ 'N': ['greyL'   , 'greyLr'  ],
     \ }),
