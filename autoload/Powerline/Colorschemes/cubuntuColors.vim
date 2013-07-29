@@ -38,11 +38,11 @@ call Pl#Hi#Allocate({
   \ 'blueL'    : g:colors.blue.light.group,
   \ 'blueLr'   : g:colors.blue.lighter.group,
   \
-  \ 'purpleDr' : g:colors.green.darker.group,
-  \ 'purpleD'  : g:colors.green.dark.group,
-  \ 'purple'   : g:colors.green.default.group,
-  \ 'purpleL'  : g:colors.green.light.group,
-  \ 'purpleLr' : g:colors.green.lighter.group,
+  \ 'purpleDr' : g:colors.purple.darker.group,
+  \ 'purpleD'  : g:colors.purple.dark.group,
+  \ 'purple'   : g:colors.purple.default.group,
+  \ 'purpleL'  : g:colors.purple.light.group,
+  \ 'purpleLr' : g:colors.purple.lighter.group,
   \
   \ 'greyDst'  : g:colors.grey.darkest.group,
   \ 'greyDr'   : g:colors.grey.darker.group,
