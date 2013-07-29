@@ -35,13 +35,13 @@ exe "hi! CursorIM      " . g:bgGreen       . g:fgInvert      . g:none
 exe "hi! CursorColumn  " . g:bgRed         . g:fgNone        . g:none
 exe "hi! CursorLine    " . g:bgBlack       . g:fgNone        . g:none
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyLr
+exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyDst
 exe "hi! iCursor       " . g:bgGreyLr      . g:none
-exe "hi! vCursor       " . g:bgOrangeLr    . g:fgWhite       . g:none
+exe "hi! vCursor       " . g:bgOrangeL     . g:fgGreyDst       . g:none
 exe "hi! rCursor       " . g:bgWhite       . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrangeD     . g:fgGreyLr
-exe "hi! VisualNOS     " . g:bgNone        . g:fgOrangeLr    . g:underline
+exe "hi! Visual        " . g:bgGreyDr      . g:fgOrange
+exe "hi! VisualNOS     " . g:bgGreyDr      . g:fgOrange      . g:none
 exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreyDr
 exe "hi! Search        " . g:bgGreenDr     . g:fgGreyLr
 " == UI ==

@@ -35,14 +35,14 @@ exe "hi! CursorIM      " . g:bgGreen        . g:fgGreenDr    . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr     . g:fgNone       . g:none
 exe "hi! CursorLine    " . g:bgGreyLst      . g:fgNone       . g:none
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenD       . g:fgGreyLst    . g:none
+exe "hi! Cursor        " . g:bgGreenD       . g:fgWhite      . g:none
 exe "hi! iCursor       " . g:bgBlueD                         . g:none
 exe "hi! rCursor       " . g:bgCyan                          . g:none
 exe "hi! vCursor       " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgOrange       . g:fgGreyLst    . g:none
-exe "hi! VisualNOS     " . g:bgNone         . g:fgOrangeL    . g:underline
-exe "hi! IncSearch     " . g:bgGreenD       . g:fgWhite    . g:none
+exe "hi! Visual        " . g:bgGreyLr       . g:fgGreyD      . g:none
+exe "hi! VisualNOS     " . g:bgGreyLr       . g:fgGrey       . g:none
+exe "hi! IncSearch     " . g:bgGreenD       . g:fgWhite      . g:none
 exe "hi! Search        " . g:bgGreenDr      . g:fgGreyLst    . g:none
 " == UI ==
 " -- autocompletion dropdown --

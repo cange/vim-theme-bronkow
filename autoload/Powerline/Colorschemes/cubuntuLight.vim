@@ -19,8 +19,8 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['green'   , 'greyL'   ],
-    \ 'i': ['blueLr'  , 'greyL'   ],
+    \ 'n': ['greenL'  , 'greyL'   ],
+    \ 'i': ['blueDr'  , 'greyL'   ],
     \ 'v': ['orangeLr', 'greyL'   ],
     \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
@@ -31,8 +31,7 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenLr' , ['bold']  ],
-    \ 'N': ['green'   , ['bold']  ],
+    \ 'n': ['greenL'  , ['bold']  ],
     \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
@@ -69,7 +68,7 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['paste_indicator', 'ws_marker'], {
-    \ 'n': ['redLr'   , 'red'      , ['bold']],
+    \ 'n': ['greyL'   , 'yellowL' ],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {
@@ -99,7 +98,7 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:prev', 'ctrlp:next'], {
-    \ 'n': ['orangeL' , 'greyLr'   ],
+    \ 'n': ['orangeL' , 'greyLr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:item'], {
     \ 'n': ['orangeDr', 'orangeL'  , ['bold']],
