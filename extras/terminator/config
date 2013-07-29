@@ -1,0 +1,70 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+  title_transmit_fg_color = "#1c1c1c"
+  title_inactive_fg_color = "#5e5c52"
+  title_transmit_bg_color = "#767676"
+  title_receive_fg_color = "#dde7f1"
+  tab_position = bottom
+  title_inactive_bg_color = "#2b2a25"
+[keybindings]
+  toggle_zoom = <Shift><Super>Return
+  next_tab = <Shift><Control>Right
+  prev_tab = <Shift><Control>Left
+[profiles]
+  [[default]]
+    palette = "#36332d:#a54644:#4c6619:#ae5307:#29587a:#803083:#06989a:#bdb49f:#565248:#dc332f:#7ca628:#fa770a:#6aacdb:#be65c1:#34e2e2:#eeeeee"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#bdb49f"
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#12110f"
+  [[solarized_dark]]
+    palette = "#002b36:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#eee8d5:#073642:#ef5d59:#bbcf33:#efc23b:#59b3ef:#959aef:#40cfc2:#fdf6e3"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#93a1a1"
+    delete_binding = ascii-del
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#002b36"
+  [[Ubuntu official]]
+    palette = "#262523:#a54644:#4c6619:#ae5307:#29587a:#803083:#06989a:#bfbbb0:#33322f:#dc332f:#7ca628:#fa770a:#6aacdb:#be65c1:#34e2e2:#eeeeec"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#807d75"
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#191917"
+  [[cange_dark]]
+    palette = "#202020:#a54644:#5d7622:#a9a346:#29587a:#803083:#06989a:#d3d7cf:#585858:#ee6561:#a2ce37:#fbf58e:#6aacdb:#be65c1:#34e2e2:#eeeeec"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#767676"
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#1c1c1c"
+  [[solarized_light]]
+    palette = "#eee8d5:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#eee8d5:#073642:#ef5d59:#bbcf33:#efc23b:#59b3ef:#959aef:#40cfc2:#fdf6e3"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#657b83"
+    delete_binding = ascii-del
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#fdf6e3"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
