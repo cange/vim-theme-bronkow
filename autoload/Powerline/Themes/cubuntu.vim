@@ -13,7 +13,6 @@ let g:Powerline#Themes#cubuntu#theme = Pl#Theme#Create(
     \ , 'virtualenv:statusline'
     \ , 'fileformat'
     \ , 'fileencoding'
-    \ , 'filetype'
     \ , 'scrollpercent'
     \ , 'lineinfo'
   \ ),
