@@ -1,9 +1,3 @@
-let g:Powerline_colorscheme = 'cubuntuLight'
-" on the fly theme reload
-if exists('g:Powerline_loaded')
-  call Pl#ReloadColorscheme()
-endif
-
 " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
   let &t_SI                       = "\<Esc>]12;".g:colors.grey.dark.hex     . "\x7"
@@ -37,8 +31,8 @@ exe "hi! CursorLine    " . g:bgGreyLst      . g:fgNone       . g:none
 " == Cursors ==
 exe "hi! Cursor        " . g:bgGreenD       . g:fgWhite      . g:none
 exe "hi! iCursor       " . g:bgBlueD                         . g:none
-exe "hi! rCursor       " . g:bgCyan                          . g:none
 exe "hi! vCursor       " . g:bgOrangeLr     . g:fgOrangeDr   . g:none
+exe "hi! rCursor       " . g:bgCyan                          . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgGreyLr       . g:fgGreyD      . g:none
 exe "hi! VisualNOS     " . g:bgGreyLr       . g:fgGrey       . g:none

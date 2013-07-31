@@ -1,6 +1,6 @@
-ru autoload/Powerline/Colorschemes/cubuntuColors.vim
+ru colors/cubuntu/alternative/powerline_colors.vim
 " order of items [fg, bg, style]
-let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
+let g:Powerline#Colorschemes#cubuntuAltDark#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
     \ 'n': ['white'   , 'grey'    ],
     \ }),
@@ -19,7 +19,7 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLr'  , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'greyD'    , ['bold']],
     \ 'N': ['greyL'   , 'greyD'   ],
     \ }),
   \

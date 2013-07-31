@@ -9,8 +9,8 @@
 " Description:
 " The color scheme is dark, by default. You can change this by setting the
 " g:cubuntu_style variable to "light" or "dark". Once the color scheme is
-" loaded, you can use the commands "CubuntuLight" or "CubuntuDark" to change
-" schemes quickly.
+" loaded, you can use the commands "CubuntuAltLight" or "CubuntuAltDark" to
+" change schemes quickly.
 "
 " colorsupport.vim (vimscript #2682) is used to help with mapping the GUI
 " settings to the 256 terminal colors.
@@ -37,7 +37,7 @@
 "
 " and create a simlink to your Vim directory
 "
-"     ln -s colors/cubuntu.vim ~/.vim/colors/
+"     ln -s colors/cubuntu/cubuntu.vim ~/.vim/colors/
 "
 " and then put this line in your `.vimrc` file
 "
@@ -57,8 +57,8 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! CubuntuLight let g:cubuntu_style = "light" | colorscheme cubuntu
-command! CubuntuDark  let g:cubuntu_style = "dark"  | colorscheme cubuntu
+command! CubuntuAltLight let g:cubuntu_style = "alt_light" | colorscheme cubuntu
+command! CubuntuAltDark  let g:cubuntu_style = "alt_dark"  | colorscheme cubuntu
 
 " #############################################################################
 hi clear
@@ -69,19 +69,25 @@ let colors_name="cubuntu"
 
 set background=dark
 
-ru /colors/colors.vim
+ru /colors/cubuntu/alternative/colors.vim
 if exists("g:cubuntu_style")
-  if g:cubuntu_style == "light"
+  if g:cubuntu_style == "alt_light"
     set background=light
+  elseif  g:cubuntu_style == "alt_dark"
+    set background=dark
+    let g:cubuntu_style="alt_dark"
   endif
 else
-  let g:cubuntu_style="dark"
+  set background=dark
+  let g:cubuntu_style="alt_dark"
 endif
 
-if g:cubuntu_style == "dark"
-  ru colors/dark.vim
-else
-  ru colors/light.vim
+if g:cubuntu_style == "alt_dark"
+  let g:Powerline_colorscheme = 'cubuntuAltDark'
+  ru colors/cubuntu/alternative/dark.vim
+elseif g:cubuntu_style == "alt_light"
+  let g:Powerline_colorscheme = 'cubuntuAltLight'
+  ru colors/cubuntu/alternative/light.vim
 endif
 
 " #############################################################################
@@ -91,6 +97,12 @@ set guicursor+=n-c:blinkon0
 set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
+
 " ############################# POWERLINE THEMES ##############################
-let g:Powerline_theme       = 'cubuntu'
-let g:Powerline_symbols     = 'fancy'
+let g:Powerline_theme   = 'cubuntu'
+let g:Powerline_symbols = 'fancy'
+" on the fly theme reload
+if exists('g:Powerline_loaded')
+  call Pl#ClearCache()
+  call Pl#ReloadColorscheme()
+endif
