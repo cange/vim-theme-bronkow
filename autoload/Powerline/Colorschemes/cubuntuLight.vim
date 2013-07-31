@@ -26,8 +26,8 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['greyLst' , 'purpleLr'],
-    \ 'N': ['grey'    , 'greyL'   ],
+    \ 'n': ['white'   , 'yellowL'  ],
+    \ 'N': ['yellowL' , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
