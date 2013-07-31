@@ -3,14 +3,16 @@
 ## Summary
 This color scheme based on the Ubuntu colors (brown, red and orange).
 You can pick between a dark anda light versions (GUI and 256 color terminal).
-A colorscheme for the[ Powerline](https://github.com/cubuntu/vim-powerline/network)
+A colorscheme for the [Powerline](https://github.com/cubuntu/vim-powerline/network)
 plugin is also integrated.
 
 ## Description
 The color scheme is dark, by default. You can change this by setting the
 `g:cubuntu_style` variable to "light" or "dark". Once the color scheme is
-loaded, you can use the commands `CubuntuLight` or `CubuntuDark` to change
-schemes quickly.
+loaded, you can use the commands `:CubuntuLight`, `:CubuntuDarkAlt`,
+`:CubuntuLightAlt` or `:CubuntuDarkAlt` to change schemes quickly.
+
+The `CubuntuDarkAlt` theme is set by default.
 
 ## Installation
 You can use [pathogen.vim](https://github.com/tpope/vim-pathogen) for a
@@ -41,4 +43,5 @@ simple installation or you go the old fashion way:
 
 ## Extras
 
-![dark colors for iTerm 2](https://github.com/cange/vim-theme-cubuntu/blob/master/extras/Cubuntu%20dark.itermcolors)
+- Ubuntu: [dark colors for Terminator ](https://github.com/cange/vim-theme-cubuntu/blob/master/extras/Cubuntu%20dark.itermcolors)
+- Mac OS: [dark colors for iTerm 2 ](https://github.com/cange/vim-theme-cubuntu/blob/master/extras/terminator/config)

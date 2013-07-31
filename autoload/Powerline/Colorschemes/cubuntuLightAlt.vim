@@ -1,72 +1,71 @@
 ru colors/cubuntu/alternative/powerline_colors.vim
 " order of items [fg, bg, style]
-let g:Powerline#Colorschemes#cubuntuAltDark#colorscheme = Pl#Colorscheme#Init([
+let g:Powerline#Colorschemes#cubuntuLightAlt#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
-    \ 'n': ['white'   , 'grey'    ],
+    \ 'n': ['white'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['greyLr'  , 'greenDr' ],
-    \ 'i': ['greyLr'  , 'blueD'   ],
-    \ 'v': ['greyLr'  , 'orangeD' ],
-    \ 'r': ['greyLr'  , 'redDr'   ],
-    \ 'N': ['greyD'   , 'grey'    ],
+    \ 'n': ['white'   , 'greenD'  ],
+    \ 'i': ['white'   , 'blue'    ],
+    \ 'v': ['white'   , 'orangeLr'],
+    \ 'r': ['white'   , 'red'     ],
+    \ 'N': ['greyL'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.filepath'], {
-    \ 'n': ['greyL'  ],
-    \ 'N': ['grey'   ],
+    \ 'n': ['greyLr' ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLr'  , 'greyD'    , ['bold']],
-    \ 'N': ['greyL'   , 'greyD'   ],
+    \ 'n': ['greyLst' , 'greyL'    , ['bold']],
+    \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['white'   , 'yellow'  ],
-    \ 'N': ['yellow'  , 'greyD'   ],
+    \ 'n': ['white'   , 'yellowL' ],
+    \ 'N': ['yellowL' , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenD'  , ['bold']  ],
-    \}),
+    \ 'n': ['greenL'  , ['bold']  ],
+    \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-    \ 'n': ['grey'    , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
-    \ 'n': ['greenDr' , 'greyD'   ],
-    \ 'i': ['blueD'   , 'greyD'   ],
-    \ 'v': ['orange'  , 'greyD'   ],
+    \ 'n': ['green'   , 'greyL'   ],
+    \ 'i': ['blueDr'  , 'greyL'   ],
+    \ 'v': ['orangeLr', 'greyL'   ],
     \ 'r': ['redLr'   , 'redDr'   ],
-    \ 'N': ['greyD'   , 'grey'    ],
+    \ 'N': ['greyL'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo'], {
-    \ 'n': ['greyD'   , 'greenDr'  , ['bold']],
+    \ 'n': ['greenL'  , 'greenD'   , ['bold']],
     \ 'i': ['blue'    , 'blueDr'   , ['bold']],
-    \ 'v': ['orangeL' , 'orangeDr' , ['bold']],
+    \ 'v': ['orangeD' , 'orangeLr' , ['bold']],
     \ 'r': ['redL'    , 'grey'     , ['bold']],
-    \ 'N': ['greyD'   , 'grey'     ],
+    \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo.line.tot'], {
-    \ 'n': ['greyD'  ],
+    \ 'n': ['green'  ],
     \ 'i': ['blueD'  ],
     \ 'v': ['orange' ],
     \ 'r': ['redL'   ],
-    \ 'N': ['greyD'  ],
+    \ 'N': ['greyLr' ],
     \ }),
   \
   \ Pl#Hi#Segments(['errors'], {
-    \ 'n': ['red'     , 'grey'     , ['bold']],
+    \ 'n': ['red'     , 'greyLr'   , ['bold']],
     \ 'N': ['greyL'   , 'blueDr'   , ['bold']],
     \ }),
   \
   \ Pl#Hi#Segments(['paste_indicator', 'ws_marker'], {
-    \ 'n': ['greyD'   , 'yellow'  ],
+    \ 'n': ['greyL'   , 'yellowL' ],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {
@@ -84,12 +83,11 @@ let g:Powerline#Colorschemes#cubuntuAltDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['nerdtree:raw.name', 'lustyexplorer:static_str.name', 'minibufexplorer:static_str.name', 'tagbar:static_str.name'], {
-    \ 'n': ['greyL'   , 'greyD'   ],
-    \ 'N': ['grey'    , 'greyD'   ],
+    \ 'n': ['greyLst' , 'greyL'   ],
+    \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
   \ Pl#Hi#Segments(['nerdtree:SPLIT', 'lustyexplorer:SPLIT', 'minibufexplorer:SPLIT', 'tagbar:SPLIT'], {
-    \ 'n': ['greyL'   , 'greyDr'  ],
-    \ 'N': ['greyL'   , 'grey'    ],
+    \ 'n': ['greyL'   , 'greyLr'  ],
     \ }),
   \ Pl#Hi#Segments(['lustyexplorer:static_str.buffer', 'tagbar:static_str.buffer'], {
     \ 'n': ['greyLst' , 'blue'    ],
@@ -97,25 +95,25 @@ let g:Powerline#Colorschemes#cubuntuAltDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:prev', 'ctrlp:next'], {
-    \ 'n': ['cyanD'   , 'grey'    ],
+    \ 'n': ['orangeL' , 'greyLr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:item'], {
-    \ 'n': ['cyanLr'  , 'cyanDr'   , ['bold']],
+    \ 'n': ['orangeDr', 'orangeL'  , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:marked'], {
-    \ 'n': ['cyan'    , 'greyD'    , ['bold']],
+    \ 'n': ['orangeL' , 'greyL'    , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:SPLIT'], {
-    \ 'n': ['greyLr'  , 'greyDr'  ],
+    \ 'n': ['greyL'   , 'greyLr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:pwd'], {
-    \ 'n': ['greyL'   , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'greyL'   ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:focus'], {
-    \ 'n': ['grey'    , 'greyDr'  ],
+    \ 'n': ['grey'    , 'greyLr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:byfname'], {
-    \ 'n': ['greyDst' , 'cyanDr'],
+    \ 'n': ['greyLr'  , 'orange'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:count'], {

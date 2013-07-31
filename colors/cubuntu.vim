@@ -9,8 +9,8 @@
 " Description:
 " The color scheme is dark, by default. You can change this by setting the
 " g:cubuntu_style variable to "light" or "dark". Once the color scheme is
-" loaded, you can use the commands "CubuntuAltLight" or "CubuntuAltDark" to
-" change schemes quickly.
+" loaded, you can use the commands "CubuntuLight", "CubuntuDark",
+" "CubuntuLightAlt" or "CubuntuDarkAlt" to change schemes quickly.
 "
 " colorsupport.vim (vimscript #2682) is used to help with mapping the GUI
 " settings to the 256 terminal colors.
@@ -57,8 +57,10 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! CubuntuAltLight let g:cubuntu_style = "alt_light" | colorscheme cubuntu
-command! CubuntuAltDark  let g:cubuntu_style = "alt_dark"  | colorscheme cubuntu
+command! CubuntuLightAlt let g:cubuntu_style = "light_alt" | colorscheme cubuntu
+command! CubuntuDarkAlt  let g:cubuntu_style = "dark_alt"  | colorscheme cubuntu
+command! CubuntuLight    let g:cubuntu_style = "light"     | colorscheme cubuntu
+command! CubuntuDark     let g:cubuntu_style = "dark"      | colorscheme cubuntu
 
 " #############################################################################
 hi clear
@@ -69,25 +71,34 @@ let colors_name="cubuntu"
 
 set background=dark
 
-ru /colors/cubuntu/alternative/colors.vim
-if exists("g:cubuntu_style")
-  if g:cubuntu_style == "alt_light"
-    set background=light
-  elseif  g:cubuntu_style == "alt_dark"
-    set background=dark
-    let g:cubuntu_style="alt_dark"
-  endif
-else
-  set background=dark
-  let g:cubuntu_style="alt_dark"
+" set default theme
+if !exists("g:cubuntu_style")
+  ec 'DEFAULT theme is dark_alt'
+  let g:cubuntu_style="dark_alt"
 endif
 
-if g:cubuntu_style == "alt_dark"
-  let g:Powerline_colorscheme = 'cubuntuAltDark'
+ru colors/cubuntu/formats.vim
+
+if g:cubuntu_style == "dark_alt"
+  let g:Powerline_colorscheme = 'cubuntuDarkAlt'
+  set background=dark
+  ru colors/cubuntu/alternative/colors.vim
   ru colors/cubuntu/alternative/dark.vim
-elseif g:cubuntu_style == "alt_light"
-  let g:Powerline_colorscheme = 'cubuntuAltLight'
+elseif g:cubuntu_style == "light_alt"
+  let g:Powerline_colorscheme = 'cubuntuLightAlt'
+  set background=light
+  ru colors/cubuntu/alternative/colors.vim
   ru colors/cubuntu/alternative/light.vim
+elseif g:cubuntu_style == "dark"
+  let g:Powerline_colorscheme = 'cubuntuDark'
+  set background=dark
+  ru colors/cubuntu/original/colors.vim
+  ru colors/cubuntu/original/dark.vim
+elseif g:cubuntu_style == "light"
+  let g:Powerline_colorscheme = 'cubuntuLight'
+  set background=light
+  ru colors/cubuntu/original/colors.vim
+  ru colors/cubuntu/original/light.vim
 endif
 
 " #############################################################################
