@@ -60,7 +60,7 @@ exe "hi! ColorColumn   " . g:bgBlack       . g:fgNone        . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGreyD       . g:fgGreyLr      . g:none
 exe "hi! StatusLineNC  " . g:bgGrey        . g:fgNone        . g:none
-exe "hi! WildMenu      " . g:bgBlueDr      . g:fgGreyLr      . g:none
+exe "hi! WildMenu      " . g:bgBlueDr      . g:fgGreyLst     . g:none
 exe "hi! TabLine       " . g:bgGreyLst     . g:fgGreyDr      . g:none
 exe "hi! TabLineFill   " . g:bgGreyLst     . g:fgGrey        . g:none
 exe "hi! TabLineSel    " . g:bgBlueLr      . g:fgGreyLst     . g:none
