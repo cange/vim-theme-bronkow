@@ -23,8 +23,8 @@ exe "hi! Type          " . g:bgNone         . g:fgGreenDr    . g:none
 exe "hi! Special       " . g:bgNone         . g:fgCyanDr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit      . g:fgInherit    . g:underline
-exe "hi! Error         " . g:bgRedD         . g:fgWhite      . g:none
-exe "hi! Todo          " . g:bgYellowL      . g:fgGreyD      . g:none
+exe "hi! Error         " . g:bgInvert       . g:fgRedLr      . g:bold
+exe "hi! Todo          " . g:bgInvert       . g:fgYellowLr   . g:bold
 exe "hi! MatchParen    " . g:bgCyan         . g:fgInvert     . g:bold
 " Invisible character colors
 exe "hi! NonText       " . g:bgNone         . g:fgGreyLr     . g:none
