@@ -19,9 +19,7 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greenD'  , 'greyD'   ],
-    \ 'i': ['blue'    , 'greyD'   ],
-    \ 'v': ['orange'  , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'greyD'   ],
     \ 'N': ['greyL'   , 'greyD'   ],
     \ }),
   \

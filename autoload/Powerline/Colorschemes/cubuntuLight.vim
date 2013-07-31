@@ -9,19 +9,16 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ 'n': ['white'   , 'greenD'  ],
     \ 'i': ['white'   , 'blue'    ],
     \ 'v': ['white'   , 'orangeLr'],
-    \ 'r': ['greyLr'  , 'redL'    ],
+    \ 'r': ['white'   , 'red'     ],
     \ 'N': ['greyL'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.filepath'], {
-    \ 'n': ['greyLst'],
-    \ 'N': ['greyLr' ],
+    \ 'n': ['greyLr' ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greenL'  , 'greyL'   ],
-    \ 'i': ['blueDr'  , 'greyL'   ],
-    \ 'v': ['orangeLr', 'greyL'   ],
+    \ 'n': ['greyLst' , 'greyL'   ],
     \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
   \
