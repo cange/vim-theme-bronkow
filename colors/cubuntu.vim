@@ -1,5 +1,5 @@
 " Maintainer: Christian Angermann
-" Version: 1.0.7
+" Version: 1.0.8
 
 " Cubuntu Colorscheme for Vim
 "
