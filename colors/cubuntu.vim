@@ -73,7 +73,6 @@ set background=dark
 
 " set default theme
 if !exists("g:cubuntu_style")
-  ec 'DEFAULT theme is dark_alt'
   let g:cubuntu_style="dark_alt"
 endif
 
