@@ -57,10 +57,12 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! CubuntuLightAlt let g:cubuntu_style = "light_alt" | colorscheme cubuntu
-command! CubuntuDarkAlt  let g:cubuntu_style = "dark_alt"  | colorscheme cubuntu
-command! CubuntuLight    let g:cubuntu_style = "light"     | colorscheme cubuntu
-command! CubuntuDark     let g:cubuntu_style = "dark"      | colorscheme cubuntu
+command! UbuntuDark      let g:cubuntu_style = "ubuntu_dark"       | colorscheme cubuntu
+command! UbuntuLight     let g:cubuntu_style = "ubuntu_light"      | colorscheme cubuntu
+command! CubuntuDarkAlt  let g:cubuntu_style = "alternative_dark"  | colorscheme cubuntu
+command! CubuntuLightAlt let g:cubuntu_style = "alternative_light" | colorscheme cubuntu
+command! CubuntuLight    let g:cubuntu_style = "original_light"    | colorscheme cubuntu
+command! CubuntuDark     let g:cubuntu_style = "original_dark"     | colorscheme cubuntu
 
 " #############################################################################
 hi clear
@@ -73,31 +75,43 @@ set background=dark
 
 " set default theme
 if !exists("g:cubuntu_style")
-  let g:cubuntu_style="dark_alt"
+  let g:cubuntu_style="alternative_dark"
 endif
 
 ru colors/cubuntu/formats.vim
 
-if g:cubuntu_style == "dark_alt"
-  let g:Powerline_colorscheme = 'cubuntuDarkAlt'
+" let s:style_type = split(g:cubuntu_style, '_')
+" let s:directory = s:style_type[0]
+" let s:tone      = s:style_type[1]
+
+" set background=s:tone
+" ru "colors/cubuntu/".s:directory."/colors.vim"
+" ru colors/cubuntu/${s:directory}/dark.vim
+
+if g:cubuntu_style == "alternative_dark"
   set background=dark
   ru colors/cubuntu/alternative/colors.vim
   ru colors/cubuntu/alternative/dark.vim
-elseif g:cubuntu_style == "light_alt"
-  let g:Powerline_colorscheme = 'cubuntuLightAlt'
+elseif g:cubuntu_style == "alternative_light"
   set background=light
   ru colors/cubuntu/alternative/colors.vim
   ru colors/cubuntu/alternative/light.vim
-elseif g:cubuntu_style == "dark"
-  let g:Powerline_colorscheme = 'cubuntuDark'
+elseif g:cubuntu_style == "original_dark"
   set background=dark
   ru colors/cubuntu/original/colors.vim
   ru colors/cubuntu/original/dark.vim
-elseif g:cubuntu_style == "light"
-  let g:Powerline_colorscheme = 'cubuntuLight'
+elseif g:cubuntu_style == "original_light"
   set background=light
   ru colors/cubuntu/original/colors.vim
   ru colors/cubuntu/original/light.vim
+elseif g:cubuntu_style == "ubuntu_dark"
+  set background=dark
+  ru colors/cubuntu/ubuntu/colors.vim
+  ru colors/cubuntu/ubuntu/dark.vim
+elseif g:cubuntu_style == "ubuntu_light"
+  set background=light
+  ru colors/cubuntu/ubuntu/colors.vim
+  ru colors/cubuntu/ubuntu/light.vim
 endif
 
 " #############################################################################
