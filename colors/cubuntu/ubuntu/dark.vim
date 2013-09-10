@@ -70,10 +70,10 @@ exe "hi! SpellCap      " . g:bgNone         . g:fgNone         . g:undercurl . g
 exe "hi! SpellRare     " . g:bgNone         . g:fgNone         . g:undercurl . g:spOrangeLr
 exe "hi! SpellLocal    " . g:bgNone         . g:fgNone         . g:undercurl . g:spOrangeDr
 " == Diff ==
-exe "hi! DiffAdd       " . g:bgGreenLr      . g:fgGreyDr       . g:none
-exe "hi! DiffChange    " . g:bgBlueLr       . g:fgGreyDr       . g:none
-exe "hi! DiffDelete    " . g:bgOrangeLr     . g:fgGreyDr       . g:none
-exe "hi! DiffText      " . g:bgOrangeLr     . g:fgGreyDr       . g:none
+exe "hi! DiffAdd       " . g:bgNone         . g:fgGreenD       . g:none
+exe "hi! DiffChange    " . g:bgNone         . g:fgBlueL        . g:none
+exe "hi! DiffDelete    " . g:bgNone         . g:fgOrangeL      . g:none
+exe "hi! DiffText      " . g:bgNone         . g:fgDAubergineL  . g:none
 " == Misc ==
 exe "hi! Directory     " . g:bgNone         . g:fgBlue         . g:none
 exe "hi! SignColumn    " . g:bgGreyD        . g:fgGreyLr       . g:none

@@ -50,12 +50,12 @@ let g:colors = {
   \},
   \'grey': {
     \'darkest':  { 'cterm': '233 ', 'hex': '#333333 ', 'group': [233, 0x333333] },
-    \'darker':   { 'cterm': '234 ', 'hex': '#717073 ', 'group': [234, 0x717073] },
-    \'dark':     { 'cterm': '236 ', 'hex': '#AEA79F ', 'group': [236, 0xAEA79F] },
-    \'default':  { 'cterm': '238 ', 'hex': '#BEB9B2 ', 'group': [238, 0xBEB9B2] },
-    \'light':    { 'cterm': '243 ', 'hex': '#CECAC5 ', 'group': [243, 0xCECAC5] },
-    \'lighter':  { 'cterm': '250 ', 'hex': '#DFDCD9 ', 'group': [250, 0xDFDCD9] },
-    \'lightest': { 'cterm': '254 ', 'hex': '#EFEDEC ', 'group': [254, 0xEFEDEC] }
+    \'darker':   { 'cterm': '238 ', 'hex': '#565248 ', 'group': [235, 0x565248] },
+    \'dark':     { 'cterm': '234 ', 'hex': '#717073 ', 'group': [234, 0x717073] },
+    \'default':  { 'cterm': '236 ', 'hex': '#AEA79F ', 'group': [236, 0xAEA79F] },
+    \'light':    { 'cterm': '238 ', 'hex': '#BEB9B2 ', 'group': [238, 0xBEB9B2] },
+    \'lighter':  { 'cterm': '243 ', 'hex': '#CECAC5 ', 'group': [243, 0xCECAC5] },
+    \'lightest': { 'cterm': '250 ', 'hex': '#DFDCD9 ', 'group': [250, 0xDFDCD9] },
   \},
   \'black': {
     \'default':  { 'cterm': '  0 ', 'hex': '#000000 ', 'group': [  0, 0x000000] }

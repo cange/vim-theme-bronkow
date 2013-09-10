@@ -12,8 +12,8 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.darkest.hex  . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyLst     . g:fgGrey       . g:none
-exe "hi! Comment       " . g:bgNone        . g:fgGreyL      . g:none
+exe "hi! Normal        " . g:bgGreyLst     . g:fgGreyDr     . g:none
+exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
 exe "hi! Constant      " . g:bgNone        . g:fgPurple     . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlueD      . g:none
@@ -54,7 +54,7 @@ exe "hi! PMenuThumb    " . g:bgBlueD                        . g:none
 exe "hi! Folded        " . g:bgGreyLst     . g:fgYellowD    . g:none
 exe "hi! FoldColumn    " . g:bgGreyL       . g:fgGreyD      . g:none
 exe "hi! VertSplit     " . g:bgGreyLr      . g:fgGreyLr     . g:none
-exe "hi! LineNr        " . g:bgGreyL       . g:fgGreyLr     . g:none
+exe "hi! LineNr        " . g:bgGreyD       . g:fgGreyLr     . g:none
 exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLst    . g:bold
 exe "hi! ColorColumn   " . g:bgGreyLr      . g:fgNone       . g:none
 " -- Status bars --
