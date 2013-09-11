@@ -9,9 +9,9 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
     \ 'n': ['white'   , 'greenD'  ],
     \ 'i': ['white'   , 'blue'    ],
-    \ 'v': ['white'   , 'orangeLr'],
+    \ 'v': ['white'   , 'orangeD' ],
     \ 'r': ['white'   , 'red'     ],
-    \ 'N': ['greyL'   , 'greyLr'  ],
+    \ 'N': ['greyD'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.filepath'], {
@@ -19,13 +19,13 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLst' , 'greyL'   ],
-    \ 'N': ['greyLr'  , 'greyL'   ],
+    \ 'n': ['greyLst' , 'greyD'   ],
+    \ 'N': ['greyLr'  , 'greyD'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['white'   , 'yellowL'  ],
-    \ 'N': ['yellowL' , 'greyL'   ],
+    \ 'n': ['white'   , 'yellowD' ],
+    \ 'N': ['yellowL' , 'greyD'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
@@ -33,15 +33,15 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-    \ 'n': ['greyLr'  , 'greyL'   ],
+    \ 'n': ['greyLr'  , 'greyD'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
-    \ 'n': ['green'   , 'greyL'   ],
-    \ 'i': ['blueDr'  , 'greyL'   ],
-    \ 'v': ['orangeLr', 'greyL'   ],
-    \ 'r': ['redL'   , 'greyL'    ],
-    \ 'N': ['greyL'   , 'greyLr'  ],
+    \ 'n': ['greenD'   , 'grey'    ],
+    \ 'i': ['blueDr'  , 'greyD'   ],
+    \ 'v': ['orangeLr', 'greyD'   ],
+    \ 'r': ['redL'    , 'greyD'   ],
+    \ 'N': ['greyL'   , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo'], {
@@ -66,7 +66,7 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['paste_indicator', 'ws_marker'], {
-    \ 'n': ['greyL'   , 'yellowL' ],
+    \ 'n': ['greyL'   , 'yellowD' ],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {
