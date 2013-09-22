@@ -26,12 +26,6 @@ call Pl#Hi#Allocate({
   \ 'greenL'   : g:colors.green.light.group,
   \ 'greenLr'  : g:colors.green.lighter.group,
   \
-  \ 'cyanDr'   : g:colors.cyan.darker.group,
-  \ 'cyanD'    : g:colors.cyan.dark.group,
-  \ 'cyan'     : g:colors.cyan.default.group,
-  \ 'cyanL'    : g:colors.cyan.light.group,
-  \ 'cyanLr'   : g:colors.cyan.lighter.group,
-  \
   \ 'blueDr'   : g:colors.blue.darker.group,
   \ 'blueD'    : g:colors.blue.dark.group,
   \ 'blue'     : g:colors.blue.default.group,
