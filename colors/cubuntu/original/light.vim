@@ -35,15 +35,15 @@ exe "hi! CursorIM      " . g:bgGreen       . g:fgGreenDr    . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr    . g:fgNone       . g:none
 exe "hi! CursorLine    " . g:bgGreyLr      . g:fgNone       . g:none
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenDr     . g:fgWhite      . g:none
+exe "hi! Cursor        " . g:bgGreenD      . g:fgWhite      . g:none
 exe "hi! iCursor       " . g:bgBlueD                        . g:none
 exe "hi! rCursor       " . g:bgBlueL                        . g:none
 exe "hi! vCursor       " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgGreyLr      . g:fgGreyD      . g:none
 exe "hi! VisualNOS     " . g:bgGreyLr      . g:fgGrey       . g:none
-exe "hi! IncSearch     " . g:bgGreenDr     . g:fgWhite      . g:none
-exe "hi! Search        " . g:bgGreenD      . g:fgGreyLst    . g:none
+exe "hi! IncSearch     " . g:bgYellowD     . g:fgGreyD      . g:none
+exe "hi! Search        " . g:bgYellowL     . g:fgGrey       . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyLr      . g:fgGreyDst    . g:none
@@ -54,7 +54,7 @@ exe "hi! PMenuThumb    " . g:bgBlueD                        . g:none
 exe "hi! Folded        " . g:bgGreyLr      . g:fgGreyD      . g:none
 exe "hi! FoldColumn    " . g:bgGreyL       . g:fgGreyD      . g:none
 exe "hi! VertSplit     " . g:bgGreyLr      . g:fgGreyLr     . g:none
-exe "hi! LineNr        " . g:bgGrey        . g:fgGreyLr     . g:none
+exe "hi! LineNr        " . g:bgGreyL       . g:fgGreyD      . g:none
 exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLst    . g:bold
 exe "hi! ColorColumn   " . g:bgGreyLr      . g:fgNone       . g:none
 " -- Status bars --

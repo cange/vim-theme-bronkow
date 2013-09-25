@@ -6,7 +6,7 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['greyLst' , 'greenDr' ],
+    \ 'n': ['greyLst' , 'greenD'  ],
     \ 'i': ['white'   , 'blueD'   ],
     \ 'v': ['white'   , 'orangeD' ],
     \ 'r': ['greyLr'  , 'redDr'   ],
@@ -97,13 +97,13 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:prev', 'ctrlp:next'], {
-    \ 'n': ['cyanD'   , 'grey'    ],
+    \ 'n': ['blueD'   , 'grey'    ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:item'], {
-    \ 'n': ['cyanLr'  , 'cyanDr'   , ['bold']],
+    \ 'n': ['blueLr'  , 'blueDr'   , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:marked'], {
-    \ 'n': ['cyan'    , 'greyD'    , ['bold']],
+    \ 'n': ['blue'    , 'greyD'    , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:SPLIT'], {
     \ 'n': ['greyLr'  , 'greyDr'  ],
@@ -115,7 +115,7 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ 'n': ['grey'    , 'greyDr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:byfname'], {
-    \ 'n': ['greyDst' , 'cyanDr'],
+    \ 'n': ['greyDst' , 'blueDr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:count'], {

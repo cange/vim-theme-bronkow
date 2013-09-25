@@ -57,8 +57,6 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! UbuntuDark      let g:cubuntu_style = "ubuntu_dark"       | colorscheme cubuntu
-command! UbuntuLight     let g:cubuntu_style = "ubuntu_light"      | colorscheme cubuntu
 command! CubuntuDarkAlt  let g:cubuntu_style = "alternative_dark"  | colorscheme cubuntu
 command! CubuntuLightAlt let g:cubuntu_style = "alternative_light" | colorscheme cubuntu
 command! CubuntuLight    let g:cubuntu_style = "original_light"    | colorscheme cubuntu
@@ -75,7 +73,7 @@ set background=dark
 
 " set default theme
 if !exists("g:cubuntu_style")
-  let g:cubuntu_style="alternative_dark"
+  let g:cubuntu_style="original_dark"
 endif
 
 ru colors/cubuntu/formats.vim
@@ -104,14 +102,6 @@ elseif g:cubuntu_style == "original_light"
   set background=light
   ru colors/cubuntu/original/colors.vim
   ru colors/cubuntu/original/light.vim
-elseif g:cubuntu_style == "ubuntu_dark"
-  set background=dark
-  ru colors/cubuntu/ubuntu/colors.vim
-  ru colors/cubuntu/ubuntu/dark.vim
-elseif g:cubuntu_style == "ubuntu_light"
-  set background=light
-  ru colors/cubuntu/ubuntu/colors.vim
-  ru colors/cubuntu/ubuntu/light.vim
 endif
 
 " #############################################################################

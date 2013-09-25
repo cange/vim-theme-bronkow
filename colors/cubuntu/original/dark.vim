@@ -33,17 +33,17 @@ exe "hi! Title         " . g:bgNone        . g:fgRedD       . g:none
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen       . g:fgInvert     . g:none
 exe "hi! CursorColumn  " . g:bgRed         . g:fgNone       . g:none
-exe "hi! CursorLine    " . g:bgBlack       . g:fgNone       . g:none
+exe "hi! CursorLine    " . g:bgNone        . g:fgNone       . g:bold
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyDst
+exe "hi! Cursor        " . g:bgGreenD      . g:fgGreyDst
 exe "hi! iCursor       " . g:bgGreyLr      . g:none
 exe "hi! vCursor       " . g:bgOrangeL     . g:fgGreyDst    . g:none
 exe "hi! rCursor       " . g:bgWhite       . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgGreyD       . g:fgGreyDst
 exe "hi! VisualNOS     " . g:bgGreyD       . g:fgGreyDst    . g:none
-exe "hi! IncSearch     " . g:bgGreenDr     . g:fgGreyDr
-exe "hi! Search        " . g:bgGreenD      . g:fgGreyLr
+exe "hi! IncSearch     " . g:bgYellowDr    . g:fgYellow
+exe "hi! Search        " . g:bgYellowD     . g:fgGreyDst
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyLr
