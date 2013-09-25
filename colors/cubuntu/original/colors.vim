@@ -65,38 +65,40 @@ fun! colors#capitalize(string)
 endfun
 
 let s:toneMapping = {
-      \'darkest':  'Dst',
-      \'darker':   'Dr',
-      \'dark':     'D',
-      \'default':  '',
-      \'light':    'L',
-      \'lighter':  'Lr',
-      \'lightest': 'Lst'
+  \'darkest':  'Dst',
+  \'darker':   'Dr',
+  \'dark':     'D',
+  \'default':  '',
+  \'light':    'L',
+  \'lighter':  'Lr',
+  \'lightest': 'Lst'
 \}
 
 " #############################################################################
-for col in keys(g:colors)
-  let c_d = g:colors[col]
-  let g:colors[col].fg = {}
-  let g:colors[col].bg = {}
-  for tone in keys(c_d)
-    let t_d = c_d[tone]
-    if !(tone == 'fg' || tone == 'bg')
-      let name =  colors#capitalize(col)
-      let label = s:toneMapping[tone]
-      let g:['fg'.name.label] = "guifg=". t_d.hex ."ctermfg=". t_d.cterm
-      let g:['bg'.name.label] = "guibg=". t_d.hex ."ctermbg=". t_d.cterm
+let g:colors#PowerlineMapping = {}
+for colorKey in keys(g:colors)
+  let colorDict = g:colors[colorKey]
+  let g:colors[colorKey].fg = {}
+  let g:colors[colorKey].bg = {}
+  for toneKey in keys(colorDict)
+    let toneDict = colorDict[toneKey]
+    if !(toneKey == 'fg' || toneKey == 'bg')
+      let name =  colors#capitalize(colorKey)
+      let label = s:toneMapping[toneKey]
+      " vim
+      let g:['fg'.name.label] = "guifg=". toneDict.hex ."ctermfg=". toneDict.cterm
+      let g:['bg'.name.label] = "guibg=". toneDict.hex ."ctermbg=". toneDict.cterm
+      " powerline
+      let g:colors#PowerlineMapping[colorKey.label] = toneDict.group
     endif
   endfor
 endfor
 " #############################################################################
-let color = g:colors.red
-let g:spRed      = "guisp=".color.default.hex
+let g:spRed      = "guisp=".g:colors.red.default.hex
+let g:spYellowDr = "guisp=".g:colors.yellow.darker.hex
+let g:spYellowD  = "guisp=".g:colors.yellow.default.hex
+let g:spYellowLr = "guisp=".g:colors.yellow.lighter.hex
 
-let color = g:colors.yellow
-let g:spYellowDr = "guisp=".color.darker.hex
-let g:spYellowD  = "guisp=".color.default.hex
-let g:spYellowLr = "guisp=".color.lighter.hex
 " ################################# FORMATS ###################################
 let g:bgNone     = "guibg=NONE     ctermbg=NONE "
 let g:fgNone     = "guifg=NONE     ctermfg=NONE "
