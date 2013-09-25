@@ -19,8 +19,8 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLst' , 'greyD'   ],
-    \ 'N': ['greyLr'  , 'greyD'   ],
+    \ 'n': ['greyLst' , 'grey'    ],
+    \ 'N': ['greyLr'  , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
@@ -29,15 +29,15 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenL'  , ['bold']  ],
+    \ 'n': ['greenDr' , ['bold']  ],
     \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-    \ 'n': ['greyLr'  , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
-    \ 'n': ['greenD'   , 'grey'    ],
+    \ 'n': ['green'   , 'grey'    ],
     \ 'i': ['blueDr'  , 'greyD'   ],
     \ 'v': ['orangeLr', 'greyD'   ],
     \ 'r': ['redL'    , 'greyD'   ],
