@@ -77,14 +77,14 @@ if !exists("g:cubuntu_style")
 endif
 
 ru colors/cubuntu/formats.vim
-
-" let s:style_type = split(g:cubuntu_style, '_')
-" let s:directory = s:style_type[0]
-" let s:tone      = s:style_type[1]
+" FIXME try to load file dynamically
+" let style_type = split(g:cubuntu_style, '_')
+" let directory = style_type[0]
+" let tone      = style_type[1]
 
 " set background=s:tone
-" ru "colors/cubuntu/".s:directory."/colors.vim"
-" ru colors/cubuntu/${s:directory}/dark.vim
+" ru colors/cubuntu/${directory}/colors.vim
+" ru colors/cubuntu/${directory}/${tone}.vim
 
 if g:cubuntu_style == "alternative_dark"
   set background=dark

@@ -33,7 +33,7 @@ exe "hi! Title         " . g:bgNone        . g:fgBlueD      . g:bold
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen       . g:fgGreenDr    . g:none
 exe "hi! CursorColumn  " . g:bgYellowLr    . g:fgNone       . g:none
-exe "hi! CursorLine    " . g:bgGreyLr      . g:fgNone       . g:none
+exe "hi! CursorLine    " . g:bgNone        . g:fgNone       . g:bold
 " == Cursors ==
 exe "hi! Cursor        " . g:bgGreenD      . g:fgWhite      . g:none
 exe "hi! iCursor       " . g:bgBlueD                        . g:none
