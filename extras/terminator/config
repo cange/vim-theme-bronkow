@@ -1,11 +1,11 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
-  title_transmit_fg_color = "#1c1c1c"
-  title_inactive_fg_color = "#5e5c52"
-  title_transmit_bg_color = "#767676"
+  title_transmit_fg_color = "#1a1a1a"
+  title_inactive_fg_color = "#4d4d4d"
+  title_transmit_bg_color = "#4d4d4d"
   title_receive_fg_color = "#dde7f1"
   tab_position = bottom
-  title_inactive_bg_color = "#2b2a25"
+  title_inactive_bg_color = "#1a1a1a"
 [keybindings]
   toggle_zoom = <Shift><Super>Return
   next_tab = <Shift><Control>Right
@@ -30,24 +30,6 @@
     delete_binding = ascii-del
     font = Bitstream Vera Sans Mono for Powerline 12
     background_color = "#002b36"
-  [[Ubuntu official]]
-    palette = "#262523:#a54644:#4c6619:#ae5307:#29587a:#803083:#06989a:#bfbbb0:#33322f:#dc332f:#7ca628:#fa770a:#6aacdb:#be65c1:#34e2e2:#eeeeec"
-    background_darkness = 0.94
-    scrollback_lines = 10000
-    background_type = transparent
-    use_system_font = False
-    foreground_color = "#807d75"
-    font = Bitstream Vera Sans Mono for Powerline 12
-    background_color = "#191917"
-  [[cange_dark]]
-    palette = "#202020:#a54644:#5d7622:#a9a346:#29587a:#803083:#06989a:#d3d7cf:#585858:#ee6561:#a2ce37:#fbf58e:#6aacdb:#be65c1:#34e2e2:#eeeeec"
-    background_darkness = 0.94
-    scrollback_lines = 10000
-    background_type = transparent
-    use_system_font = False
-    foreground_color = "#767676"
-    font = Bitstream Vera Sans Mono for Powerline 12
-    background_color = "#1c1c1c"
   [[solarized_light]]
     palette = "#eee8d5:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#eee8d5:#073642:#ef5d59:#bbcf33:#efc23b:#59b3ef:#959aef:#40cfc2:#fdf6e3"
     background_darkness = 0.94
@@ -58,12 +40,30 @@
     delete_binding = ascii-del
     font = Bitstream Vera Sans Mono for Powerline 12
     background_color = "#fdf6e3"
+  [[Cubuntu dark]]
+    palette = "#333333:#d93829:#508550:#e46d43:#33555e:#803083:#06989a:#beb9b2:#4d4d4d:#e8887f:#8dad8c:#eb9172:#99aaaf:#be65c1:#34e2e2:#cecac5"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#806678"
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#1a1a1a"
+  [[Cubuntu light]]
+    palette = "#666666:#e16054:#508550:#e46d43:#002b36:#2c001e:#06989a:#cecac5:#aea79f:#d93829:#8dad8c:#eb9172:#668086:#5c384c:#34e2e2:#ffffff"
+    background_darkness = 0.94
+    scrollback_lines = 10000
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#421a35"
+    font = Bitstream Vera Sans Mono for Powerline 12
+    background_color = "#beb9b2"
 [layouts]
   [[default]]
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = default
+      profile = Cubuntu dark
     [[[window0]]]
       type = Window
       parent = ""
