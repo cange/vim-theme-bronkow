@@ -1,5 +1,5 @@
 " This theme is based on the default theme
-let g:Powerline#Themes#cubuntu#theme = Pl#Theme#Create(
+let g:Powerline#Themes#bronkow#theme = Pl#Theme#Create(
   \ Pl#Theme#Buffer(''
     \ , 'paste_indicator'
     \ , 'fugitive:branch'

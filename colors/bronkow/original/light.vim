@@ -1,4 +1,4 @@
-let g:Powerline_colorscheme = 'cubuntuLight'
+let g:Powerline_colorscheme = 'bronkowLight'
 " on the fly theme reload
 if exists('g:Powerline_loaded')
   call Pl#ReloadColorscheme()
@@ -38,12 +38,12 @@ exe "hi! CursorLine    " . g:bgNone        . g:fgNone       . g:bold
 exe "hi! Cursor        " . g:bgGreenD      . g:fgWhite      . g:none
 exe "hi! iCursor       " . g:bgBlueD                        . g:none
 exe "hi! rCursor       " . g:bgBlueL                        . g:none
-exe "hi! vCursor       " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
+exe "hi! vCursor       " . g:bgOrangeD     . g:fgOrangeLr   . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgGreyLr      . g:fgGreyD      . g:none
+exe "hi! Visual        " . g:bgGreyLr      . g:fgPurple     . g:none
 exe "hi! VisualNOS     " . g:bgGreyLr      . g:fgGrey       . g:none
-exe "hi! IncSearch     " . g:bgYellowD     . g:fgGreyD      . g:none
-exe "hi! Search        " . g:bgYellowL     . g:fgGrey       . g:none
+exe "hi! IncSearch     " . g:bgPurpleD     . g:fgWhite      . g:none
+exe "hi! Search        " . g:bgPurple      . g:fgGreyLst    . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyLr      . g:fgGreyDst    . g:none
@@ -53,8 +53,8 @@ exe "hi! PMenuThumb    " . g:bgBlueD                        . g:none
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyLr      . g:fgGreyD      . g:none
 exe "hi! FoldColumn    " . g:bgGreyL       . g:fgGreyD      . g:none
-exe "hi! VertSplit     " . g:bgGreyLr      . g:fgGreyLr     . g:none
-exe "hi! LineNr        " . g:bgGreyL       . g:fgGreyD      . g:none
+exe "hi! VertSplit     " . g:bgGreyL       . g:fgGreyL      . g:none
+exe "hi! LineNr        " . g:bgGreyLr      . g:fgGreyD      . g:none
 exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLst    . g:bold
 exe "hi! ColorColumn   " . g:bgGreyLr      . g:fgNone       . g:none
 " -- Status bars --
@@ -70,7 +70,7 @@ exe "hi! SpellCap      " . g:bgNone        . g:fgNone       . g:undercurl . g:sp
 exe "hi! SpellRare     " . g:bgNone        . g:fgNone       . g:undercurl . g:spYellowLr
 exe "hi! SpellLocal    " . g:bgNone        . g:fgNone       . g:undercurl . g:spYellowDr
 " == Diff ==
-exe "hi! DiffAdd       " . g:bgGreenLr     . g:fgGreenDr    . g:none
+exe "hi! DiffAdd       " . g:bgGreenL      . g:fgGreenDr    . g:none
 exe "hi! DiffChange    " . g:bgBlueLr      . g:fgBlueDr     . g:none
 exe "hi! DiffDelete    " . g:bgRedLr       . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
@@ -87,3 +87,5 @@ exe "hi! Ignore        "                   . g:fgInvert
 exe "hi! String        " . g:bgNone        . g:fgRedDr      . g:none
 exe "hi! BString       " . g:bgNone        . g:fgRedD       . g:bold
 exe "hi! Function      " . g:bgNone        . g:fgBlueD      . g:bold
+" == JavaScript ==
+exe "hi! jsFuncCall    " . g:bgNone        . g:fgBlueDr     . g:none

@@ -1,7 +1,7 @@
-ru autoload/Powerline/Colorschemes/cubuntuColors.vim
-ru colors/cubuntu/original/powerline_colors.vim
+ru autoload/Powerline/Colorschemes/bronkowColors.vim
+ru colors/bronkow/original/powerline_colors.vim
 " order of items [fg, bg, style]
-let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
+let g:Powerline#Colorschemes#bronkowLight#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
     \ 'n': ['white'   , 'greyLr'  ],
     \ }),
@@ -24,12 +24,12 @@ let g:Powerline#Colorschemes#cubuntuLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['white'   , 'yellow'  ],
-    \ 'N': ['yellowLr', 'greyL'   ],
+    \ 'n': ['grey'    , 'yellowD' ],
+    \ 'N': ['yellowDr', 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenD'  , ['bold']  ],
+    \ 'n': ['yellowDr', ['bold']  ],
     \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
