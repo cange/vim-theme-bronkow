@@ -1,5 +1,7 @@
 # Bronkow Colorscheme for Vim
 
+<img src="colour-palette.png">
+
 ## Summary
 This color scheme based on the [Ubuntu colour palette](http://design.ubuntu.com/brand/colour-palette).
 You can choose between a dark and a light versions (GUI and 256 color terminal).
@@ -35,7 +37,6 @@ simple installation or you go the old fashion way:
   ```
 4. Restart Vim
 
-<img src="colour-palette.png">
 ## TODOs
 - adjust 256 based colors
 - add some screenshots
