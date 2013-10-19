@@ -1,53 +1,54 @@
-ru colors/cubuntu/alternative/powerline_colors.vim
+ru autoload/Powerline/Colorschemes/bronkowColors.vim
+ru colors/bronkow/original/powerline_colors.vim
 " order of items [fg, bg, style]
-let g:Powerline#Colorschemes#cubuntuLightAlt#colorscheme = Pl#Colorscheme#Init([
+let g:Powerline#Colorschemes#bronkowLight#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
     \ 'n': ['white'   , 'greyLr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['white'   , 'greenD'  ],
-    \ 'i': ['white'   , 'blue'    ],
-    \ 'v': ['white'   , 'orangeLr'],
+    \ 'n': ['greenL'  , 'greenD'  ],
+    \ 'i': ['blueLr'  , 'blue'    ],
+    \ 'v': ['orangeLr', 'orangeD' ],
     \ 'r': ['white'   , 'red'     ],
-    \ 'N': ['greyL'   , 'greyLr'  ],
+    \ 'N': ['greyLr'  , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.filepath'], {
-    \ 'n': ['greyLr' ],
+    \ 'n': ['grey'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLst' , 'greyL'    , ['bold']],
-    \ 'N': ['greyLr'  , 'greyL'   ],
+    \ 'n': ['greyD'   , 'greyL'   ],
+    \ 'N': ['grey'    , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['white'   , 'yellowL' ],
-    \ 'N': ['yellowL' , 'greyL'   ],
+    \ 'n': ['grey'    , 'yellowD' ],
+    \ 'N': ['yellowDr', 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenL'  , ['bold']  ],
+    \ 'n': ['yellowDr', ['bold']  ],
     \ }),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-    \ 'n': ['greyLr'  , 'greyL'   ],
+    \ 'n': ['grey'    , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
-    \ 'n': ['green'   , 'greyL'   ],
-    \ 'i': ['blueDr'  , 'greyL'   ],
-    \ 'v': ['orangeLr', 'greyL'   ],
-    \ 'r': ['redLr'   , 'redDr'   ],
-    \ 'N': ['greyL'   , 'greyLr'  ],
+    \ 'n': ['greenD'  , 'greyL'   ],
+    \ 'i': ['blueD'   , 'greyL'   ],
+    \ 'v': ['orangeDr', 'greyL'   ],
+    \ 'r': ['redL'    , 'greyL'   ],
+    \ 'N': ['greyL'   , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo'], {
     \ 'n': ['greenL'  , 'greenD'   , ['bold']],
-    \ 'i': ['blue'    , 'blueDr'   , ['bold']],
-    \ 'v': ['orangeD' , 'orangeLr' , ['bold']],
-    \ 'r': ['redL'    , 'grey'     , ['bold']],
+    \ 'i': ['blueLr'  , 'blue'     , ['bold']],
+    \ 'v': ['orangeLr', 'orangeD'  , ['bold']],
+    \ 'r': ['redLr'   , 'redD'     , ['bold']],
     \ 'N': ['greyLr'  , 'greyL'   ],
     \ }),
   \
@@ -65,7 +66,7 @@ let g:Powerline#Colorschemes#cubuntuLightAlt#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['paste_indicator', 'ws_marker'], {
-    \ 'n': ['greyL'   , 'yellowL' ],
+    \ 'n': ['yellowLr', 'yellowDr'],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {

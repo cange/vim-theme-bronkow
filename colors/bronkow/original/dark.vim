@@ -1,4 +1,4 @@
-let g:Powerline_colorscheme = 'cubuntuDark'
+let g:Powerline_colorscheme = 'bronkowDark'
 " on the fly theme reload
 if exists('g:Powerline_loaded')
   call Pl#ReloadColorscheme()
@@ -12,20 +12,20 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.light.hex    . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyDst     . g:fgGreyLr     . g:none
-exe "hi! Comment       " . g:bgNone        . g:fgGreyL      . g:none
+exe "hi! Normal        " . g:bgGreyDst     . g:fgPurpleLr   . g:none
+exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
 exe "hi! Constant      " . g:bgNone        . g:fgPurpleLr   . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlue       . g:none
-exe "hi! Statement     " . g:bgNone        . g:fgCyan       . g:bold
+exe "hi! Statement     " . g:bgNone        . g:fgBlueL      . g:bold
 exe "hi! PreProc       " . g:bgNone        . g:fgYellow     . g:none
 exe "hi! Type          " . g:bgNone        . g:fgGreenD     . g:none
-exe "hi! Special       " . g:bgNone        . g:fgCyanL      . g:none
+exe "hi! Special       " . g:bgNone        . g:fgBlue       . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
-exe "hi! Error         " . g:bgRedD        . g:fgGreyLr     . g:none
-exe "hi! Todo          " . g:bgYellowD     . g:fgGreyD      . g:none
-exe "hi! MatchParen    " . g:bgCyanDr      . g:fgGreyLr     . g:bold
+exe "hi! Error         " . g:bgGreyD       . g:fgRedDr      . g:none
+exe "hi! Todo          " . g:bgGreyD       . g:fgYellow     . g:none
+exe "hi! MatchParen    " . g:bgBlueD       . g:fgGreyLr     . g:bold
 " Invisible character colors
 exe "hi! NonText       " . g:bgNone        . g:fgGreyD      . g:none
 exe "hi! SpecialKey    " . g:bgNone        . g:fgGreyD      . g:none
@@ -33,17 +33,17 @@ exe "hi! Title         " . g:bgNone        . g:fgRedD       . g:none
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen       . g:fgInvert     . g:none
 exe "hi! CursorColumn  " . g:bgRed         . g:fgNone       . g:none
-exe "hi! CursorLine    " . g:bgBlack       . g:fgNone       . g:none
+exe "hi! CursorLine    " . g:bgNone        . g:fgNone       . g:bold
 " == Cursors ==
-exe "hi! Cursor        " . g:bgGreenDr     . g:fgGreyDst
+exe "hi! Cursor        " . g:bgGreenD      . g:fgGreyDst
 exe "hi! iCursor       " . g:bgGreyLr      . g:none
-exe "hi! vCursor       " . g:bgOrangeL     . g:fgGreyDst    . g:none
+exe "hi! vCursor       " . g:bgOrangeD     . g:fgGreyLst    . g:bold
 exe "hi! rCursor       " . g:bgWhite       . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgGreyD       . g:fgGreyDst
+exe "hi! Visual        " . g:bgGreyD       . g:fgGreyDst    . g:none
 exe "hi! VisualNOS     " . g:bgGreyD       . g:fgGreyDst    . g:none
-exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreyDr
-exe "hi! Search        " . g:bgGreenDr     . g:fgGreyLr
+exe "hi! IncSearch     " . g:bgGreen       . g:fgGreyLst    . g:none
+exe "hi! Search        " . g:bgGreenD      . g:fgBlack      . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyLr
@@ -51,12 +51,12 @@ exe "hi! PmenuSel      " . g:bgBlueDr      . g:fgGreyLr
 exe "hi! PMenuSbar     " . g:bgGrey
 exe "hi! PMenuThumb    " . g:bgBlueD
 " -- vertical separator line --
-exe "hi! Folded        " . g:bgGreyD       . g:fgGreyL      . g:none
-exe "hi! FoldColumn    " . g:bgGreyD       . g:fgGreyL      . g:none
-exe "hi! VertSplit     " . g:bgGrey        . g:fgGrey       . g:none
+exe "hi! Folded        " . g:bgGreyDr      . g:fgGrey       . g:none
+exe "hi! FoldColumn    " . g:bgGreyDr      . g:fgGrey       . g:none
+exe "hi! VertSplit     " . g:bgGreyD       . g:fgGreyD      . g:none
 exe "hi! LineNr        " . g:bgGreyDr      . g:fgGreyL      . g:none
 exe "hi! CursorLineNr  " . g:bgGreyD       . g:fgGreyLr     . g:bold
-exe "hi! ColorColumn   " . g:bgBlack       . g:fgNone       . g:none
+exe "hi! ColorColumn   " . g:bgGreyDr      . g:fgNone       . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGreyD       . g:fgGreyLr     . g:none
 exe "hi! StatusLineNC  " . g:bgGrey        . g:fgNone       . g:none
@@ -86,4 +86,6 @@ exe "hi! Ignore        "                   . g:fgInvert
 " == custom types by cange ==
 exe "hi! String        " . g:bgNone        . g:fgRedD       . g:none
 exe "hi! BString       " . g:bgNone        . g:fgRedD       . g:bold
-exe "hi! Function      " . g:bgNone        . g:fgCyanD      . g:bold
+exe "hi! Function      " . g:bgNone        . g:fgBlue       . g:bold
+" == JavaScript ==
+exe "hi! jsFuncCall    " . g:bgNone        . g:fgBlueL      . g:none

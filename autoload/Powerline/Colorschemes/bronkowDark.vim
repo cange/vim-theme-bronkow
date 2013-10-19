@@ -1,12 +1,12 @@
-ru colors/cubuntu/original/powerline_colors.vim
+ru colors/bronkow/original/powerline_colors.vim
 " order of items [fg, bg, style]
-let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
+let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
     \ 'n': ['white'   , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['greyLst' , 'greenDr' ],
+    \ 'n': ['greyLst' , 'greenD'  ],
     \ 'i': ['white'   , 'blueD'   ],
     \ 'v': ['white'   , 'orangeD' ],
     \ 'r': ['greyLr'  , 'redDr'   ],
@@ -24,12 +24,12 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['white'   , 'yellow'  ],
+    \ 'n': ['greyD'   , 'yellowDr'],
     \ 'N': ['yellow'  , 'greyD'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
-    \ 'n': ['greenD'  , ['bold']  ],
+    \ 'n': ['yellowDr', ['bold']  ],
     \}),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
@@ -38,24 +38,24 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
     \ 'n': ['greenD'  , 'grey'    ],
-    \ 'i': ['blueD'   , 'greyD'   ],
+    \ 'i': ['blue'    , 'greyD'   ],
     \ 'v': ['orange'  , 'greyD'   ],
     \ 'r': ['red'     , 'greyD'   ],
     \ 'N': ['greyD'   , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo'], {
-    \ 'n': ['green'   , 'greenDr'  , ['bold']],
-    \ 'i': ['blue'    , 'blueDr'   , ['bold']],
-    \ 'v': ['orangeL' , 'orangeDr' , ['bold']],
+    \ 'n': ['greenL'  , 'greenD'   , ['bold']],
+    \ 'i': ['blueL'   , 'blueD'    , ['bold']],
+    \ 'v': ['orangeLr', 'orangeD'  , ['bold']],
     \ 'r': ['redL'    , 'grey'     , ['bold']],
     \ 'N': ['greyD'   , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo.line.tot'], {
-    \ 'n': ['greenD' ],
-    \ 'i': ['blueD'  ],
-    \ 'v': ['orange' ],
+    \ 'n': ['greenDr'],
+    \ 'i': ['blueDr' ],
+    \ 'v': ['orangeL'],
     \ 'r': ['redL'   ],
     \ 'N': ['greyD'  ],
     \ }),
@@ -97,13 +97,13 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:prev', 'ctrlp:next'], {
-    \ 'n': ['cyanD'   , 'grey'    ],
+    \ 'n': ['blueD'   , 'grey'    ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:item'], {
-    \ 'n': ['cyanLr'  , 'cyanDr'   , ['bold']],
+    \ 'n': ['blueLr'  , 'blueDr'   , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:marked'], {
-    \ 'n': ['cyan'    , 'greyD'    , ['bold']],
+    \ 'n': ['blue'    , 'greyD'    , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:SPLIT'], {
     \ 'n': ['greyLr'  , 'greyDr'  ],
@@ -115,7 +115,7 @@ let g:Powerline#Colorschemes#cubuntuDark#colorscheme = Pl#Colorscheme#Init([
     \ 'n': ['grey'    , 'greyDr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:byfname'], {
-    \ 'n': ['greyDst' , 'cyanDr'],
+    \ 'n': ['greyDst' , 'blueDr'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['ctrlp:count'], {

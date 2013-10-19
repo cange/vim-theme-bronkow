@@ -1,16 +1,16 @@
 " Maintainer: Christian Angermann
-" Version: 1.0.8
+" Version: 1.1.0
 
-" Cubuntu Colorscheme for Vim
+" Bronkow Colorscheme for Vim
 "
 " Summary:
 " Color scheme with dark and light versions (GUI and 256 color terminal).
 
 " Description:
 " The color scheme is dark, by default. You can change this by setting the
-" g:cubuntu_style variable to "light" or "dark". Once the color scheme is
-" loaded, you can use the commands "CubuntuLight", "CubuntuDark",
-" "CubuntuLightAlt" or "CubuntuDarkAlt" to change schemes quickly.
+" g:bronkow_style variable to "light" or "dark". Once the color scheme is
+" loaded, you can use the commands "BronkowLight" or "BronkowDark",
+" to change schemes quickly.
 "
 " colorsupport.vim (vimscript #2682) is used to help with mapping the GUI
 " settings to the 256 terminal colors.
@@ -32,16 +32,16 @@
 "
 " Clone the repository:
 "
-"     git clone git://github.com/cange/vim-theme-cubuntu.git
-"     cd vim-theme-cubuntu/
+"     git clone git://github.com/cange/vim-theme-bronkow.git
+"     cd vim-theme-bronkow/
 "
 " and create a simlink to your Vim directory
 "
-"     ln -s colors/cubuntu/cubuntu.vim ~/.vim/colors/
+"     ln -s colors/bronkow/bronkow.vim ~/.vim/colors/
 "
 " and then put this line in your `.vimrc` file
 "
-"     colorscheme cubuntu
+"     colorscheme bronkow
 "
 " == Vimwiki Colors ==
 hi link VimwikiHeader1 BConstant
@@ -57,47 +57,41 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! CubuntuLightAlt let g:cubuntu_style = "light_alt" | colorscheme cubuntu
-command! CubuntuDarkAlt  let g:cubuntu_style = "dark_alt"  | colorscheme cubuntu
-command! CubuntuLight    let g:cubuntu_style = "light"     | colorscheme cubuntu
-command! CubuntuDark     let g:cubuntu_style = "dark"      | colorscheme cubuntu
+command! BronkowLight    let g:bronkow_style = "original_light"    | colorscheme bronkow
+command! BronkowDark     let g:bronkow_style = "original_dark"     | colorscheme bronkow
 
 " #############################################################################
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name="cubuntu"
+let colors_name="bronkow"
 
-set background=dark
+set background=light
 
 " set default theme
-if !exists("g:cubuntu_style")
-  let g:cubuntu_style="dark_alt"
+if !exists("g:bronkow_style")
+  let g:bronkow_style="original_light"
 endif
 
-ru colors/cubuntu/formats.vim
+ru colors/bronkow/formats.vim
+" FIXME try to load file dynamically
+" let style_type = split(g:bronkow_style, '_')
+" let directory = style_type[0]
+" let tone      = style_type[1]
 
-if g:cubuntu_style == "dark_alt"
-  let g:Powerline_colorscheme = 'cubuntuDarkAlt'
+" set background=s:tone
+" ru colors/bronkow/${directory}/colors.vim
+" ru colors/bronkow/${directory}/${tone}.vim
+
+if g:bronkow_style == "original_dark"
   set background=dark
-  ru colors/cubuntu/alternative/colors.vim
-  ru colors/cubuntu/alternative/dark.vim
-elseif g:cubuntu_style == "light_alt"
-  let g:Powerline_colorscheme = 'cubuntuLightAlt'
+  ru colors/bronkow/original/colors.vim
+  ru colors/bronkow/original/dark.vim
+elseif g:bronkow_style == "original_light"
   set background=light
-  ru colors/cubuntu/alternative/colors.vim
-  ru colors/cubuntu/alternative/light.vim
-elseif g:cubuntu_style == "dark"
-  let g:Powerline_colorscheme = 'cubuntuDark'
-  set background=dark
-  ru colors/cubuntu/original/colors.vim
-  ru colors/cubuntu/original/dark.vim
-elseif g:cubuntu_style == "light"
-  let g:Powerline_colorscheme = 'cubuntuLight'
-  set background=light
-  ru colors/cubuntu/original/colors.vim
-  ru colors/cubuntu/original/light.vim
+  ru colors/bronkow/original/colors.vim
+  ru colors/bronkow/original/light.vim
 endif
 
 " #############################################################################
@@ -109,7 +103,7 @@ set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 
 " ############################# POWERLINE THEMES ##############################
-let g:Powerline_theme   = 'cubuntu'
+let g:Powerline_theme   = 'bronkow'
 let g:Powerline_symbols = 'fancy'
 " on the fly theme reload
 if exists('g:Powerline_loaded')
