@@ -35,7 +35,7 @@ simple installation or you go the old fashion way:
   ```
 4. Restart Vim
 
-<!-- <img src="/colour-palette.png"> -->
+<img src="colour-palette.png">
 ## TODOs
 - adjust 256 based colors
 - add some screenshots
