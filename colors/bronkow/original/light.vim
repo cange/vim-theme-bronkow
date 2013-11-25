@@ -12,19 +12,19 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.darkest.hex  . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyLst     . g:fgPurple     . g:none
+exe "hi! Normal        " . g:bgGreyLst     . g:fgPurpleD    . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurpleD    . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgPurpleDr   . g:none
 " NERDTree bookmark
-exe "hi! Identifier    " . g:bgNone        . g:fgBlueD      . g:none
+exe "hi! Identifier    " . g:bgNone        . g:fgBlueDr     . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgBlue       . g:bold
 exe "hi! PreProc       " . g:bgNone        . g:fgPurpleDr   . g:none
-exe "hi! Type          " . g:bgNone        . g:fgGreenD     . g:none
+exe "hi! Type          " . g:bgNone        . g:fgGreenDr    . g:none
 exe "hi! Special       " . g:bgNone        . g:fgBlueD      . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
-exe "hi! Error         " . g:bgInvert      . g:fgRed        . g:bold
-exe "hi! Todo          " . g:bgInvert      . g:fgYellow     . g:bold
+exe "hi! Error         " . g:bgInvert      . g:fgRedD       . g:bold
+exe "hi! Todo          " . g:bgInherit     . g:fgRedDr      . g:bold
 exe "hi! MatchParen    " . g:bgBlueLr      . g:fgBlueDr     . g:bold
 " Invisible character colors
 exe "hi! NonText       " . g:bgNone        . g:fgGreyLr     . g:none
@@ -40,7 +40,7 @@ exe "hi! iCursor       " . g:bgBlueD                        . g:none
 exe "hi! rCursor       " . g:bgBlueL                        . g:none
 exe "hi! vCursor       " . g:bgOrangeD     . g:fgOrangeLr   . g:none
 " == Selections ==
-exe "hi! Visual        " . g:bgGreyLr      . g:fgPurple     . g:none
+exe "hi! Visual        " . g:bgGreyLr      . g:fgPurpleD    . g:none
 exe "hi! VisualNOS     " . g:bgGreyLr      . g:fgGrey       . g:none
 exe "hi! IncSearch     " . g:bgPurpleD     . g:fgWhite      . g:none
 exe "hi! Search        " . g:bgPurple      . g:fgGreyLst    . g:none
@@ -54,8 +54,8 @@ exe "hi! PMenuThumb    " . g:bgBlueD                        . g:none
 exe "hi! Folded        " . g:bgGreyLr      . g:fgGreyD      . g:none
 exe "hi! FoldColumn    " . g:bgGreyL       . g:fgGreyD      . g:none
 exe "hi! VertSplit     " . g:bgGreyL       . g:fgGreyL      . g:none
-exe "hi! LineNr        " . g:bgGreyLr      . g:fgGreyD      . g:none
-exe "hi! CursorLineNr  " . g:bgGrey        . g:fgGreyLst    . g:bold
+exe "hi! LineNr        " . g:bgGreyLr      . g:fgGrey       . g:none
+exe "hi! CursorLineNr  " . g:bgGreyL       . g:fgGreyLst    . g:bold
 exe "hi! ColorColumn   " . g:bgGreyLr      . g:fgNone       . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgGreyLr      . g:fgGrey       . g:none
@@ -76,16 +76,16 @@ exe "hi! DiffDelete    " . g:bgRedLr       . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
 " == Misc ==
 exe "hi! Directory     " . g:bgNone        . g:fgGreenDr    . g:none
-exe "hi! SignColumn    " . g:bgGreyL       . g:fgGreyDr     . g:none
+exe "hi! SignColumn    " . g:bgGreyLr      . g:fgGreyDr     . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueD      . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit    . g:none
 exe "hi! ErrorMsg      " . g:bgRedD        . g:fgGreyLst    . g:none
-exe "hi! WarningMsg    " . g:bgInherit     . g:fgOrange     . g:none
+exe "hi! WarningMsg    " . g:bgOrangeD     . g:fgGreyLst    . g:none
 exe "hi! Question      " . g:bgGreenD      . g:fgWhite      . g:none
 exe "hi! Ignore        "                   . g:fgInvert
 " == custom types by enterprise ==
-exe "hi! String        " . g:bgNone        . g:fgRedDr      . g:none
-exe "hi! BString       " . g:bgNone        . g:fgRedD       . g:bold
+exe "hi! String        " . g:bgNone        . g:fgOrangeDr   . g:none
+exe "hi! BString       " . g:bgNone        . g:fgOrangeDr   . g:bold
 exe "hi! Function      " . g:bgNone        . g:fgBlueD      . g:bold
 " == JavaScript ==
 exe "hi! jsFuncCall    " . g:bgNone        . g:fgBlueDr     . g:none

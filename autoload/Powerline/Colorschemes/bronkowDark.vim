@@ -2,7 +2,7 @@ ru colors/bronkow/original/powerline_colors.vim
 " order of items [fg, bg, style]
 let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
   \ Pl#Hi#Segments(['SPLIT'], {
-    \ 'n': ['white'   , 'grey'    ],
+    \ 'n': ['white'   , 'greyD'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
@@ -10,7 +10,7 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ 'i': ['white'   , 'blueD'   ],
     \ 'v': ['white'   , 'orangeD' ],
     \ 'r': ['greyLr'  , 'redDr'   ],
-    \ 'N': ['greyD'   , 'grey'    ],
+    \ 'N': ['greyDst' , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.filepath'], {
@@ -19,13 +19,13 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyLr'  , 'greyD'   ],
-    \ 'N': ['greyL'   , 'greyD'   ],
+    \ 'n': ['greyLr'  , 'greyDst' ],
+    \ 'N': ['greyL'   , 'greyDst' ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
-    \ 'n': ['greyD'   , 'yellowDr'],
-    \ 'N': ['yellow'  , 'greyD'   ],
+    \ 'n': ['greyDst' , 'yellowDr'],
+    \ 'N': ['yellow'  , 'greyDst' ],
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo.flags'], {
@@ -33,15 +33,15 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \}),
   \
   \ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-    \ 'n': ['grey'    , 'greyD'   ],
+    \ 'n': ['grey'    , 'greyDst' ],
     \ }),
   \
   \ Pl#Hi#Segments(['scrollpercent'], {
-    \ 'n': ['greenD'  , 'grey'    ],
-    \ 'i': ['blue'    , 'greyD'   ],
-    \ 'v': ['orange'  , 'greyD'   ],
-    \ 'r': ['red'     , 'greyD'   ],
-    \ 'N': ['greyD'   , 'grey'    ],
+    \ 'n': ['greenD'  , 'greyDst' ],
+    \ 'i': ['blue'    , 'greyDst' ],
+    \ 'v': ['orange'  , 'greyDst' ],
+    \ 'r': ['red'     , 'greyDst' ],
+    \ 'N': ['greyDst' , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo'], {
@@ -49,7 +49,7 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ 'i': ['blueL'   , 'blueD'    , ['bold']],
     \ 'v': ['orangeLr', 'orangeD'  , ['bold']],
     \ 'r': ['redL'    , 'grey'     , ['bold']],
-    \ 'N': ['greyD'   , 'grey'    ],
+    \ 'N': ['greyDst' , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['lineinfo.line.tot'], {
@@ -57,16 +57,16 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ 'i': ['blueDr' ],
     \ 'v': ['orangeL'],
     \ 'r': ['redL'   ],
-    \ 'N': ['greyD'  ],
+    \ 'N': ['greyDst'],
     \ }),
   \
   \ Pl#Hi#Segments(['errors'], {
-    \ 'n': ['red'     , 'grey'     , ['bold']],
+    \ 'n': ['red'     , 'greyD'    , ['bold']],
     \ 'N': ['greyL'   , 'blueDr'   , ['bold']],
     \ }),
   \
   \ Pl#Hi#Segments(['paste_indicator', 'ws_marker'], {
-    \ 'n': ['greyD'   , 'yellow'  ],
+    \ 'n': ['greyDst' , 'yellow'  ],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:static_str.name', 'command_t:static_str.name'], {
@@ -75,17 +75,17 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \ Pl#Hi#Segments(['gundo:static_str.buffer', 'command_t:raw.line'], {
     \ 'n': ['blueLr'  , 'blueDr'  ],
-    \ 'N': ['greyL'   , 'greyD'   ],
+    \ 'N': ['greyL'   , 'greyDst' ],
     \ }),
   \
   \ Pl#Hi#Segments(['gundo:SPLIT', 'command_t:SPLIT'], {
-    \ 'n': ['white'   , 'greyD'   ],
+    \ 'n': ['white'   , 'greyDst' ],
     \ 'N': ['greyL'   , 'grey'    ],
     \ }),
   \
   \ Pl#Hi#Segments(['nerdtree:raw.name', 'lustyexplorer:static_str.name', 'minibufexplorer:static_str.name', 'tagbar:static_str.name'], {
-    \ 'n': ['greyL'   , 'greyD'   ],
-    \ 'N': ['grey'    , 'greyD'   ],
+    \ 'n': ['greyL'   , 'greyDst' ],
+    \ 'N': ['grey'    , 'greyDst' ],
     \ }),
   \ Pl#Hi#Segments(['nerdtree:SPLIT', 'lustyexplorer:SPLIT', 'minibufexplorer:SPLIT', 'tagbar:SPLIT'], {
     \ 'n': ['greyL'   , 'greyDr'  ],
@@ -103,13 +103,13 @@ let g:Powerline#Colorschemes#bronkowDark#colorscheme = Pl#Colorscheme#Init([
     \ 'n': ['blueLr'  , 'blueDr'   , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:marked'], {
-    \ 'n': ['blue'    , 'greyD'    , ['bold']],
+    \ 'n': ['blue'    , 'greyDst'  , ['bold']],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:SPLIT'], {
     \ 'n': ['greyLr'  , 'greyDr'  ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:pwd'], {
-    \ 'n': ['greyL'   , 'greyD'   ],
+    \ 'n': ['greyL'   , 'greyDst' ],
     \ }),
   \ Pl#Hi#Segments(['ctrlp:focus'], {
     \ 'n': ['grey'    , 'greyDr'  ],

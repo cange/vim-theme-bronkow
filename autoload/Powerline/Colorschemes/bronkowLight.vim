@@ -7,10 +7,10 @@ let g:Powerline#Colorschemes#bronkowLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['branch', 'raw', 'filesize'], {
-    \ 'n': ['greenL'  , 'greenD'  ],
-    \ 'i': ['blueLr'  , 'blue'    ],
+    \ 'n': ['greenLr' , 'greenD'  ],
+    \ 'i': ['blueLr'  , 'blueDr'  ],
     \ 'v': ['orangeLr', 'orangeD' ],
-    \ 'r': ['white'   , 'red'     ],
+    \ 'r': ['greyLst' , 'redDr'   ],
     \ 'N': ['greyLr'  , 'grey'    ],
     \ }),
   \
@@ -19,8 +19,8 @@ let g:Powerline#Colorschemes#bronkowLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['fileinfo', 'filename', 'filepath'], {
-    \ 'n': ['greyD'   , 'greyL'   ],
-    \ 'N': ['grey'    , 'greyL'   ],
+    \ 'n': ['greyDr'  , 'greyL'   ],
+    \ 'N': ['greyD'   , 'greyL'   ],
     \ }),
   \
   \ Pl#Hi#Segments(['static_str'], {
@@ -61,7 +61,7 @@ let g:Powerline#Colorschemes#bronkowLight#colorscheme = Pl#Colorscheme#Init([
     \ }),
   \
   \ Pl#Hi#Segments(['errors'], {
-    \ 'n': ['red'     , 'greyLr'   , ['bold']],
+    \ 'n': ['redD'    , 'greyLr'   , ['bold']],
     \ 'N': ['greyL'   , 'blueDr'   , ['bold']],
     \ }),
   \
