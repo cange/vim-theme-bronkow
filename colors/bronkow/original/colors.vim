@@ -34,18 +34,18 @@ let g:colors = {
     \'lighter' : colors#buildToneDict('FFE9B9', '220'),
   \},
   \'green': {
-    \'darker'  : colors#buildToneDict('015A01', ' 64'),
-    \'dark'    : colors#buildToneDict('679C67', '100'),
-    \'default' : colors#buildToneDict('8CB58C', '106'),
-    \'light'   : colors#buildToneDict('B3CEB3', '148'),
-    \'lighter' : colors#buildToneDict('D9E6D9', '149'),
+    \'darker'  : colors#buildToneDict('2e5832', ' 64'),
+    \'dark'    : colors#buildToneDict('327a3a', '100'),
+    \'default' : colors#buildToneDict('38a747', '106'),
+    \'light'   : colors#buildToneDict('6ac777', '148'),
+    \'lighter' : colors#buildToneDict('9cdaa5', '149'),
   \},
   \'blue': {
-    \'darker'  : colors#buildToneDict('002B36', ' 52'),
-    \'dark'    : colors#buildToneDict('33555E', '124'),
-    \'default' : colors#buildToneDict('668086', '160'),
-    \'light'   : colors#buildToneDict('8C9FA4', '196'),
-    \'lighter' : colors#buildToneDict('B3C0C3', '202'),
+    \'darker'  : colors#buildToneDict('0c546e', ' 17'),
+    \'dark'    : colors#buildToneDict('3d768b', ' 24'),
+    \'default' : colors#buildToneDict('6d98a8', ' 25'),
+    \'light'   : colors#buildToneDict('91b2be', ' 67'),
+    \'lighter' : colors#buildToneDict('b7ccd4', ' 74'),
   \},
   \'purple': {
     \'darker'  : colors#buildToneDict('2C001E', ' 52'),
@@ -55,13 +55,13 @@ let g:colors = {
     \'lighter' : colors#buildToneDict('C0B3BC', '202'),
   \},
   \'grey': {
-    \'darkest' : colors#buildToneDict('333333', '233'),
-    \'darker'  : colors#buildToneDict('666666', '234'),
-    \'dark'    : colors#buildToneDict('8C8C8C', '236'),
-    \'default' : colors#buildToneDict('AEA79F', '238'),
-    \'light'   : colors#buildToneDict('BEB9B2', '243'),
-    \'lighter' : colors#buildToneDict('CECAC5', '250'),
-    \'lightest': colors#buildToneDict('E7E5E2', '254'),
+    \'darkest' : colors#buildToneDict('121110', '233'),
+    \'darker'  : colors#buildToneDict('353230', '234'),
+    \'dark'    : colors#buildToneDict('575450', '236'),
+    \'default' : colors#buildToneDict('8b867f', '238'),
+    \'light'   : colors#buildToneDict('aea79f', '243'),
+    \'lighter' : colors#buildToneDict('cecac5', '250'),
+    \'lightest': colors#buildToneDict('e7e5e2', '254'),
   \},
   \'black': {
     \'default' : colors#buildToneDict('000000', '0')
@@ -70,7 +70,6 @@ let g:colors = {
     \'default' : colors#buildToneDict('FFFFFF', '255')
   \}
 \}
-
 fun! colors#capitalize(string)
   let first = toupper(a:string[0])
   let rest = a:string[1:-1]
