@@ -12,7 +12,7 @@ if &term =~ "xterm\\|rxvt"
   autocmd VimLeave * silent !echo -ne    "\033]".g:colors.grey.light.hex    . "\007"
 endif
 
-exe "hi! Normal        " . g:bgGreyDr      . g:fgPurpleLr   . g:none
+exe "hi! Normal        " . g:bgGreyDst     . g:fgPurpleLr   . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
 exe "hi! Constant      " . g:bgNone        . g:fgPurpleLr   . g:none
 " NERDTree bookmark
@@ -42,8 +42,8 @@ exe "hi! rCursor       " . g:bgWhite                        . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgGreyD       . g:fgGreyDst    . g:none
 exe "hi! VisualNOS     " . g:bgGreyD       . g:fgGreyDst    . g:none
-exe "hi! IncSearch     " . g:bgGreen       . g:fgGreyLst    . g:none
-exe "hi! Search        " . g:bgGreenD      . g:fgGreyDst    . g:none
+exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreenLr    . g:none
+exe "hi! Search        " . g:bgGreenDr     . g:fgGreenL     . g:none
 " == UI ==
 " -- autocompletion dropdown --
 exe "hi! PMenu         " . g:bgGreyD       . g:fgGreyLr     . g:none
@@ -52,8 +52,8 @@ exe "hi! PMenuSbar     " . g:bgGrey                         . g:none
 exe "hi! PMenuThumb    " . g:bgBlueD                        . g:none
 " -- vertical separator line --
 exe "hi! Folded        " . g:bgGreyDr      . g:fgBlue       . g:none
-exe "hi! FoldColumn    " . g:bgGreyDst     . g:fgYellow     . g:none
-exe "hi! VertSplit     " . g:bgGreyDst     . g:fgGreyDst    . g:none
+exe "hi! FoldColumn    " . g:bgGreyDr      . g:fgYellow     . g:none
+exe "hi! VertSplit     " . g:bgGreyD       . g:fgGreyD      . g:none
 exe "hi! LineNr        " . g:bgGreyD       . g:fgGreyL      . g:none
 exe "hi! CursorLineNr  " . g:bgGreyDr      . g:fgGreyL      . g:bold
 exe "hi! ColorColumn   " . g:bgGreyD       . g:fgNone       . g:none
@@ -75,7 +75,7 @@ exe "hi! DiffChange    " . g:bgBlueLr      . g:fgBlueDr     . g:none
 exe "hi! DiffDelete    " . g:bgRedLr       . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone        . g:fgGreenD     . g:none
+exe "hi! Directory     " . g:bgNone        . g:fgGreen      . g:none
 exe "hi! SignColumn    " . g:bgGreyD       . g:fgGreyLr     . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueL      . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit    . g:none

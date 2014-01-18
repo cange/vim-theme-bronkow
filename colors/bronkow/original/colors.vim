@@ -55,7 +55,7 @@ let g:colors = {
     \'lighter' : colors#buildToneDict('C0B3BC', '202'),
   \},
   \'grey': {
-    \'darkest' : colors#buildToneDict('121110', '233'),
+    \'darkest' : colors#buildToneDict('232120', '233'),
     \'darker'  : colors#buildToneDict('353230', '234'),
     \'dark'    : colors#buildToneDict('575450', '236'),
     \'default' : colors#buildToneDict('8b867f', '238'),

@@ -14,7 +14,7 @@ endif
 
 exe "hi! Normal        " . g:bgGreyLst     . g:fgPurpleD    . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurpleDr   . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgGreenDr    . g:bold
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlueDr     . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgBlue       . g:bold
