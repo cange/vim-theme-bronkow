@@ -67,11 +67,11 @@ if exists("syntax_on")
 endif
 let colors_name="bronkow"
 
-set background=light
+set background=dark
 
 " set default theme
 if !exists("g:bronkow_style")
-  let g:bronkow_style="original_light"
+  let g:bronkow_style="original_dark"
 endif
 
 ru colors/bronkow/formats.vim
