@@ -14,12 +14,12 @@ endif
 
 exe "hi! Normal        " . g:bgGreyDst     . g:fgPurpleLr   . g:none
 exe "hi! Comment       " . g:bgNone        . g:fgGrey       . g:none
-exe "hi! Constant      " . g:bgNone        . g:fgPurpleLr   . g:none
+exe "hi! Constant      " . g:bgNone        . g:fgGreyLr     . g:none
 " NERDTree bookmark
 exe "hi! Identifier    " . g:bgNone        . g:fgBlue       . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgBlueL      . g:bold
-exe "hi! PreProc       " . g:bgNone        . g:fgYellow     . g:none
-exe "hi! Type          " . g:bgNone        . g:fgGreenD     . g:none
+exe "hi! PreProc       " . g:bgNone        . g:fgYellowD    . g:none
+exe "hi! Type          " . g:bgNone        . g:fgGreenL     . g:none
 exe "hi! Special       " . g:bgNone        . g:fgBlueLr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
@@ -29,7 +29,7 @@ exe "hi! MatchParen    " . g:bgBlueD       . g:fgGreyLr     . g:bold
 " Invisible character colors
 exe "hi! NonText       " . g:bgNone        . g:fgGreyD      . g:none
 exe "hi! SpecialKey    " . g:bgNone        . g:fgGreyD      . g:none
-exe "hi! Title         " . g:bgNone        . g:fgRedD       . g:none
+exe "hi! Title         " . g:bgNone        . g:fgOrangeD    . g:none
 " == Text Selection ==
 exe "hi! CursorIM      " . g:bgGreen       . g:fgInvert     . g:none
 exe "hi! CursorColumn  " . g:bgRed         . g:fgNone       . g:none

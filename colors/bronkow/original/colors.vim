@@ -41,11 +41,11 @@ let g:colors = {
     \'lighter' : colors#buildToneDict('9cdaa5', '149'),
   \},
   \'blue': {
-    \'darker'  : colors#buildToneDict('0c546e', ' 17'),
-    \'dark'    : colors#buildToneDict('3d768b', ' 24'),
-    \'default' : colors#buildToneDict('6d98a8', ' 25'),
-    \'light'   : colors#buildToneDict('91b2be', ' 67'),
-    \'lighter' : colors#buildToneDict('b7ccd4', ' 74'),
+    \'darker'  : colors#buildToneDict('002B36', ' 17'),
+    \'dark'    : colors#buildToneDict('33555E', ' 24'),
+    \'default' : colors#buildToneDict('668086', ' 25'),
+    \'light'   : colors#buildToneDict('8C9FA4', ' 67'),
+    \'lighter' : colors#buildToneDict('B3C0C3', ' 74'),
   \},
   \'purple': {
     \'darker'  : colors#buildToneDict('2C001E', ' 52'),
