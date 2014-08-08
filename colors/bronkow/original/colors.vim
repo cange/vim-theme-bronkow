@@ -13,11 +13,11 @@ endfun
 
 let g:colors = {
   \'red': {
-    \'darker'  : colors#buildToneDict('D93829', ' 55'),
-    \'dark'    : colors#buildToneDict('E16054', '124'),
-    \'default' : colors#buildToneDict('EEA59E', '160'),
-    \'light'   : colors#buildToneDict('F4C4Bf', '196'),
-    \'lighter' : colors#buildToneDict('F9E1DF', '202'),
+    \'darker'  : colors#buildToneDict('D93829', '124'),
+    \'dark'    : colors#buildToneDict('E16054', '  9'),
+    \'default' : colors#buildToneDict('EEA59E', '203'),
+    \'light'   : colors#buildToneDict('F4C4Bf', '210'),
+    \'lighter' : colors#buildToneDict('F9E1DF', '224'),
   \},
   \'orange': {
     \'darker'  : colors#buildToneDict('DD4814', ' 94'),
@@ -34,11 +34,11 @@ let g:colors = {
     \'lighter' : colors#buildToneDict('FFE9B9', '220'),
   \},
   \'green': {
-    \'darker'  : colors#buildToneDict('2e5832', ' 64'),
-    \'dark'    : colors#buildToneDict('327a3a', '100'),
-    \'default' : colors#buildToneDict('38a747', '106'),
-    \'light'   : colors#buildToneDict('6ac777', '148'),
-    \'lighter' : colors#buildToneDict('9cdaa5', '149'),
+    \'darker'  : colors#buildToneDict('2e5832',  ' 2'),
+    \'dark'    : colors#buildToneDict('327a3a',  '22'),
+    \'default' : colors#buildToneDict('38a747',  '28'),
+    \'light'   : colors#buildToneDict('6ac777',  '35'),
+    \'lighter' : colors#buildToneDict('9cdaa5',  '41'),
   \},
   \'blue': {
     \'darker'  : colors#buildToneDict('002B36', ' 17'),
