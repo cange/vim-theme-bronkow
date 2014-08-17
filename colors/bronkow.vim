@@ -84,13 +84,13 @@ ru colors/bronkow/formats.vim
 " ru colors/bronkow/${directory}/colors.vim
 " ru colors/bronkow/${directory}/${tone}.vim
 
+ru colors/bronkow/formats.vim
+ru colors/bronkow/original/colors.vim
 if g:bronkow_style == "original_dark"
   set background=dark
-  ru colors/bronkow/original/colors.vim
   ru colors/bronkow/original/dark.vim
 elseif g:bronkow_style == "original_light"
   set background=light
-  ru colors/bronkow/original/colors.vim
   ru colors/bronkow/original/light.vim
 endif
 

@@ -74,6 +74,11 @@ exe "hi! DiffAdd       " . g:bgGreenL      . g:fgGreenDr    . g:none
 exe "hi! DiffChange    " . g:bgBlueLr      . g:fgBlueDr     . g:none
 exe "hi! DiffDelete    " . g:bgRedLr       . g:fgRedDr      . g:none
 exe "hi! DiffText      " . g:bgOrangeLr    . g:fgOrangeDr   . g:none
+" == Git ==
+exe "hi! GitGutterAdd         " . g:bgGreyLr . g:fgGreenD   . g:none
+exe "hi! GitGutterChange      " . g:bgGreyLr . g:fgYellowDr . g:none
+exe "hi! GitGutterDelete      " . g:bgGreyLr . g:fgRedDr    . g:none
+exe "hi! GitGutterChangeDelete" . g:bgOrange . g:fgRedDr    . g:none
 " == Misc ==
 exe "hi! Directory     " . g:bgNone        . g:fgGreenDr    . g:none
 exe "hi! SignColumn    " . g:bgGreyLr      . g:fgGreyDr     . g:none
