@@ -49,10 +49,10 @@ let g:colors = {
   \},
   \'purple': {
     \'darker'  : colors#buildToneDict('2C001E', ' 52'),
-    \'dark'    : colors#buildToneDict('56334B', '124'),
-    \'default' : colors#buildToneDict('806678', '160'),
-    \'light'   : colors#buildToneDict('A08C9A', '196'),
-    \'lighter' : colors#buildToneDict('C0B3BC', '202'),
+    \'dark'    : colors#buildToneDict('56334B', ' 53'),
+    \'default' : colors#buildToneDict('806678', ' 95'),
+    \'light'   : colors#buildToneDict('A08C9A', '139'),
+    \'lighter' : colors#buildToneDict('C0B3BC', '250'),
   \},
   \'grey': {
     \'darkest' : colors#buildToneDict('232120', '233'),
