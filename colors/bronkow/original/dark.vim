@@ -42,7 +42,7 @@ exe "hi! rCursor       " . g:bgWhite                        . g:none
 " == Selections ==
 exe "hi! Visual        " . g:bgGreyD       . g:fgGreyDst    . g:none
 exe "hi! VisualNOS     " . g:bgGreyD       . g:fgGreyDst    . g:none
-exe "hi! IncSearch     " . g:bgGreenD      . g:fgGreenLr    . g:none
+exe "hi! IncSearch     " . g:bgGreenDr     . g:fgGreenLr    . g:none
 exe "hi! Search        " . g:bgGreenDr     . g:fgGreenL     . g:none
 " == UI ==
 " -- autocompletion dropdown --
