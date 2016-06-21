@@ -13,61 +13,46 @@ endfun
 
 let g:colors = {
   \'red': {
-    \'darker'  : colors#buildToneDict('D93829', '124'),
-    \'dark'    : colors#buildToneDict('E16054', '  9'),
-    \'default' : colors#buildToneDict('EEA59E', '203'),
-    \'light'   : colors#buildToneDict('F4C4Bf', '210'),
-    \'lighter' : colors#buildToneDict('F9E1DF', '224'),
+    \'darker'  : colors#buildToneDict('382127', ' 52'),
+    \'dark'    : colors#buildToneDict('813844', ' 95'),
+    \'default' : colors#buildToneDict('EB5055', '167'),
+    \'light'   : colors#buildToneDict('EB5368', '168')
   \},
   \'orange': {
-    \'darker'  : colors#buildToneDict('DD4814', ' 94'),
-    \'dark'    : colors#buildToneDict('E46D43', '130'),
-    \'default' : colors#buildToneDict('EB9172', '166'),
-    \'light'   : colors#buildToneDict('F0AC95', '208'),
-    \'lighter' : colors#buildToneDict('F5C8B9', '226'),
-  \},
-  \'yellow': {
-    \'darker'  : colors#buildToneDict('FFB515', ' 58'),
-    \'dark'    : colors#buildToneDict('FFC444', '101'),
-    \'default' : colors#buildToneDict('FFD373', '100'),
-    \'light'   : colors#buildToneDict('FFDE95', '190'),
-    \'lighter' : colors#buildToneDict('FFE9B9', '220'),
+    \'dark'    : colors#buildToneDict('9E4E24', '130'),
+    \'default' : colors#buildToneDict('D96629', '166'),
+    \'light'   : colors#buildToneDict('D99B28', '178')
   \},
   \'green': {
-    \'darker'  : colors#buildToneDict('2e5832',  ' 2'),
-    \'dark'    : colors#buildToneDict('327a3a',  '22'),
-    \'default' : colors#buildToneDict('38a747',  '28'),
-    \'light'   : colors#buildToneDict('6ac777',  '35'),
-    \'lighter' : colors#buildToneDict('9cdaa5',  '41'),
+    \'default' : colors#buildToneDict('70BF53', ' 77')
   \},
   \'blue': {
-    \'darker'  : colors#buildToneDict('002B36', ' 17'),
-    \'dark'    : colors#buildToneDict('33555E', ' 24'),
-    \'default' : colors#buildToneDict('668086', ' 25'),
-    \'light'   : colors#buildToneDict('8C9FA4', ' 67'),
-    \'lighter' : colors#buildToneDict('B3C0C3', ' 74'),
+    \'dark'    : colors#buildToneDict('132637', '234'),
+    \'default' : colors#buildToneDict('1D4F73', ' 24'),
+    \'light'   : colors#buildToneDict('46AFE3', ' 38')
   \},
   \'purple': {
-    \'darker'  : colors#buildToneDict('2C001E', ' 52'),
-    \'dark'    : colors#buildToneDict('56334B', ' 53'),
-    \'default' : colors#buildToneDict('806678', ' 95'),
-    \'light'   : colors#buildToneDict('A08C9A', '139'),
-    \'lighter' : colors#buildToneDict('C0B3BC', '250'),
+    \'dark'    : colors#buildToneDict('A260B1', '133'),
+    \'default' : colors#buildToneDict('DF80FF', '171')
   \},
-  \'grey': {
-    \'darkest' : colors#buildToneDict('232120', '233'),
-    \'darker'  : colors#buildToneDict('353230', '234'),
-    \'dark'    : colors#buildToneDict('575450', '236'),
-    \'default' : colors#buildToneDict('8b867f', '238'),
-    \'light'   : colors#buildToneDict('aea79f', '243'),
-    \'lighter' : colors#buildToneDict('cecac5', '250'),
-    \'lightest': colors#buildToneDict('e7e5e2', '254'),
+  \'shade': {
+    \'darkest' : colors#buildToneDict('14171A', '233'),
+    \'darker'  : colors#buildToneDict('181D20', '234'),
+    \'dark'    : colors#buildToneDict('2D333C', '235'),
+    \'default' : colors#buildToneDict('343C45', '236'),
+    \'light'   : colors#buildToneDict('5F7381', '237'),
+    \'lighter' : colors#buildToneDict('8FA1B2', '247'),
+    \'lightest': colors#buildToneDict('A9BACB', '250')
   \},
   \'black': {
-    \'default' : colors#buildToneDict('000000', '0')
+    \'default' : colors#buildToneDict('000000', '  0')
+  \},
+  \'grey': {
+    \'default' : colors#buildToneDict('757873', '243'),
+    \'light'   : colors#buildToneDict('888888', '244')
   \},
   \'white': {
-    \'default' : colors#buildToneDict('FFFFFF', '255')
+    \'default' : colors#buildToneDict('F5F7F0', '254')
   \}
 \}
 fun! colors#capitalize(string)
@@ -106,21 +91,7 @@ for colorKey in keys(g:colors)
   endfor
 endfor
 " #############################################################################
-let g:spRed      = "guisp=".g:colors.red.darker.hex
-let g:spYellowDr = "guisp=".g:colors.yellow.darker.hex
-let g:spYellowD  = "guisp=".g:colors.yellow.default.hex
-let g:spYellowLr = "guisp=".g:colors.yellow.lighter.hex
-
-" ################################# FORMATS ###################################
-let g:bgNone     = "guibg=NONE     ctermbg=NONE "
-let g:fgNone     = "guifg=NONE     ctermfg=NONE "
-let g:bgInherit  = "guibg=BG       ctermbg=BG   "
-let g:fgInherit  = "guifg=FG       ctermfg=FG   "
-let g:bgInvert   = "guibg=FG       ctermbg=FG   "
-let g:fgInvert   = "guifg=BG       ctermfg=BG   "
-let g:bold       = "gui=BOLD       cterm=BOLD   "
-let g:italic     = "gui=ITALIC     cterm=ITALIC "
-let g:italicBold = "gui=ITALIC,BOLD cterm=ITALIC,BOLD "
-let g:none       = "gui=NONE       cterm=NONE   "
-let g:underline  = "gui=UNDERLINE  cterm=UNDERLINE "
-let g:undercurl  = "gui=UNDERCURL  cterm=UNDERCURL "
+let g:spRed     = "guisp=".g:colors.red.dark.hex
+let g:spOrangeD = "guisp=".g:colors.orange.dark.hex
+let g:spOrange  = "guisp=".g:colors.orange.default.hex
+let g:spOrangeL = "guisp=".g:colors.orange.light.hex

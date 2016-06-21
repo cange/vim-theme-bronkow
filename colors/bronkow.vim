@@ -57,10 +57,10 @@ hi link TagbarAccessProtected Type
 hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-command! BronkowLight    let g:bronkow_style = "original_light"    | colorscheme bronkow
-command! BronkowDark     let g:bronkow_style = "original_dark"     | colorscheme bronkow
+command! BronkowLight let g:bronkow_style = "original_light" | colorscheme bronkow
+command! BronkowDark  let g:bronkow_style = "original_dark"  | colorscheme bronkow
 
-" #############################################################################
+" ==============================================================================
 hi clear
 if exists("syntax_on")
   syntax reset
@@ -94,7 +94,7 @@ elseif g:bronkow_style == "original_light"
   ru colors/bronkow/original/light.vim
 endif
 
-" #############################################################################
+" ==============================================================================
 " cursor shapes and behaviours
 set guicursor =n-c:block-Cursor
 set guicursor+=n-c:blinkon0
@@ -102,11 +102,16 @@ set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 
-" ############################# POWERLINE THEMES ##############################
-let g:Powerline_theme   = 'bronkow'
-let g:Powerline_symbols = 'fancy'
+" === POWERLINE THEMES =========================================================
 " on the fly theme reload
 if exists('g:Powerline_loaded')
+  let g:Powerline_theme   = 'bronkow'
+  let g:Powerline_symbols = 'fancy'
   call Pl#ClearCache()
   call Pl#ReloadColorscheme()
+  let g:Powerline_stl_path_style = 'short'
 endif
+
+" === AIRLINE THEMES ===========================================================
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'bronkow'

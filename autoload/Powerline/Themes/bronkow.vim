@@ -1,7 +1,7 @@
 " This theme is based on the default theme
+    " \ , 'paste_indicator'
 let g:Powerline#Themes#bronkow#theme = Pl#Theme#Create(
   \ Pl#Theme#Buffer(''
-    \ , 'paste_indicator'
     \ , 'fugitive:branch'
     \ , 'hgrev:branch'
     \ , 'fileinfo'

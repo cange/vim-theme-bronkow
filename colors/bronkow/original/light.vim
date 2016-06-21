@@ -1,8 +1,4 @@
 let g:Powerline_colorscheme = 'bronkowLight'
-" on the fly theme reload
-if exists('g:Powerline_loaded')
-  call Pl#ReloadColorscheme()
-endif
 
 " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
