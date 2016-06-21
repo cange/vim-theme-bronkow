@@ -13,43 +13,45 @@ endfun
 
 let g:colors = {
   \'red': {
-    \'darker'  : colors#buildToneDict('382127', ' 52'),
-    \'dark'    : colors#buildToneDict('813844', ' 95'),
-    \'default' : colors#buildToneDict('EB5055', '167'),
-    \'light'   : colors#buildToneDict('EB5368', '168')
+    \'dark'    : colors#buildToneDict('574250', ' 95'),
+    \'default' : colors#buildToneDict('EB5368', '167')
   \},
   \'orange': {
-    \'dark'    : colors#buildToneDict('9E4E24', '130'),
+    \'dark'    : colors#buildToneDict('B85E2F', '130'),
     \'default' : colors#buildToneDict('D96629', '166'),
     \'light'   : colors#buildToneDict('D99B28', '178')
   \},
   \'green': {
-    \'default' : colors#buildToneDict('70BF53', ' 77')
+    \'default' : colors#buildToneDict('10C66F', ' 77'),
+    \'light'   : colors#buildToneDict('00FF7F', ' 77')
   \},
   \'blue': {
-    \'dark'    : colors#buildToneDict('132637', '234'),
-    \'default' : colors#buildToneDict('1D4F73', ' 24'),
-    \'light'   : colors#buildToneDict('46AFE3', ' 38')
+    \'dark'    : colors#buildToneDict('475983', '234'),
+    \'default' : colors#buildToneDict('5675B9', ' 24'),
+    \'light'   : colors#buildToneDict('4399C4', ' 38'),
+    \'lighter' : colors#buildToneDict('BCB8D6', ' 38')
   \},
   \'purple': {
-    \'dark'    : colors#buildToneDict('A260B1', '133'),
-    \'default' : colors#buildToneDict('DF80FF', '171')
+    \'default' : colors#buildToneDict('BD73DB', '171')
   \},
   \'shade': {
-    \'darkest' : colors#buildToneDict('14171A', '233'),
-    \'darker'  : colors#buildToneDict('181D20', '234'),
-    \'dark'    : colors#buildToneDict('2D333C', '235'),
-    \'default' : colors#buildToneDict('343C45', '236'),
-    \'light'   : colors#buildToneDict('5F7381', '237'),
+    \'darkest' : colors#buildToneDict('181D20', '233'),
+    \'darker'  : colors#buildToneDict('272B35', '234'),
+    \'dark'    : colors#buildToneDict('393F4C', '235'),
+    \'default' : colors#buildToneDict('454D5D', '236'),
+    \'light'   : colors#buildToneDict('6D7782', '237'),
     \'lighter' : colors#buildToneDict('8FA1B2', '247'),
-    \'lightest': colors#buildToneDict('A9BACB', '250')
+    \'lightest': colors#buildToneDict('E9F4FE', '250')
   \},
   \'black': {
     \'default' : colors#buildToneDict('000000', '  0')
   \},
   \'grey': {
-    \'default' : colors#buildToneDict('757873', '243'),
-    \'light'   : colors#buildToneDict('888888', '244')
+    \'darker'  : colors#buildToneDict('797B81', '243'),
+    \'dark'    : colors#buildToneDict('888888', '243'),
+    \'default' : colors#buildToneDict('9BA0A6', '243'),
+    \'light'   : colors#buildToneDict('A3A5A9', '244'),
+    \'lighter' : colors#buildToneDict('CBCCCE', '244')
   \},
   \'white': {
     \'default' : colors#buildToneDict('F5F7F0', '254')
