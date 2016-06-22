@@ -13,7 +13,7 @@ endif
 exe "hi! Comment       " . g:bgNone        . g:fgGreyDr     . g:none
 exe "hi! Constant      " . g:bgNone        . g:fgShadeLst   . g:none
 exe "hi! Conditional   " . g:bgNone        . g:fgOrangeL    . g:none
-exe "hi! Identifier    " . g:bgNone        . g:fgBlueLr     . g:none
+exe "hi! Identifier    " . g:bgNone        . g:fgPurpleL    . g:none
 exe "hi! Normal        " . g:bgShadeD      . g:fgShadeLr    . g:none
 exe "hi! Number        " . g:bgNone        . g:fgRed        . g:none
 exe "hi! PreProc       " . g:bgNone        . g:fgGreyL      . g:none
@@ -21,7 +21,7 @@ exe "hi! Special       " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgGreenL     . g:none
 exe "hi! Operator      " . g:bgNone        . g:fgGreyL      . g:none
 exe "hi! String        " . g:bgNone        . g:fgShadeLst   . g:none
-exe "hi! Type          " . g:bgNone        . g:fgBlueLr     . g:none
+exe "hi! Type          " . g:bgNone        . g:fgPurpleL    . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 exe "hi! Error         " . g:bgRedD        . g:fgOrangeL    . g:none
@@ -105,13 +105,13 @@ exe "hi! jsModules         " . g:fgGreenL
 exe "hi! jsNull            " . g:fgRed
 exe "hi! jsThis            " . g:fgGreenL
 exe "hi! jsUndefined       " . g:fgRed
-exe "hi! jsFuncCall        " . g:fgBlueLr
+exe "hi! jsFuncCall        " . g:fgPurpleL
 
 " == JSON ==
 exe "hi! jsonKeyword   "  . g:fgBlue
 exe "hi! jsonNumber    "  . g:fgGreen
 " == HTML ==
-exe "hi! htmlArg "        . g:fgBlueLr
+exe "hi! htmlArg "        . g:fgPurpleL
 exe "hi! htmlTag "        . g:fgShadeLr
 exe "hi! htmlTagName "    . g:fgGreenL
 " exe "hi! htmlEndTag "     . g:fgRed
@@ -124,6 +124,15 @@ exe "hi! hamlFilter "           . g:fgPurple
 " == CSS ==
 exe "hi! cssAttr "              . g:fgRed
 exe "hi! cssAttributeSelector " . g:fgGreen
+" == SCSS ==
+exe "hi! scssIf                 " . g:fgGreenL
+exe "hi! scssImport             " . g:fgGreenL
+exe "hi! scssExtend             " . g:fgGreenL
+exe "hi! scssInclude            " . g:fgGreenL
+exe "hi! scssMixin              " . g:fgGreenL
+exe "hi! scssMixinName          " . g:fgShadeLst
+exe "hi! scssFunctionDefinition " . g:fgGreenL
+exe "hi! scssFunctionName       " . g:fgShadeLst
 " == NERDTree ==
 exe "hi! NERDTreeBookmark "        . g:fgShade
 exe "hi! NERDTreeBookmarkName "    . g:fgBlueL
