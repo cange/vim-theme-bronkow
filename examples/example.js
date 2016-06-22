@@ -17,6 +17,8 @@ export default class CardsResizer {
 
       $parent.css('height', height || $this.outerHeight())
     })
+    var foo = null;
+    var foo = undefined;
   }
 
   clearHeight () {

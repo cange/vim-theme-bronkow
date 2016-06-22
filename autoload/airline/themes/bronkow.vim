@@ -36,8 +36,8 @@ function! airline#themes#bronkow#refresh()
   let s:blueD     = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.dark.cterm     ), 'g': g:colors.blue.dark.hex      }
   let s:blue      = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.default.cterm  ), 'g': g:colors.blue.default.hex   }
   let s:blueL     = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.light.cterm    ), 'g': g:colors.blue.light.hex     }
-  let s:blueLr    = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.lighter.cterm  ), 'g': g:colors.blue.lighter.hex   }
   let s:purple    = {'t': s:ansi_colors ?   5 : (s:tty ? '5' : g:colors.purple.default.cterm), 'g': g:colors.purple.default.hex }
+  let s:purpleL   = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.purple.light.cterm  ), 'g': g:colors.purple.light.hex   }
   let s:black     = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : g:colors.black.default.cterm ), 'g': g:colors.black.default.hex  }
   let s:white     = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : g:colors.white.default.cterm ), 'g': g:colors.white.default.hex  }
 

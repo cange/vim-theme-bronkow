@@ -1,5 +1,5 @@
 " Check key colors with
-" :source $VIMRUNTIME/syntax/hitest.vim
+" :so $VIMRUNTIME/syntax/hitest.vim
 let g:Powerline_colorscheme = 'bronkowDark'
 
 " " ============================== define cursor ================================
@@ -19,7 +19,8 @@ exe "hi! Number        " . g:bgNone        . g:fgRed        . g:none
 exe "hi! PreProc       " . g:bgNone        . g:fgGreyL      . g:none
 exe "hi! Special       " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgGreenL     . g:none
-exe "hi! String        " . g:bgNone        . g:fgGreen      . g:none
+exe "hi! Operator      " . g:bgNone        . g:fgGreyL      . g:none
+exe "hi! String        " . g:bgNone        . g:fgShadeLst   . g:none
 exe "hi! Type          " . g:bgNone        . g:fgBlueLr     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
@@ -76,11 +77,11 @@ exe "hi! DiffDelete    " . g:bgNone . g:fgRed    . g:none
 exe "hi! DiffText      " . g:bgNone . g:fgOrange . g:none
 " == Git ==
 exe "hi! GitGutterAdd          " . g:bgNone      . g:fgGreenL    . g:none
-exe "hi! GitGutterChange       " . g:bgRedD      . g:fgOrangeL   . g:none
-exe "hi! GitGutterDelete       " . g:bgRedD      . g:fgRed       . g:none
-exe "hi! GitGutterChangeDelete " . g:bgRedD      . g:fgRed       . g:none
+exe "hi! GitGutterChange       " . g:bgNone      . g:fgOrangeL   . g:none
+exe "hi! GitGutterDelete       " . g:bgNone      . g:fgRed       . g:none
+exe "hi! GitGutterChangeDelete " . g:bgNone      . g:fgRed       . g:none
 " == Misc ==
-exe "hi! Directory     " . g:bgNone        . g:fgGreen      . g:none
+exe "hi! Directory     " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! SignColumn    " . g:bgShadeD      . g:fgShadeLr    . g:none
 exe "hi! MoreMsg       " . g:bgNone        . g:fgBlueL      . g:none
 exe "hi! ModeMsg       " . g:bgNone        . g:fgInherit    . g:none
@@ -89,41 +90,40 @@ exe "hi! WarningMsg    " . g:bgInherit     . g:fgOrangeL    . g:none
 exe "hi! Question      " . g:bgNone        . g:fgGreen      . g:none
 exe "hi! Ignore        "                   . g:fgInvert     . g:none
 " == JavaScript ==
-exe "hi! jsBooleanTrue  " . g:fgRed
-exe "hi! jsBooleanFalse " . g:fgRed
-exe "hi! jsFunction     " . g:fgGreenL
-exe "hi! jsThis         " . g:fgGreenL
- "exe "hi! jsFuncCall     " . g:fgBlueL
- "exe "hi! jsString     " . g:fgBlueL
- "exe "hi! jsObjectKey    " . g:fgBlueL
- "exe "hi! jsPrototype    " . g:fgBlueL
-" exe "hi! jsNull         " . g:fgRed
-" exe "hi! jsReturn       " . g:fgOrangeL
- "exe "hi! jsOperator     " . g:fgOrangeL
+exe "hi! jsBooleanFalse    " . g:fgRed
+exe "hi! jsBooleanTrue     " . g:fgRed
+exe "hi! jsClassDefinition " . g:fgShadeLst
+exe "hi! jsClassKeywords   " . g:fgGreenL
+exe "hi! jsImportContainer " . g:fgShadeLst
+exe "hi! jsFuncName        " . g:fgShadeLst
+exe "hi! jsFuncArgs        " . g:fgShadeLst
+exe "hi! jsConditional     " . g:fgGreenL
+exe "hi! jsReturn          " . g:fgGreenL
+exe "hi! jsFunction        " . g:fgGreenL
+exe "hi! jsModuleWords     " . g:fgGreenL
+exe "hi! jsModules         " . g:fgGreenL
+exe "hi! jsNull            " . g:fgRed
+exe "hi! jsThis            " . g:fgGreenL
+exe "hi! jsUndefined       " . g:fgRed
+exe "hi! jsFuncCall        " . g:fgBlueLr
+
 " == JSON ==
 exe "hi! jsonKeyword   "  . g:fgBlue
 exe "hi! jsonNumber    "  . g:fgGreen
 " == HTML ==
- exe "hi! htmlArg "        . g:fgBlueLr
- exe "hi! htmlString "     . g:fgShadeLst
- exe "hi! htmlTag "        . g:fgShadeLr
- exe "hi! htmlTagName "    . g:fgGreenL
+exe "hi! htmlArg "        . g:fgBlueLr
+exe "hi! htmlTag "        . g:fgShadeLr
+exe "hi! htmlTagName "    . g:fgGreenL
 " exe "hi! htmlEndTag "     . g:fgRed
 " exe "hi! htmlH1 "         . g:fgRed
 " exe "hi! htmlTagN "       . g:fgPurple
 " -- markup engine: slim --
-exe "hi! slimTag " . g:fgPurple
+exe "hi! slimTag "              . g:fgPurple
 " -- markup engine: haml --
-exe "hi! hamlFilter " . g:fgPurple
+exe "hi! hamlFilter "           . g:fgPurple
 " == CSS ==
- exe "hi! cssAttr "              . g:fgRed
+exe "hi! cssAttr "              . g:fgRed
 exe "hi! cssAttributeSelector " . g:fgGreen
-" exe "hi! cssPseudoClassFn "     . g:fgPurple
-" exe "hi! cssTagName "           . g:fgPurple
-" exe "hi! cssMediaKeyword "      . g:fgBlueLr
-" exe "hi! cssMediaType "         . g:fgRed
-" exe "hi! cssMediaProp "         . g:fgBlueLr
-" exe "hi! cssColor "             . g:fgRed
 " == NERDTree ==
 exe "hi! NERDTreeBookmark "        . g:fgShade
 exe "hi! NERDTreeBookmarkName "    . g:fgBlueL
