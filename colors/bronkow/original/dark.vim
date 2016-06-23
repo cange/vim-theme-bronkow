@@ -21,7 +21,7 @@ exe "hi! Special       " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgGreenL     . g:none
 exe "hi! Operator      " . g:bgNone        . g:fgGreyL      . g:none
 exe "hi! String        " . g:bgNone        . g:fgShadeLst   . g:none
-exe "hi! Type          " . g:bgNone        . g:fgPurpleL    . g:none
+exe "hi! Type          " . g:bgNone        . g:fgGreenL     . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 exe "hi! Error         " . g:bgRedD        . g:fgOrangeL    . g:none
@@ -109,14 +109,12 @@ exe "hi! jsFuncCall        " . g:fgPurpleL
 
 " == JSON ==
 exe "hi! jsonKeyword   "  . g:fgBlue
-exe "hi! jsonNumber    "  . g:fgGreen
+exe "hi! jsonNumber    "  . g:fgRed
 " == HTML ==
 exe "hi! htmlArg "        . g:fgPurpleL
 exe "hi! htmlTag "        . g:fgShadeLr
 exe "hi! htmlTagName "    . g:fgGreenL
-" exe "hi! htmlEndTag "     . g:fgRed
-" exe "hi! htmlH1 "         . g:fgRed
-" exe "hi! htmlTagN "       . g:fgPurple
+exe "hi! htmlH1 "         . g:fgShadeLr
 " -- markup engine: slim --
 exe "hi! slimTag "              . g:fgPurple
 " -- markup engine: haml --
@@ -125,14 +123,18 @@ exe "hi! hamlFilter "           . g:fgPurple
 exe "hi! cssAttr "              . g:fgRed
 exe "hi! cssAttributeSelector " . g:fgGreen
 " == SCSS ==
+exe "hi! scssElse               " . g:fgGreenL
+exe "hi! scssExtend             " . g:fgGreenL
+exe "hi! scssFunctionDefinition " . g:fgGreenL
+exe "hi! scssFunctionName       " . g:fgShadeLst
 exe "hi! scssIf                 " . g:fgGreenL
 exe "hi! scssImport             " . g:fgGreenL
-exe "hi! scssExtend             " . g:fgGreenL
 exe "hi! scssInclude            " . g:fgGreenL
 exe "hi! scssMixin              " . g:fgGreenL
 exe "hi! scssMixinName          " . g:fgShadeLst
-exe "hi! scssFunctionDefinition " . g:fgGreenL
-exe "hi! scssFunctionName       " . g:fgShadeLst
+exe "hi! scssSelectorChar       " . g:fgGreenL
+exe "hi! scssSelectorName       " . g:fgGreenL
+
 " == NERDTree ==
 exe "hi! NERDTreeBookmark "        . g:fgShade
 exe "hi! NERDTreeBookmarkName "    . g:fgBlueL
