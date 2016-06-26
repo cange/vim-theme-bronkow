@@ -21,7 +21,7 @@ exe "hi! Special       " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! Statement     " . g:bgNone        . g:fgGreenL     . g:none
 exe "hi! Operator      " . g:bgNone        . g:fgGreyL      . g:none
 exe "hi! String        " . g:bgNone        . g:fgShadeLst   . g:none
-exe "hi! Type          " . g:bgNone        . g:fgGreenL     . g:none
+exe "hi! Type          " . g:bgNone        . g:fgPurpleL    . g:none
 " == Text Markup ==
 exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 exe "hi! Error         " . g:bgRedD        . g:fgOrangeL    . g:none
@@ -75,11 +75,11 @@ exe "hi! DiffAdd       " . g:bgNone . g:fgGreen  . g:none
 exe "hi! DiffChange    " . g:bgNone . g:fgBlueL  . g:none
 exe "hi! DiffDelete    " . g:bgNone . g:fgRed    . g:none
 exe "hi! DiffText      " . g:bgNone . g:fgOrange . g:none
-" == Git ==
-exe "hi! GitGutterAdd          " . g:bgNone      . g:fgGreenL    . g:none
-exe "hi! GitGutterChange       " . g:bgNone      . g:fgOrangeL   . g:none
-exe "hi! GitGutterDelete       " . g:bgNone      . g:fgRed       . g:none
-exe "hi! GitGutterChangeDelete " . g:bgNone      . g:fgRed       . g:none
+" == UI – Git ==
+exe "hi! GitGutterAdd          " . g:bgNone      . g:fgGreen   . g:none
+exe "hi! GitGutterChange       " . g:bgNone      . g:fgOrangeL . g:none
+exe "hi! GitGutterDelete       " . g:bgNone      . g:fgRed     . g:none
+exe "hi! GitGutterChangeDelete " . g:bgNone      . g:fgRed     . g:none
 " == Misc ==
 exe "hi! Directory     " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! SignColumn    " . g:bgShadeD      . g:fgShadeLr    . g:none
@@ -120,8 +120,14 @@ exe "hi! slimTag "              . g:fgPurple
 " -- markup engine: haml --
 exe "hi! hamlFilter "           . g:fgPurple
 " == CSS ==
-exe "hi! cssAttr "              . g:fgRed
-exe "hi! cssAttributeSelector " . g:fgGreen
+exe "hi! cssAttr                " . g:fgRed
+exe "hi! cssValueTime           " . g:fgRed
+exe "hi! cssValueNumber           " . g:fgRed
+exe "hi! cssAttributeSelector   " . g:fgGreen
+exe "hi! cssClassName           " . g:fgGreenL
+exe "hi! cssIdentifier          " . g:fgGreenL
+exe "hi! cssFunction            " . g:fgRed
+exe "hi! cssFunctionName        " . g:fgRed
 " == SCSS ==
 exe "hi! scssElse               " . g:fgGreenL
 exe "hi! scssExtend             " . g:fgGreenL
