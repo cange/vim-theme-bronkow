@@ -47,55 +47,39 @@ function! airline#themes#bronkow#refresh()
   " the specific gui and terminal colors from the base color dicts.
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
-  if s:background == 'dark'
-    let s:N1 = [s:shadeLst, s:blue, '']
-    let s:N2 = [s:shadeLst, (s:tty ? s:shadeD : s:shade), '']
-    let s:N3 = [s:shadeL, s:shadeDr, '']
-  else
-    let s:N1 = [s:shadeLst, s:shade, 'bold']
-    let s:N2 = [(s:tty ? s:shadeD : s:shadeLst), s:shadeLr, '']
-    let s:N3 = [s:shadeLr, s:shadeLst, '']
-  endif
+  "if s:background == 'dark'
+    let s:N1 =  [s:blueL, s:shadeDr, '']
+    let s:N2 =  [s:shadeLst, (s:tty ? s:shadeLr : s:shadeD), '']
+    let s:N3 =  [s:shadeLr, s:shadeDr, '']
+    let s:NM =  [s:orangeL, s:shadeDr, '']
+    let s:NMi = [s:red, s:green, '']
+    " Inactive, according to VertSplit in bronkow
+    let s:IA =  [s:shadeL, s:shadeDr, '']
+  "endif
 
   let s:NF = [s:orange, s:N3[1], '']
   let s:NW = [s:white, s:orange, '']
 
-  if s:background == 'dark'
-    let s:NM =  [s:orangeL, s:N3[1], '']
-    let s:NMi = [s:shadeLst, s:N3[1], '']
-  else
-    let s:NM =  [s:shadeD, s:N3[1], '']
-    let s:NMi = [s:shadeDr, s:N3[1], '']
-  endif
-
   " Insert mode
-  let s:I1 = [s:shadeD, s:green, '']
+  let s:I1 = [s:green, s:shadeDr, '']
   let s:I2 = s:N2
   let s:I3 = s:N3
   let s:IF = s:NF
   let s:IM = s:NM
 
   " Visual mode
-  let s:V1 = [s:white, s:orange, '']
+  let s:V1 = [s:orangeL, s:shadeDr, '']
   let s:V2 = s:N2
   let s:V3 = s:N3
   let s:VF = s:NF
   let s:VM = s:NM
 
   " Replace mode
-  let s:R1 = [s:shadeLr, s:redD, '']
+  let s:R1 = [s:red, s:shadeDr, '']
   let s:R2 = s:N2
   let s:R3 = s:N3
   let s:RM = s:NM
   let s:RF = s:NF
-
-  " Inactive, according to VertSplit in bronkow
-  " (bg dark: shade; bg light: base0)
-  if s:background == 'dark'
-    let s:IA = [s:shadeDr, s:shade, '']
-  else
-    let s:IA = [s:shadeLr s:shadeL, '']
-  endif
 
   " let airline#extensions#branch#format
 
@@ -116,6 +100,9 @@ function! airline#themes#bronkow#refresh()
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]])
+        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
+        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
+        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]])
   let g:airline#themes#bronkow#palette.inactive_modified = {
         \ 'airline_c': [s:NMi[0].g, '', s:NMi[0].t, '', s:NMi[2]]}
 
@@ -125,11 +112,11 @@ function! airline#themes#bronkow#refresh()
         \ [s:N3[0].g, s:N3[1].g, s:N3[0].t, s:N3[1].t, s:N3[2]])
 
   let g:airline#themes#bronkow#palette.normal.airline_warning = [
-        \ s:shadeDr.g, s:orange.g, s:shadeDr.t, s:orange.t, s:NW[2]]
+        \ s:shadeDr.g, s:shadeDr.g, s:shadeDr.t, s:orange.t, s:NW[2]]
         " \ s:NW[0].g, s:NW[1].g, s:NW[0].t, s:NW[1].t, s:NW[2]]
 
   let g:airline#themes#bronkow#palette.normal.airline_error = [
-        \ s:shadeDr.g, s:purple.g, s:shadeDr.t, s:purple.t, s:NW[2]]
+        \ s:shadeDr.g, s:shadeDr.g, s:shadeDr.t, s:purple.t, s:NW[2]]
 
   let g:airline#themes#bronkow#palette.normal_modified = {
         \ 'airline_c': [s:NM[0].g, s:NM[1].g,
@@ -193,9 +180,9 @@ function! airline#themes#bronkow#refresh()
 
   " CtrlP plugin
   let g:airline#themes#bronkow#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-        \ [ s:shadeL.g, s:shadeD.g,  s:shadeL.t, s:shadeD.t,  ''     ],
+        \ [ s:shade.g,  s:shadeDr.g, s:shade.t,  s:shadeDr.t, ''     ],
         \ [ s:shade.g,  s:shadeDr.g, s:shade.t,  s:shadeDr.t, 'bold' ],
-        \ [ s:blueL.g,  s:blue.g,    s:blueL.t,  s:blue.t,    'bold' ])
+        \ [ s:greyLr.g, s:blue.g,    s:greyLr.t, s:blue.t,    'bold' ])
 
 endfunction
 

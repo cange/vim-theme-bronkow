@@ -29,6 +29,7 @@ let g:colors = {
     \'dark'    : colors#buildToneDict('475983', '234'),
     \'default' : colors#buildToneDict('5675B9', ' 24'),
     \'light'   : colors#buildToneDict('4399C4', ' 38'),
+    \'lighter' : colors#buildToneDict('B9D7FD', ' 38'),
   \},
   \'purple': {
     \'default' : colors#buildToneDict('BD73DB', '171'),
@@ -41,7 +42,7 @@ let g:colors = {
     \'default' : colors#buildToneDict('454D5D', '236'),
     \'light'   : colors#buildToneDict('6D7782', '237'),
     \'lighter' : colors#buildToneDict('8FA1B2', '247'),
-    \'lightest': colors#buildToneDict('E9F4FE', '250')
+    \'lightest': colors#buildToneDict('A9BACB', '250')
   \},
   \'black': {
     \'default' : colors#buildToneDict('000000', '  0')
@@ -49,9 +50,9 @@ let g:colors = {
   \'grey': {
     \'darker'  : colors#buildToneDict('797B81', '243'),
     \'dark'    : colors#buildToneDict('888888', '243'),
-    \'default' : colors#buildToneDict('9BA0A6', '243'),
-    \'light'   : colors#buildToneDict('A9BACB', '244'),
-    \'lighter' : colors#buildToneDict('CBCCCE', '244')
+    \'default' : colors#buildToneDict('B0B0B0', '243'),
+    \'light'   : colors#buildToneDict('CBCCCE', '244'),
+    \'lighter' : colors#buildToneDict('E9F4FE', '244')
   \},
   \'white': {
     \'default' : colors#buildToneDict('F5F7F0', '254')

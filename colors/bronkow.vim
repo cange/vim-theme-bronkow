@@ -74,7 +74,6 @@ if !exists("g:bronkow_style")
   let g:bronkow_style="original_dark"
 endif
 
-ru colors/bronkow/formats.vim
 " FIXME try to load file dynamically
 " let style_type = split(g:bronkow_style, '_')
 " let directory = style_type[0]
@@ -84,8 +83,7 @@ ru colors/bronkow/formats.vim
 " ru colors/bronkow/${directory}/colors.vim
 " ru colors/bronkow/${directory}/${tone}.vim
 
-ru colors/bronkow/formats.vim
-ru colors/bronkow/original/colors.vim
+
 if g:bronkow_style == "original_dark"
   set background=dark
   ru colors/bronkow/original/dark.vim

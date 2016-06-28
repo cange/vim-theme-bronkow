@@ -1,5 +1,8 @@
 let g:Powerline_colorscheme = 'bronkowLight'
 
+ru colors/bronkow/formats.vim
+ru colors/bronkow/original/colors.vim
+
 " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
   let &t_SI                       = "\<Esc>]12;".g:colors.grey.dark.hex     . "\x7"
