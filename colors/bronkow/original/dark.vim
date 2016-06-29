@@ -25,7 +25,7 @@ exe "hi! CursorLineNr  " . g:bgShade    . g:fgShadeLr    . g:bold
 exe "hi! FoldColumn    " . g:bgRed      . g:fgOrange     . g:none
 exe "hi! Folded        " . g:bgRed      . g:fgBlue       . g:none
 exe "hi! LineNr        " . g:bgShadeD   . g:fgShadeL     . g:none
-exe "hi! VertSplit     " . g:bgShadeDr  . g:fgShadeDr    . g:none
+exe "hi! VertSplit     " . g:bgNone  . g:fgShadeDr    . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgShadeDr     . g:fgShadeLr    . g:none
 exe "hi! StatusLineNC  " . g:bgShadeDr     . g:fgNone       . g:none
@@ -52,23 +52,20 @@ exe "hi! GitGutterChangeDelete " . g:bgNone      . g:fgRed     . g:none
 exe "hi! Directory             " . g:bgNone      . g:fgShadeLr . g:none
 exe "hi! SignColumn            " . g:bgShadeD    . g:fgShadeLr . g:none
 exe "hi! MoreMsg               " . g:bgNone      . g:fgBlueL   . g:none
-"exe "hi! ModeMsg               " . g:bgNone      . g:fgInherit . g:none
+exe "hi! ModeMsg               " . g:bgNone                    . g:none
 exe "hi! ErrorMsg              " . g:bgRedD      . g:fgOrangeL . g:none
-"exe "hi! WarningMsg            " . g:bgInherit   . g:fgOrangeL . g:none
+exe "hi! WarningMsg            " .               . g:fgOrangeL . g:none
 exe "hi! Question              " . g:bgNone      . g:fgGreen   . g:none
-"exe "hi! Ignore                "                 . g:fgInvert  . g:none
 " -- Text Selection --
-"exe "hi! CursorIM              " . g:bgWhite     . g:fgInvert  . g:none
 exe "hi! CursorColumn          " . g:bgRed       . g:fgNone    . g:none
 exe "hi! CursorLine            " . g:bgShade     . g:fgNone    . g:bold
 " -- Cursors --
 exe "hi! Cursor                " . g:bgGreyLr                  . g:none
 exe "hi! iCursor               " . g:bgGreen                   . g:none
-exe "hi! vCursor               " . g:bgGreenL    . g:fgBlack
+exe "hi! vCursor               " . g:bgOrangeL   . g:fgBlack
 exe "hi! rCursor               " . g:bgWhite                   . g:none
 " -- Selections --
-exe "hi! Visual                " . g:bgBlueLr    . g:fgNone  . g:none
-"exe "hi! VisualNOS             " . g:bgShadeL    . g:fgInvert  . g:bold
+exe "hi! Visual                " . g:bgBlueLr    . g:fgBlack   . g:none
 exe "hi! Search                " . g:bgGrey      . g:fgShadeDr . g:none
 exe "hi! IncSearch             " . g:bgBlack     . g:fgWhite   . g:none
 " -- NERDTree --

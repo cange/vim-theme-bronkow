@@ -48,34 +48,34 @@ function! airline#themes#bronkow#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
   "if s:background == 'dark'
-    let s:N1 =  [s:blueL, s:shadeDr, '']
+    let s:N1 =  [s:shadeDr, s:blueL, '']
     let s:N2 =  [s:shadeLst, (s:tty ? s:shadeLr : s:shadeD), '']
     let s:N3 =  [s:shadeLr, s:shadeDr, '']
     let s:NM =  [s:orangeL, s:shadeDr, '']
     let s:NMi = [s:red, s:green, '']
     " Inactive, according to VertSplit in bronkow
-    let s:IA =  [s:shadeL, s:shadeDr, '']
+    let s:IA =  [s:shade, s:shadeDr, '']
   "endif
 
-  let s:NF = [s:orange, s:N3[1], '']
+  let s:NF = [s:shadeDr, s:orange, '']
   let s:NW = [s:white, s:orange, '']
 
   " Insert mode
-  let s:I1 = [s:green, s:shadeDr, '']
+  let s:I1 = [s:shadeDr, s:green, '']
   let s:I2 = s:N2
   let s:I3 = s:N3
   let s:IF = s:NF
   let s:IM = s:NM
 
   " Visual mode
-  let s:V1 = [s:orangeL, s:shadeDr, '']
+  let s:V1 = [s:shadeDr, s:orangeL, '']
   let s:V2 = s:N2
   let s:V3 = s:N3
   let s:VF = s:NF
   let s:VM = s:NM
 
   " Replace mode
-  let s:R1 = [s:red, s:shadeDr, '']
+  let s:R1 = [s:shadeDr, s:red, '']
   let s:R2 = s:N2
   let s:R3 = s:N3
   let s:RM = s:NM
@@ -100,9 +100,6 @@ function! airline#themes#bronkow#refresh()
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]])
-        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
-        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
-        " \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]])
   let g:airline#themes#bronkow#palette.inactive_modified = {
         \ 'airline_c': [s:NMi[0].g, '', s:NMi[0].t, '', s:NMi[2]]}
 
