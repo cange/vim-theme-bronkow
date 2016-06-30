@@ -54,7 +54,7 @@ exe "hi! SignColumn            " . g:bgShadeD    . g:fgShadeLr . g:none
 exe "hi! MoreMsg               " . g:bgNone      . g:fgBlueL   . g:none
 exe "hi! ModeMsg               " . g:bgNone                    . g:none
 exe "hi! ErrorMsg              " . g:bgRedD      . g:fgOrangeL . g:none
-exe "hi! WarningMsg            " .               . g:fgOrangeL . g:none
+exe "hi! WarningMsg            "                 . g:fgOrangeL . g:none
 exe "hi! Question              " . g:bgNone      . g:fgGreen   . g:none
 " -- Text Selection --
 exe "hi! CursorColumn          " . g:bgRed       . g:fgNone    . g:none
