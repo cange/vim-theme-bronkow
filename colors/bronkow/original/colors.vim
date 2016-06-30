@@ -12,6 +12,22 @@ fun! colors#buildToneDict(hexStr, rgbInt)
 endfun
 
 let g:colors = {
+  \'shade': {
+    \'darkest' : colors#buildToneDict('181D20', '233'),
+    \'darker'  : colors#buildToneDict('272B35', '234'),
+    \'dark'    : colors#buildToneDict('393F4C', '235'),
+    \'default' : colors#buildToneDict('454D5D', '236'),
+    \'light'   : colors#buildToneDict('6D7782', '237'),
+    \'lighter' : colors#buildToneDict('8FA1B2', '247'),
+    \'lightest': colors#buildToneDict('A9BACB', '250')
+  \},
+  \'grey': {
+    \'darker'  : colors#buildToneDict('797B81', '243'),
+    \'dark'    : colors#buildToneDict('888888', '243'),
+    \'default' : colors#buildToneDict('B0B0B0', '243'),
+    \'light'   : colors#buildToneDict('CBCCCE', '244'),
+    \'lighter' : colors#buildToneDict('E9F4FE', '244')
+  \},
   \'red': {
     \'dark'    : colors#buildToneDict('574250', ' 95'),
     \'default' : colors#buildToneDict('EB5368', '167')
@@ -22,8 +38,8 @@ let g:colors = {
     \'light'   : colors#buildToneDict('D99B28', '178')
   \},
   \'green': {
-    \'default' : colors#buildToneDict('10C66F', ' 77'),
-    \'light'   : colors#buildToneDict('00FF7F', ' 77')
+    \'dark'    : colors#buildToneDict('10C66F', ' 77'),
+    \'default' : colors#buildToneDict('00FF7F', ' 77')
   \},
   \'blue': {
     \'dark'    : colors#buildToneDict('475983', '234'),
@@ -35,24 +51,8 @@ let g:colors = {
     \'default' : colors#buildToneDict('BD73DB', '171'),
     \'light'   : colors#buildToneDict('BCB8D6', ' 38')
   \},
-  \'shade': {
-    \'darkest' : colors#buildToneDict('181D20', '233'),
-    \'darker'  : colors#buildToneDict('272B35', '234'),
-    \'dark'    : colors#buildToneDict('393F4C', '235'),
-    \'default' : colors#buildToneDict('454D5D', '236'),
-    \'light'   : colors#buildToneDict('6D7782', '237'),
-    \'lighter' : colors#buildToneDict('8FA1B2', '247'),
-    \'lightest': colors#buildToneDict('A9BACB', '250')
-  \},
   \'black': {
     \'default' : colors#buildToneDict('000000', '  0')
-  \},
-  \'grey': {
-    \'darker'  : colors#buildToneDict('797B81', '243'),
-    \'dark'    : colors#buildToneDict('888888', '243'),
-    \'default' : colors#buildToneDict('B0B0B0', '243'),
-    \'light'   : colors#buildToneDict('CBCCCE', '244'),
-    \'lighter' : colors#buildToneDict('E9F4FE', '244')
   \},
   \'white': {
     \'default' : colors#buildToneDict('F5F7F0', '254')

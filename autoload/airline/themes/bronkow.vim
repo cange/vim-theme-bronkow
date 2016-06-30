@@ -21,21 +21,25 @@ function! airline#themes#bronkow#refresh()
   let s:shadeL    = {'t': s:ansi_colors ?  12 : (s:tty ? '7' : g:colors.shade.light.cterm   ), 'g': g:colors.shade.light.hex    }
   let s:shadeLr   = {'t': s:ansi_colors ?  14 : (s:tty ? '7' : g:colors.shade.lighter.cterm ), 'g': g:colors.shade.lighter.hex  }
   let s:shadeLst  = {'t': s:ansi_colors ?   7 : (s:tty ? '7' : g:colors.shade.lightest.cterm), 'g': g:colors.shade.lightest.hex }
+
   let s:greyDr    = {'t': s:ansi_colors ? '0' : (s:tty ? '0' : g:colors.grey.darker.cterm   ), 'g': g:colors.grey.darker.hex    }
   let s:greyD     = {'t': s:ansi_colors ?  10 : (s:tty ? '0' : g:colors.grey.dark.cterm     ), 'g': g:colors.grey.dark.hex      }
   let s:grey      = {'t': s:ansi_colors ?  11 : (s:tty ? '7' : g:colors.grey.default.cterm  ), 'g': g:colors.grey.default.hex   }
   let s:greyL     = {'t': s:ansi_colors ?  12 : (s:tty ? '7' : g:colors.grey.light.cterm    ), 'g': g:colors.grey.light.hex     }
   let s:greyLr    = {'t': s:ansi_colors ?  14 : (s:tty ? '7' : g:colors.grey.lighter.cterm  ), 'g': g:colors.grey.lighter.hex   }
+
   let s:redD      = {'t': s:ansi_colors ?   1 : (s:tty ? '1' : g:colors.red.dark.cterm      ), 'g': g:colors.red.dark.hex       }
   let s:red       = {'t': s:ansi_colors ?   1 : (s:tty ? '1' : g:colors.red.default.cterm   ), 'g': g:colors.red.default.hex    }
   let s:orangeD   = {'t': s:ansi_colors ?   9 : (s:tty ? '9' : g:colors.orange.dark.cterm   ), 'g': g:colors.orange.dark.hex    }
   let s:orange    = {'t': s:ansi_colors ?   9 : (s:tty ? '9' : g:colors.orange.default.cterm), 'g': g:colors.orange.default.hex }
   let s:orangeL   = {'t': s:ansi_colors ?   9 : (s:tty ? '9' : g:colors.orange.light.cterm  ), 'g': g:colors.orange.light.hex   }
+  let s:greenD    = {'t': s:ansi_colors ?   2 : (s:tty ? '2' : g:colors.green.dark.cterm    ), 'g': g:colors.green.dark.hex     }
   let s:green     = {'t': s:ansi_colors ?   2 : (s:tty ? '2' : g:colors.green.default.cterm ), 'g': g:colors.green.default.hex  }
-  let s:greenL    = {'t': s:ansi_colors ?   2 : (s:tty ? '2' : g:colors.green.light.cterm   ), 'g': g:colors.green.light.hex    }
   let s:blueD     = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.dark.cterm     ), 'g': g:colors.blue.dark.hex      }
   let s:blue      = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.default.cterm  ), 'g': g:colors.blue.default.hex   }
   let s:blueL     = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.light.cterm    ), 'g': g:colors.blue.light.hex     }
+  let s:blueLr    = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.blue.lighter.cterm  ), 'g': g:colors.blue.lighter.hex   }
+
   let s:purple    = {'t': s:ansi_colors ?   5 : (s:tty ? '5' : g:colors.purple.default.cterm), 'g': g:colors.purple.default.hex }
   let s:purpleL   = {'t': s:ansi_colors ?   4 : (s:tty ? '4' : g:colors.purple.light.cterm  ), 'g': g:colors.purple.light.hex   }
   let s:black     = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : g:colors.black.default.cterm ), 'g': g:colors.black.default.hex  }
@@ -49,7 +53,7 @@ function! airline#themes#bronkow#refresh()
   " Normal mode
   "if s:background == 'dark'
     let s:N1 =  [s:shadeDr, s:blueL, '']
-    let s:N2 =  [s:shadeLst, (s:tty ? s:shadeLr : s:shadeD), '']
+    let s:N2 =  [s:shadeLr, (s:tty ? s:shadeLr : s:shade), '']
     let s:N3 =  [s:shadeLr, s:shadeDr, '']
     let s:NM =  [s:orangeL, s:shadeDr, '']
     let s:NMi = [s:red, s:green, '']
@@ -92,9 +96,7 @@ function! airline#themes#bronkow#refresh()
   let s:VFa = [s:VF[0].g, s:VF[1].g, s:VF[0].t, s:VF[1].t, s:VF[2]]
   let s:RFa = [s:RF[0].g, s:RF[1].g, s:RF[0].t, s:RF[1].t, s:RF[2]]
 
-  let g:airline#themes#bronkow#palette.accents = {
-        \ 'red': s:NFa,
-        \ }
+  let g:airline#themes#bronkow#palette.accents = {'red': s:NFa}
 
   let g:airline#themes#bronkow#palette.inactive = airline#themes#generate_color_map(
         \ [s:IA[0].g, s:IA[1].g, s:IA[0].t, s:IA[1].t, s:IA[2]],
@@ -109,11 +111,11 @@ function! airline#themes#bronkow#refresh()
         \ [s:N3[0].g, s:N3[1].g, s:N3[0].t, s:N3[1].t, s:N3[2]])
 
   let g:airline#themes#bronkow#palette.normal.airline_warning = [
-        \ s:shadeDr.g, s:shadeDr.g, s:shadeDr.t, s:orange.t, s:NW[2]]
+        \ s:shadeL.g, s:shadeDr.g, s:shadeDr.t, s:orange.t, s:NW[2]]
         " \ s:NW[0].g, s:NW[1].g, s:NW[0].t, s:NW[1].t, s:NW[2]]
 
   let g:airline#themes#bronkow#palette.normal.airline_error = [
-        \ s:shadeDr.g, s:shadeDr.g, s:shadeDr.t, s:purple.t, s:NW[2]]
+        \ s:shadeL.g, s:shadeDr.g, s:shadeDr.t, s:purple.t, s:NW[2]]
 
   let g:airline#themes#bronkow#palette.normal_modified = {
         \ 'airline_c': [s:NM[0].g, s:NM[1].g,
