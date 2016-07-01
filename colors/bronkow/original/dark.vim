@@ -39,12 +39,12 @@ exe "hi! SpellCap      " . g:bgNone        . g:fgNone       . g:undercurl . g:sp
 exe "hi! SpellRare     " . g:bgNone        . g:fgNone       . g:undercurl . g:spOrangeL
 exe "hi! SpellLocal    " . g:bgNone        . g:fgNone       . g:undercurl . g:spOrangeD
 " -- Diff --
-exe "hi! DiffAdd       " . g:bgNone . g:fgGreen  . g:none
+exe "hi! DiffAdd       " . g:bgNone . g:fgGreenD . g:none
 exe "hi! DiffChange    " . g:bgNone . g:fgBlueL  . g:none
 exe "hi! DiffDelete    " . g:bgNone . g:fgRed    . g:none
 exe "hi! DiffText      " . g:bgNone . g:fgOrange . g:none
 " -- UI – Git --
-exe "hi! GitGutterAdd          " . g:bgNone      . g:fgGreen   . g:none
+exe "hi! GitGutterAdd          " . g:bgNone      . g:fgGreenD  . g:none
 exe "hi! GitGutterChange       " . g:bgNone      . g:fgOrangeL . g:none
 exe "hi! GitGutterDelete       " . g:bgNone      . g:fgRed     . g:none
 exe "hi! GitGutterChangeDelete " . g:bgNone      . g:fgRed     . g:none
@@ -55,13 +55,13 @@ exe "hi! MoreMsg               " . g:bgNone      . g:fgBlueL   . g:none
 exe "hi! ModeMsg               " . g:bgNone                    . g:none
 exe "hi! ErrorMsg              " . g:bgRedD      . g:fgOrangeL . g:none
 exe "hi! WarningMsg            "                 . g:fgOrangeL . g:none
-exe "hi! Question              " . g:bgNone      . g:fgGreen   . g:none
+exe "hi! Question              " . g:bgNone      . g:fgGreenD  . g:none
 " -- Text Selection --
 exe "hi! CursorColumn          " . g:bgRed       . g:fgNone    . g:none
 exe "hi! CursorLine            " . g:bgShade     . g:fgNone    . g:bold
 " -- Cursors --
 exe "hi! Cursor                " . g:bgGreyLr                  . g:none
-exe "hi! iCursor               " . g:bgGreen                   . g:none
+exe "hi! iCursor               " . g:bgGreenD                  . g:none
 exe "hi! vCursor               " . g:bgOrangeL   . g:fgBlack
 exe "hi! rCursor               " . g:bgWhite                   . g:none
 " -- Selections --
@@ -71,8 +71,8 @@ exe "hi! IncSearch             " . g:bgBlack     . g:fgWhite   . g:none
 " -- NERDTree --
  exe "hi! NERDTreeBookmark        " . g:fgShadeL
  exe "hi! NERDTreeBookmarkName    " . g:fgBlueL
- exe "hi! NERDTreeBookmarksHeader " . g:fgGreen
- exe "hi! NERDTreeCWD             " . g:fgGreen
+ exe "hi! NERDTreeBookmarksHeader " . g:fgGreenD
+ exe "hi! NERDTreeCWD             " . g:fgGreenD
  exe "hi! NERDTreeClosable        " . g:fgShadeLr
  exe "hi! NERDTreeDir             " . g:fgShadeLst
  exe "hi! NERDTreeDirSlash        " . g:fgShadeL
@@ -84,7 +84,7 @@ exe "hi! IncSearch             " . g:bgBlack     . g:fgWhite   . g:none
  exe "hi! NERDTreeToggleOff       " . g:fgRed
 " == TMRU ==
 exe "hi! InputlListCursor "        . g:bgBlueD . g:bold
-exe "hi! InputlListSelected "      . g:bgGreen
+exe "hi! InputlListSelected "      . g:bgGreenD
 " == Text Markup ==
 "exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 " -- Invisible character colors --
@@ -97,14 +97,14 @@ exe "hi! Title         " . g:bgNone        . g:fgOrangeD    . g:none
 exe "hi! Boolean       " . g:fgRed
 exe "hi! Character     " . g:fgShadeLst
 exe "hi! Comment       " . g:fgGreyDr
-exe "hi! Conditional   " . g:fgGreenL                 . g:none
+exe "hi! Conditional   " . g:fgGreen                  . g:none
 exe "hi! Constant      " . g:fgShadeLst
 exe "hi! Error         " . g:fgOrangeL   . g:bgRedD
-exe "hi! Exception     " . g:fgGreen
+exe "hi! Exception     " . g:fgGreenD
 exe "hi! Function      " . g:fgGreyLr
-exe "hi! Identifier    " . g:fgGreen
-exe "hi! Include       " . g:fgGreenL                 . g:none
-exe "hi! Keyword       " . g:fgGreen
+exe "hi! Identifier    " . g:fgGreenD
+exe "hi! Include       " . g:fgGreen                  . g:none
+exe "hi! Keyword       " . g:fgGreenD
 exe "hi! Label         " . g:fgPurpleL   . g:bgRed
 exe "hi! MatchParen    " . g:fgShadeLst  . g:bgBlue   . g:bold
 exe "hi! Noise         " . g:fgShadeLst
@@ -112,13 +112,13 @@ exe "hi! Normal        " . g:fgPurpleL   . g:bgShadeD
 exe "hi! Number        " . g:fgRed
 exe "hi! Operator      " . g:fgShadeLst
 exe "hi! PreProc       " . g:fgGreyL
-exe "hi! Repeat        " . g:fgGreenL                 . g:none
-exe "hi! Special       " . g:fgGreenL                 . g:none
+exe "hi! Repeat        " . g:fgGreen                  . g:none
+exe "hi! Special       " . g:fgGreen                  . g:none
 exe "hi! SpecialChar   " . g:fgShadeLr
-exe "hi! Statement     " . g:fgGreenL                 . g:none
-exe "hi! StorageClass  " . g:fgGreenL                 . g:none
+exe "hi! Statement     " . g:fgGreen                  . g:none
+exe "hi! StorageClass  " . g:fgGreen                  . g:none
 exe "hi! String        " . g:fgGreyLr
-exe "hi! Structure     " . g:fgGreenL                 . g:none
+exe "hi! Structure     " . g:fgGreen                  . g:none
 exe "hi! Todo          " . g:fgOrangeL
 exe "hi! Type          " . g:fgPurpleL
 "
