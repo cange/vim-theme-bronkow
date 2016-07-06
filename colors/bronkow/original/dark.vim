@@ -23,7 +23,7 @@ exe "hi! PMenuThumb    " . g:bgBlueD
 exe "hi! ColorColumn   " . g:bgShade    . g:fgNone       . g:none
 exe "hi! CursorLineNr  " . g:bgShade    . g:fgShadeLr    . g:bold
 exe "hi! FoldColumn    " . g:bgRed      . g:fgOrange     . g:none
-exe "hi! Folded        " . g:bgRed      . g:fgBlue       . g:none
+exe "hi! Folded        " . g:bgShade    . g:fgOrangeL    . g:none
 exe "hi! LineNr        " . g:bgShadeD   . g:fgShadeL     . g:none
 exe "hi! VertSplit     " . g:bgNone  . g:fgShadeDr    . g:none
 " -- Status bars --
@@ -105,8 +105,8 @@ exe "hi! Function      " . g:fgGreyLr
 exe "hi! Identifier    " . g:fgGreenD
 exe "hi! Include       " . g:fgGreen                  . g:none
 exe "hi! Keyword       " . g:fgGreenD
-exe "hi! Label         " . g:fgPurpleL   . g:bgRed
-exe "hi! MatchParen    " . g:fgShadeLst  . g:bgBlue   . g:bold
+exe "hi! Label         " . g:fgShadeL
+exe "hi! MatchParen    " . g:fgBlueD     . g:bgGreen  . g:bold
 exe "hi! Noise         " . g:fgShadeLst
 exe "hi! Normal        " . g:fgPurpleL   . g:bgShadeD
 exe "hi! Number        " . g:fgRed
@@ -124,8 +124,8 @@ exe "hi! Type          " . g:fgPurpleL
 "
 " == Syntax ==
 "
-exe "hi! scssSelectorChar " . g:fgPurpleL
-exe "hi! scssSelectorName " . g:fgPurpleL
+exe "hi! scssSelectorChar " . g:fgGreenD
+exe "hi! scssSelectorName " . g:fgGreen
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -142,8 +142,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink cssProp          Type
   HiLink cssIdentifier    Type
   HiLink cssMedia         Type
-  HiLink scssMixin        Type
   HiLink cssMediaKeyword  Type
+  HiLink scssMixin        Type
 
   delcommand HiLink
 endif
