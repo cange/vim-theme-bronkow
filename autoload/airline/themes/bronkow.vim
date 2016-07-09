@@ -52,7 +52,7 @@ function! airline#themes#bronkow#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
   "if s:background == 'dark'
-    let s:N1 =  [s:shadeDr, s:blueL, '']
+    let s:N1 =  [s:greyL, s:blueD, '']
     let s:N2 =  [s:shadeLr, (s:tty ? s:shadeLr : s:shade), '']
     let s:N3 =  [s:shadeLr, s:shadeDr, '']
     let s:NM =  [s:orangeL, s:shadeDr, '']
