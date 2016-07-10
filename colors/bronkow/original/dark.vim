@@ -123,9 +123,12 @@ exe "hi! Todo          " . g:fgOrangeL
 exe "hi! Type          " . g:fgPurpleL
 "
 " == Syntax ==
-"
+" SCSS
 exe "hi! scssSelectorChar " . g:fgGreenD
 exe "hi! scssSelectorName " . g:fgGreen
+" JavaScript
+exe "hi! jsClassFuncName  " . g:fgGreyLr
+exe "hi! jsFuncArgs       " . g:fgGreyLr
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
