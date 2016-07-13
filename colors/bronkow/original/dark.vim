@@ -126,9 +126,15 @@ exe "hi! Type          " . g:fgPurpleL
 " SCSS
 exe "hi! scssSelectorChar " . g:fgGreenD
 exe "hi! scssSelectorName " . g:fgGreen
+" CSS
+exe "hi! cssImportant     " . g:fgOrangeL
+exe "hi! cssPseudoClassId " . g:fgOrange
 " JavaScript
 exe "hi! jsClassFuncName  " . g:fgGreyLr
 exe "hi! jsFuncArgs       " . g:fgGreyLr
+" Slim template engine
+exe "hi! slimClass        " . g:fgGreyL
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
