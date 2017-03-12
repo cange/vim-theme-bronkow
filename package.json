@@ -1,0 +1,29 @@
+{
+  "name": "vim-theme-bronkow",
+  "version": "1.0.0",
+  "description": "<img src=\"colour-palette.png\">",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "node ./index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cange/vim-theme-bronkow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cange/vim-theme-bronkow/issues"
+  },
+  "homepage": "https://github.com/cange/vim-theme-bronkow#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "color2xterm": "^1.0.0",
+    "jest": "^18.1.0"
+  }
+}

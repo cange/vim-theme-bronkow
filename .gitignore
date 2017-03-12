@@ -1,3 +1,4 @@
 screenshots/*-*.png
 screenshots/*.psd
 .DS_Store
+node_modules
