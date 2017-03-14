@@ -1,21 +1,16 @@
-function! converters#capitalize(string)
+function! Converters#capitalize(string)
   let first = toupper(a:string[0])
   let rest = a:string[1:-1]
-  return first.''.rest
+  return first.rest
 endfunction
 
 let s:toneMapping = {
-      \'darkest':  'Dst',
-      \'darker':   'Dr',
-      \'dark':     'D',
-      \'medium':   '',
-      \'light':    'L',
-      \'lighter':  'Lr',
-      \'lightest': 'Lst'
+      \"darker":   "Dr",
+      \"dark":     "D",
+      \"medium":   "",
+      \"light":    "L",
+      \"lighter":  "Lr",
       \}
-
-
-let g:helpers#PowerlineMapping = {}
 
 function! Converters#translate(colors)
   for colorKey in keys(g:colors)
@@ -26,21 +21,17 @@ function! Converters#translate(colors)
     for toneKey in keys(colorDict)
       let toneDict = colorDict[toneKey]
 
-      if !(toneKey == 'fg' || toneKey == 'bg')
-        let name = converters#capitalize(colorKey)
+      if !(toneKey == "fg" || toneKey == "bg")
+        let name = Converters#capitalize(colorKey)
         let label = s:toneMapping[toneKey]
-        " vim
-        let g:['fg'.name.label] = " guifg=". toneDict.hex ." ctermfg=". toneDict.cterm
-        let g:['bg'.name.label] = " guibg=". toneDict.hex ." ctermbg=". toneDict.cterm
-        " powerline
-        let g:helpers#PowerlineMapping[colorKey.label] = toneDict.group
+        let g:["fg".name.label] = " guifg=". toneDict.gui ." ctermfg=". toneDict.cterm
+        let g:["bg".name.label] = " guibg=". toneDict.gui ." ctermbg=". toneDict.cterm
       endif
 
     endfor
   endfor
 
-  let g:spRed     = "guisp=".g:colors.red.dark.hex
-  let g:spOrangeD = "guisp=".g:colors.orange.darker.hex
-  let g:spOrange  = "guisp=".g:colors.orange.dark.hex
-  let g:spOrangeL = "guisp=".g:colors.orange.light.hex
+  let g:spRed     = "guisp=".g:colors.red.dark.gui
+  let g:spOrangeD = "guisp=".g:colors.orange.darker.gui
+  let g:spOrangeL = "guisp=".g:colors.orange.light.gui
 endfunction

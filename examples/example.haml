@@ -20,9 +20,7 @@
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
     / Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
     / CSS: implied media=all
-    %link{:href => "../css/skeleton.css", :rel => "stylesheet"}/
-    %link{:href => "../css/chosen.css", :rel => "stylesheet"}/
-    %link{:href => "../css/style.css", :rel => "stylesheet"}/
+    %link{:href => "example.css", :rel => "stylesheet"}/
     :css
       /* box-sizing test */
       #boxsize button,
@@ -512,6 +510,25 @@
         %li
           %label Javascript
           %meter#meter-javascript-example{:value => "0"}
+      %h1 Image and multimedia
+      / Simple audio playback
+      %audio{:autoplay => "", :src => "http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"}
+        Your browser does not support the
+        %code audio
+        element.
+      / Audio playback with captions
+      %audio{:src => "foo.ogg"}
+        %track{:kind => "captions", :label => "English", :src => "foo.en.vtt", :srclang => "en"}
+          %track{:kind => "captions", :label => "Svenska", :src => "foo.sv.vtt", :srclang => "sv"}
+      %h2 Audio element with source element
+      %audio{:controls => "controls"}
+        Your browser does not support the
+        %code audio
+        element.
+        %source{:src => "foo.wav", :type => "audio/wav"}
+      %video{:controls => "", :poster => "/images/sample.gif"}
+        %source{:src => "sample.mp4", :type => "video/mp4"}
+          %track{:kind => "captions", :src => "sampleCaptions.vtt", :srclang => "en"}
       :javascript
         (function () {
           if (! ("position" in document.createElement ("progress"))) {

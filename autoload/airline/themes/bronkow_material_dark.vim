@@ -23,23 +23,24 @@ scriptencoding utf-8
 " variable. The # is a separator that maps with the directory structure. If
 " you get this wrong, Vim will complain loudly.
 ru colors/bronkow/material/colors.vim
-
-function! C(fgName, fgTone, bgName, bgTone, ...)
+"
+" Helper to set colors set
+" @returns {array} in attr-list format: [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list"
+function! C(fg_color, bg_color, ...)
   let tones = { 'dr': 'darker', 'd': 'dark', 'l': 'light', 'lr': 'lighter', 'm': 'medium' }
-  let fgTone = tones[a:fgTone]
-  let bgTone = tones[a:bgTone]
+  let fg_split = split(a:fg_color)
+  let bg_split = split(a:bg_color)
+  let fg_name = fg_split[0]
+  let bg_name = bg_split[0]
+  let fg_tone = tones[fg_split[1]]
+  let bg_tone = tones[bg_split[1]]
 
-  let fg = g:colors[a:fgName][fgTone]
-  let bg = g:colors[a:bgName][bgTone]
-  let guifg = fg.hex
-  let guibg = bg.hex
-  let ctermfg = fg.cterm
-  let ctermbg = bg.cterm
+  let fg = g:colors[fg_name][fg_tone]
+  let bg = g:colors[bg_name][bg_tone]
 
   let opts = a:0 > 0 ? a:1 : 'NONE'
-  "echo 'fg: '. a:fgName . ' -bg: '. a:bgName . ' -args: '. a:0 . ' -opts: '. opts
 
-  return [ guifg, guibg, ctermfg, ctermbg, opts ]
+  return [ fg.gui, bg.gui, fg.cterm, bg.cterm, opts ]
 endfunction
 
 let g:airline#themes#bronkow_material_dark#palette = {}
@@ -50,38 +51,39 @@ let g:airline#themes#bronkow_material_dark#palette = {}
 " to the dictionary.  The array is in the format:
 " [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list" for valid
 " values for the "opt" value.
-let s:normal1 = C('shade', 'lr', 'shade', 'dr')
-let s:normal2 = C('shade', 'd', 'shade', 'lr')
-let s:normal3 = C('grey', 'l', 'shade', 'd')
+let s:normal1 = C('shade dr', 'shade lr')
+let s:normal2 = C('shade lr', 'shade l')
+let s:normal3 = C('shade lr', 'shade d')
 let s:normal_color_map = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
-let s:normal_modified = { 'airline_c': C('orange', 'l', 'shade', 'd') }
-
-let g:airline#themes#bronkow_material_dark#palette.normal = copy(s:normal_color_map)
+let s:normal_modified = { 'airline_c': C('orange l', 'shade d') }
 
 " Here we define overrides for when the buffer is modified.  This will be
 " applied after g:airline#themes#bronkow_material_dark#palette.normal, hence why only certain keys are
 " declared.
-let g:airline#themes#bronkow_material_dark#palette.normal_modified = s:normal_modified
+let s:palette = {
+  \'normal':           copy(s:normal_color_map),
+  \'normal_modified':  copy(s:normal_modified),
+  \
+  \'insert':           copy(s:normal_color_map),
+  \'insert_modified':  copy(s:normal_modified),
+  \'insert_paste':     { 'airline_c': C('cyan d', 'shade lr') },
+  \
+  \'replace':          copy(s:normal_color_map),
+  \'replace_modified': copy(s:normal_modified),
+  \
+  \'visual':           copy(s:normal_color_map),
+  \'visual_modified':  copy(s:normal_modified)
+\}
+let s:palette.insert.airline_a = C('shade d', 'cyan d')
+let s:palette.replace.airline_a = C('shade d', 'red d')
+let s:palette.visual.airline_a = C('shade d', 'orange l')
 
-let g:airline#themes#bronkow_material_dark#palette.insert = copy(s:normal_color_map)
-let g:airline#themes#bronkow_material_dark#palette.insert.airline_a = C('shade', 'd', 'cyan', 'd')
-let g:airline#themes#bronkow_material_dark#palette.insert_modified = s:normal_modified
-let g:airline#themes#bronkow_material_dark#palette.insert_paste = { 'airline_c': C('cyan', 'd', 'shade', 'lr') }
-
-let g:airline#themes#bronkow_material_dark#palette.replace = copy(s:normal_color_map)
-let g:airline#themes#bronkow_material_dark#palette.replace.airline_a = C('shade', 'd', 'red', 'd')
-let g:airline#themes#bronkow_material_dark#palette.replace_modified = s:normal_modified
-
-let g:airline#themes#bronkow_material_dark#palette.visual = copy(s:normal_color_map)
-let g:airline#themes#bronkow_material_dark#palette.visual.airline_a = C('shade', 'd', 'orange', 'l')
-let g:airline#themes#bronkow_material_dark#palette.visual_modified = s:normal_modified
-
-let s:inactive1 = C('shade', 'dr', 'shade', 'dr')
-let s:inactive2 = C('shade', 'd', 'shade', 'd')
-let s:inactive3 = C('grey', 'd', 'shade', 'dr')
-let s:inactive_modified = C('red', 'd', 'shade', 'dr')
-let g:airline#themes#bronkow_material_dark#palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
-let g:airline#themes#bronkow_material_dark#palette.inactive_modified = s:normal_modified
+let s:inactive1 = C('shade dr', 'shade dr')
+let s:inactive2 = C('shade d', 'shade d')
+let s:inactive3 = C('grey d', 'shade dr')
+let s:inactive_modified = C('red d', 'shade dr')
+let s:palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
+let s:palette.inactive_modified = s:normal_modified
 
 " Accents are used to give parts within a section a slightly different look or
 " color. Here we are defining a "red" accent, which is used by the 'readonly'
@@ -90,7 +92,7 @@ let g:airline#themes#bronkow_material_dark#palette.inactive_modified = s:normal_
 " this means is that regardless of which section the part is defined in, it
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
-let g:airline#themes#bronkow_material_dark#palette.accents = { 'red': C('red', 'd', 'shade', 'dr') }
+let s:palette.accents = { 'red': C('red d', 'shade dr') }
 
 " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
 " variable so that related functionality is loaded iff the user is using
@@ -99,11 +101,15 @@ let g:airline#themes#bronkow_material_dark#palette.accents = { 'red': C('red', '
 if !get(g:, 'loaded_ctrlp', 0)
   finish
 endif
-let g:airline#themes#bronkow_material_dark#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-  \ C('cyan',   'dr', 'shade', 'dr'),
-  \ C('orange', 'lr', 'cyan', 'dr'),
-  \ C('cyan',   'dr', 'orange', 'l', 'bold')
-  \)
 
+let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
+  \ C('cyan dr',   'shade dr'),
+  \ C('orange lr', 'cyan dr'),
+  \ C('cyan dr',   'orange l', 'bold')
+  \)
+"
+" global export
+let g:airline#themes#bronkow_material_dark#palette = s:palette
+"
 " order of section
 let g:airline_section_a = airline#section#create(['branch'])
