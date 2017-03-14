@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node ./index.js",
+    "build:watch": "onchange 'lib/**/*.js' -- npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -24,6 +25,8 @@
   "dependencies": {},
   "devDependencies": {
     "color2xterm": "^1.0.0",
-    "jest": "^18.1.0"
+    "jest": "^18.1.0",
+    "onchange": "^3.2.1",
+    "watchify": "^3.9.0"
   }
 }

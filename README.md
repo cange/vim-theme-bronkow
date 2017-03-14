@@ -1,47 +1,26 @@
-# Bronkow Colorscheme for Vim
+# Vim Bronkow Theme based on Material Design
 
-<img src="colour-palette.png">
+This is a Vim color scheme based on [Google’s Material Design Color Palette](https://material.io/guidelines/style/color.html).
 
-## Summary
-This color scheme based on the [Ubuntu colour palette](http://design.ubuntu.com/brand/colour-palette).
-You can choose between a dark and a light versions (GUI and 256 color terminal).
-
-A colorscheme for the [Powerline](https://github.com/Bronkow/vim-powerline/network)
-plugin is integrated as well.
-
-## Description
-The light version of the scheme is set by default. You can change this by
-setting the `g:bronkow_style` variable to "light" or "dark". Once the color scheme is
-loaded, you can use the commands `:BronkowLight` or `:BronkowDark`,
- to change schemes quickly.
+<img src="colors/bronkow/material/palette.svg">
 
 ## Installation
-You can use [pathogen.vim](https://github.com/tpope/vim-pathogen) for a
-simple installation or you go the old fashion way:
 
-1. Clone the repository
+This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
-  ```bash
-  git clone git://github.com/cange/vim-theme-bronkow.git
-  cd vim-theme-bronkow/
-  ```
-2. Create a simlink to your Vim directory
+1. Download
+  *  [Pathogen](https://github.com/tpope/vim-pathogen)
+    *  `git clone https://github.com/cange/vim-theme-bronkow ~/.vim/bundle/vim-theme-bronkow`
+  *  [Vundle](https://github.com/gmarik/vundle)
+    *  `Plugin 'cange/vim-theme-bronkow'`
+  * or other package manager
 
-  ```bash
-  ln -s colors/bronkow.vim ~/.vim/colors/
-  ```
-3. Put this line in your `.vimrc` file
+3. Enable theme in your `.vimrc`
 
   ```bash
-  colorscheme bronkow
+  colorscheme bronkow_material
   ```
-4. Restart Vim
+4. Restart Vim or run `so ~/.vimrc` in Vim
 
-## TODOs
-- adjust 256 based colors
-- add some screenshots
-
-## Extras
-
-- Ubuntu: [dark colors for Terminator ](https://github.com/cange/vim-theme-bronkow/blob/master/extras/Bronkow%20dark.itermcolors)
-- Mac OS: [dark colors for iTerm 2 ](https://github.com/cange/vim-theme-bronkow/blob/master/extras/terminator/config)
+## Recommended iTerm2 theme
+- [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)

@@ -31,7 +31,7 @@
 "
 " and create a simlink to your Vim directory
 "
-"     ln -s colors/bronkow/bronkow.vim ~/.vim/colors/
+"     ln -s colors/material.vim ~/.vim/colors/
 "
 " and then put this line in your `.vimrc` file
 "
@@ -52,8 +52,11 @@ hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
 "command! BronkowMaterialLight let g:bronkow_style = "material_light" | colorscheme bronkow_material
-command! BronkowMaterialDark  let g:bronkow_style = "material_dark" | colorscheme bronkow_material
-
+command! BronkowMaterialDark let g:bronkow_style = "material_dark" | colorscheme bronkow_material
+" == status line  ==
+let g:airline_powerline_fonts = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_theme = "bronkow_material_dark"
 " ==============================================================================
 hi clear
 if exists("syntax_on")
@@ -93,6 +96,3 @@ set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 
-" === AIRLINE THEMES ===========================================================
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'bronkow_material_dark'

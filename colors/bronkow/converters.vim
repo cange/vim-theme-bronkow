@@ -18,6 +18,7 @@ function! Converters#translate(colors)
     let g:colors[colorKey].fg = {}
     let g:colors[colorKey].bg = {}
 
+
     for toneKey in keys(colorDict)
       let toneDict = colorDict[toneKey]
 
@@ -31,7 +32,7 @@ function! Converters#translate(colors)
     endfor
   endfor
 
-  let g:spRed     = "guisp=".g:colors.red.dark.gui
-  let g:spOrangeD = "guisp=".g:colors.orange.darker.gui
-  let g:spOrangeL = "guisp=".g:colors.orange.light.gui
+  let g:spRed     = "guisp=".g:colors.Red.dark.gui
+  let g:spOrangeD = "guisp=".g:colors.Orange.darker.gui
+  let g:spOrangeL = "guisp=".g:colors.Orange.light.gui
 endfunction

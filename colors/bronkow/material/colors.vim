@@ -1,68 +1,49 @@
 let g:colors = {
-	\'shade': {
-		\'lighter':	{ 'cterm': 59,  'gui': '#3C4D56' },
-		\'light':		{ 'cterm': 23,  'gui': '#263238' },
-		\'dark':		{ 'cterm': 17,  'gui': '#212B30' },
-		\'darker':	{ 'cterm': 0,  'gui': '#1E272C' }
+	\'LightGreen': {
+		\'lighter':	{ 'cterm': 194,	'gui': '#DCEDC8' },
+		\'light':		{ 'cterm': 150,	'gui': '#AED581' },
+		\'dark':		{ 'cterm': 71,	'gui': '#689F38' },
+		\'darker':	{ 'cterm': 58,	'gui': '#33691E' },
 	\},
-	\'grey': {
-		\'lighter':	{ 'cterm': 15,  'gui': '#eeeeee' },
-		\'light':		{ 'cterm': 145, 'gui': '#bdbdbd' },
-		\'dark':		{ 'cterm': 59,  'gui': '#616161' },
-		\'darker':	{ 'cterm': 59,  'gui': '#424242' }
+	\'DeepPurple': {
+		\'lighter':	{ 'cterm': 141,	'gui': '#B388FF' },
 	\},
-	\'green': {
-		\'lighter':	{ 'cterm': 194, 'gui': '#dcedc8' },
-		\'light':		{ 'cterm': 150, 'gui': '#aed581' },
-		\'dark':		{ 'cterm': 71,  'gui': '#689f38' },
-		\'darker':	{ 'cterm': 58,  'gui': '#33691e' }
+	\'LightBlue': {
+		\'lighter':	{ 'cterm': 117,	'gui': '#80D8FF' },
+		\'light':		{ 'cterm': 81,	'gui': '#40C4FF' },
+		\'dark':		{ 'cterm': 39,	'gui': '#00B0FF' },
 	\},
-	\'cyan': {
-		\'lighter':	{ 'cterm': 159, 'gui': '#b2ebf2' },
-		\'light':		{ 'cterm': 116, 'gui': '#80cbc4' },
-		\'dark':		{ 'cterm': 37,  'gui': '#00acc1' },
-		\'darker':	{ 'cterm': 23,  'gui': '#006064' }
+	\'Cyan': {
+		\'lighter':	{ 'cterm': 159,	'gui': '#B2EBF2' },
+		\'light':		{ 'cterm': 116,	'gui': '#80DEEA' },
+		\'dark':		{ 'cterm': 37,	'gui': '#00ACC1' },
+		\'darker':	{ 'cterm': 23,	'gui': '#006064' },
 	\},
-	\'red': {
-		\'lighter':	{ 'cterm': 224, 'gui': '#ffcdd2' },
-		\'light':		{ 'cterm': 174, 'gui': '#e57373' },
-		\'dark':		{ 'cterm': 160, 'gui': '#d32f2f' },
-		\'darker':	{ 'cterm': 124, 'gui': '#b71c1c' }
+	\'Red': {
+		\'light':		{ 'cterm': 174,	'gui': '#E57373' },
+		\'dark':		{ 'cterm': 160,	'gui': '#D32F2F' },
 	\},
-	\'orange': {
-		\'lighter':	{ 'cterm': 223, 'gui': '#ffe0b2' },
-		\'light':		{ 'cterm': 215, 'gui': '#ffb74d' },
-		\'dark':		{ 'cterm': 208, 'gui': '#f57c00' },
-		\'darker':	{ 'cterm': 166, 'gui': '#e65100' }
+	\'Orange': {
+		\'lighter':	{ 'cterm': 223,	'gui': '#FFE0B2' },
+		\'light':		{ 'cterm': 215,	'gui': '#FFB74D' },
+		\'dark':		{ 'cterm': 208,	'gui': '#F57C00' },
+		\'darker':	{ 'cterm': 166,	'gui': '#E65100' },
 	\},
-	\'blue': {
-		\'lighter':	{ 'cterm': 111, 'gui': '#82b1ff' },
-		\'light':		{ 'cterm': 69,  'gui': '#448aff' },
-		\'dark':		{ 'cterm': 33,  'gui': '#2979ff' },
-		\'darker':	{ 'cterm': 27,  'gui': '#2962ff' }
+	\'Black': {
+		\'medium':	{ 'cterm': 0,		'gui': '#000000' },
 	\},
-	\'purple': {
-		\'lighter':	{ 'cterm': 182, 'gui': '#e1bee7' },
-		\'light':		{ 'cterm': 134, 'gui': '#ba68c8' },
-		\'dark':		{ 'cterm': 91,  'gui': '#7b1fa2' },
-		\'darker':	{ 'cterm': 54,  'gui': '#4a148c' }
+	\'Shade': {
+		\'lighter':	{ 'cterm': 59,	'gui': '#3C4D56' },
+		\'light':		{ 'cterm': 23,	'gui': '#263238' },
+		\'dark':		{ 'cterm': 17,	'gui': '#212B30' },
+		\'darker':	{ 'cterm': 0,		'gui': '#1E272C' },
 	\},
-	\'deepPurple': {
-		\'lighter':	{ 'cterm': 141, 'gui': '#b388ff' },
-		\'light':		{ 'cterm': 99,  'gui': '#7c4dff' },
-		\'dark':		{ 'cterm': 57,  'gui': '#651fff' },
-		\'darker':	{ 'cterm': 56,  'gui': '#6200ea' }
+	\'Grey': {
+		\'lighter':	{ 'cterm': 15,	'gui': '#EEEEEE' },
+		\'light':		{ 'cterm': 145,	'gui': '#BDBDBD' },
+		\'dark':		{ 'cterm': 59,	'gui': '#616161' },
 	\},
-	\'indigo': {
-		\'lighter':	{ 'cterm': 146, 'gui': '#9fa8da' },
-		\'light':		{ 'cterm': 61,  'gui': '#5c6bc0' },
-		\'dark':		{ 'cterm': 61,  'gui': '#303f9f' },
-		\'darker':	{ 'cterm': 18,  'gui': '#1a237e' }
-	\},
-	\'black': {
-		\'medium':	{ 'cterm': 0,  'gui': '#000000' }
-	\},
-	\'white': {
-		\'medium':	{ 'cterm': 15,  'gui': '#ffffff' }
+	\'White': {
+		\'medium':	{ 'cterm': 15,	'gui': '#FFFFFF' },
 	\}
 \}
