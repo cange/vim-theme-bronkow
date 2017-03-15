@@ -20,12 +20,12 @@ exe "hi! PmenuSel      " . g:bgShadeDst    . g:fgShadeLst
 exe "hi! PMenuSbar     " . g:bgBlue
 exe "hi! PMenuThumb    " . g:bgBlueD
 " -- vertical separator line --
-exe "hi! ColorColumn   " . g:bgShade    . g:fgNone       . g:none
-exe "hi! CursorLineNr  " . g:bgShade    . g:fgShadeLr    . g:bold
-exe "hi! FoldColumn    " . g:bgRed      . g:fgOrange     . g:none
-exe "hi! Folded        " . g:bgShade    . g:fgOrangeL    . g:none
-exe "hi! LineNr        " . g:bgShadeD   . g:fgShadeL     . g:none
-exe "hi! VertSplit     " . g:bgNone  . g:fgShadeDr    . g:none
+exe "hi! ColorColumn   " . g:bgShade       . g:fgNone       . g:none
+exe "hi! CursorLineNr  " . g:bgShade       . g:fgShadeLr    . g:bold
+exe "hi! FoldColumn    " . g:bgRed         . g:fgOrange     . g:none
+exe "hi! Folded        " . g:bgShade       . g:fgOrangeL    . g:none
+exe "hi! LineNr        " . g:bgShadeD      . g:fgShadeL     . g:none
+exe "hi! VertSplit     " . g:bgNone        . g:fgShadeDr    . g:none
 " -- Status bars --
 exe "hi! StatusLine    " . g:bgShadeDr     . g:fgShadeLr    . g:none
 exe "hi! StatusLineNC  " . g:bgShadeDr     . g:fgNone       . g:none
@@ -67,7 +67,7 @@ exe "hi! rCursor               " . g:bgWhite                   . g:none
 " -- Selections --
 exe "hi! Visual                " . g:bgBlueLr    . g:fgBlack   . g:none
 exe "hi! Search                " . g:bgGrey      . g:fgShadeDr . g:none
-exe "hi! IncSearch             " . g:bgBlack     . g:fgWhite   . g:none
+exe "hi! IncSearch             " . g:bgGreen     . g:fgBlack   . g:none
 " -- NERDTree --
  exe "hi! NERDTreeBookmark        " . g:fgShadeL
  exe "hi! NERDTreeBookmarkName    " . g:fgBlueL
