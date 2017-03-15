@@ -11,7 +11,7 @@ fs.writeFile('./colors/bronkow/material/colors.vim', vimColorGenerator.run(), (e
   console.log('Vim colors are saved!')
 })
 
- fs.writeFile('./colors/bronkow/material/palette.svg', svgPrinter.run(), (err) => {
+ fs.writeFile('./palette.svg', svgPrinter.run(), (err) => {
    if (err) throw err;
   console.log('Palette SVG is saved!')
 })

@@ -40,10 +40,10 @@ exe "hi! GitGutterChangeDelete " . g:bgShadeD      . g:fgRedL       . g:none
 " -- Status bars --
 exe "hi! StatusLine            " . g:bgShadeDr     . g:fgShadeLr    . g:none
 exe "hi! StatusLineNC          " . g:bgShadeDr     . g:fgNone       . g:none
-exe "hi! WildMenu              " . g:bgLightBlueD       . g:fgShadeLr    . g:none
+exe "hi! WildMenu              " . g:bgLightBlueD  . g:fgShadeLr    . g:none
 exe "hi! TabLine               " . g:bgShadeLr     . g:fgShadeDr    . g:none
 exe "hi! TabLineFill           " . g:bgShadeLr     . g:fgGreyL      . g:none
-exe "hi! TabLineSel            " . g:bgLightBlueL       . g:fgShadeLr    . g:none
+exe "hi! TabLineSel            " . g:bgLightBlueL  . g:fgShadeLr    . g:none
 " -- Spelling --
 exe "hi! SpellBad              " . g:bgNone        . g:fgNone       . g:undercurl . g:spRed
 exe "hi! SpellCap              " . g:bgNone        . g:fgNone       . g:undercurl . g:spOrangeD
@@ -51,13 +51,13 @@ exe "hi! SpellRare             " . g:bgNone        . g:fgNone       . g:undercur
 exe "hi! SpellLocal            " . g:bgNone        . g:fgNone       . g:undercurl . g:spOrangeD
 " -- Diff --
 exe "hi! DiffAdd               " . g:bgNone        . g:fgLightGreenD. g:none
-exe "hi! DiffChange            " . g:bgNone        . g:fgLightBlueL      . g:none
+exe "hi! DiffChange            " . g:bgNone        . g:fgLightBlueL . g:none
 exe "hi! DiffDelete            " . g:bgNone        . g:fgRedL       . g:none
 exe "hi! DiffText              " . g:bgNone        . g:fgOrangeL    . g:none
 " -- Misc --
 exe "hi! Directory             " . g:bgNone        . g:fgShadeLr    . g:none
 exe "hi! SignColumn            " . g:bgShadeD      . g:fgShadeLr    . g:none
-exe "hi! MoreMsg               " . g:bgNone        . g:fgLightBlueL      . g:none
+exe "hi! MoreMsg               " . g:bgNone        . g:fgLightBlueL . g:none
 exe "hi! ModeMsg               " . g:bgNone                         . g:none
 exe "hi! ErrorMsg              " . g:bgRedD        . g:fgOrangeL    . g:none
 exe "hi! WarningMsg            "                   . g:fgOrangeL    . g:none
@@ -93,7 +93,7 @@ exe "hi! Comment               " . g:fgGreyD        . g:bgNone   . g:none
 exe "hi! Error                 " . g:fgRedL         . g:bgNone   . g:none
 exe "hi! Keyword               " . g:fgDeepPurpleLr . g:bgNone   . g:none
 exe "hi! PreProc               " . g:fgDeepPurpleLr . g:bgNone   . g:none
-exe "hi! Identifier            " . g:fgLightBlueLr       . g:bgNone   . g:none
+exe "hi! Identifier            " . g:fgLightBlueLr  . g:bgNone   . g:none
 exe "hi! Include               " . g:fgDeepPurpleLr . g:bgNone   . g:none
 exe "hi! Operator              " . g:fgCyanLr       . g:bgNone   . g:none
 "exe "hi! Character     " . g:fgRedL       . g:bgCyanD  . g:none
@@ -131,11 +131,11 @@ hi link jsThis              Constant
 exe "hi! NERDTreeBookmark           " . g:fgShadeLr
 exe "hi! NERDTreeLinkFile           " . g:fgShadeLr
 exe "hi! NERDTreeBookmarkName       " . g:fgLightBlueLr
-exe "hi! NERDTreeBookmarksHeader    " . g:bgShadeLr  . g:fgShadeL  . g:bold
+exe "hi! NERDTreeBookmarksHeader    " . g:bgShadeLr      . g:fgShadeL  . g:bold
 exe "hi! NERDTreeCWD                " . g:fgLightBlueLr  . g:bold
 exe "hi! NERDTreeClosable           " . g:fgShadeLr
-exe "hi! NERDTreeDir                " . g:fgCyanL                  . g:bold
-exe "hi! NERDTreeDirSlash           " . g:fgInvert
+exe "hi! NERDTreeDir                " . g:fgCyanL        . g:bold
+exe "hi! NERDTreeDirSlash           " . g:fgCyanD
 exe "hi! NERDTreeExecFile           " . g:fgOrangeL
 exe "hi! NERDTreeFile               " . g:fgGreyL
 exe "hi! NERDTreeFlags              " . g:fgInvert
