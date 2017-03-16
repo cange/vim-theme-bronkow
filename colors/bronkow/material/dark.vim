@@ -96,6 +96,7 @@ exe "hi! PreProc               " . g:fgDeepPurpleLr . g:bgNone   . g:none
 exe "hi! Identifier            " . g:fgLightBlueLr  . g:bgNone   . g:none
 exe "hi! Include               " . g:fgDeepPurpleLr . g:bgNone   . g:none
 exe "hi! Operator              " . g:fgCyanLr       . g:bgNone   . g:none
+exe "hi! Todo                  " . g:fgOrangeD      . g:bgNone   . g:none
 "exe "hi! Character     " . g:fgRedL       . g:bgCyanD  . g:none
 "exe "hi! Conditional   " . g:fgLightBlue        . g:bgCyanD  . g:none
 "exe "hi! Exception     " . g:fgLightGreenD      . g:bgCyanD  . g:none
@@ -105,7 +106,6 @@ exe "hi! Operator              " . g:fgCyanLr       . g:bgNone   . g:none
 "exe "hi! Repeat        " . g:fgLightGreen       . g:bgCyanD  . g:none
 "exe "hi! SpecialChar   " . g:fgCyanLr      . g:bgCyanD  . g:none
 "exe "hi! Structure     " . g:fgLightGreen       . g:bgCyanD  . g:none
-"exe "hi! Todo          " . g:fgOrangeL     . g:bgCyanD  . g:none
 "exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 " -- CSS/SASS exceptions --
 hi link cssClassNameDot     Operator

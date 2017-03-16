@@ -52,7 +52,7 @@ let g:airline#themes#bronkow_material_dark#palette = {}
 " values for the "opt" value.
 let s:normal1 = C('Shade dr', 'Shade lr')
 let s:normal2 = C('Shade lr', 'Shade l')
-let s:normal3 = C('Shade lr', 'Shade d')
+let s:normal3 = C('Grey l', 'Shade d')
 let s:normal_color_map = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
 let s:modified = { 'airline_c': C('LightBlue l', 'Shade d') }
 let s:error =    C('Grey lr', 'Red d')
@@ -94,7 +94,7 @@ let s:inactive2 = C('Shade d', 'Shade d')
 let s:inactive3 = C('Grey d', 'Shade dr')
 let s:inactive_modified = C('Red d', 'Shade dr')
 let s:palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
-let s:palette.inactive_modified = s:normal_modified
+let s:palette.inactive_modified = s:modified
 
 " Accents are used to give parts within a section a slightly different look or
 " color. Here we are defining a "red" accent, which is used by the 'readonly'
