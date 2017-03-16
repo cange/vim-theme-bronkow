@@ -2,7 +2,7 @@
 
 This is a Vim color scheme based on [Google’s Material Design Color Palette](https://material.io/guidelines/style/color.html).
 
-<img src="palette.svg">
+<img src="colors/bronkow/material/palette.png" />
 
 ## Installation
 
