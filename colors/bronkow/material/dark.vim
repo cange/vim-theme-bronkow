@@ -108,23 +108,25 @@ exe "hi! Todo                  " . g:fgOrangeD      . g:bgNone   . g:none
 "exe "hi! Structure     " . g:fgLightGreen       . g:bgCyanD  . g:none
 "exe "hi! Underlined    " . g:bgInherit     . g:fgInherit    . g:underline
 " -- CSS/SASS exceptions --
-hi link cssClassNameDot     Operator
-hi link cssProp             Special
-hi link cssTagName          Normal
-hi link scssSelectorName    Constant
-hi link scssVariable        Normal
+hi link cssClassNameDot      Operator
+hi link cssProp              Special
+hi link cssTagName           Normal
+hi link scssSelectorName     Constant
+hi link scssVariable         Normal
 " -- HTML exceptions --
-hi link htmlArg             Constant
-hi link htmlTagName         Boolean
-hi link slimText            Special
-hi link slimClass           Constant
-hi link slimClassChar       Operator
+hi link htmlArg              Constant
+hi link htmlTagName          Boolean
+hi link jsxAttrib            Constant
+hi link jsxTag               Identifier
+hi link jsxTagName           Boolean
+hi link slimClass            Constant
+hi link slimClassChar        Operator
+hi link slimText             Special
 " -- JavaScript --
-hi link jsClassDefinition   Constant
-hi link jsObjectProp        Identifier
-hi link jsObjectKey         String
+hi link jsClassDefinition    Constant
 hi link jsDestructuringBlock String
-hi link jsThis              Constant
+hi link jsObjectProp         Identifier
+hi link jsThis               Constant
 
 " === Plugins ===
 " -- NERDTree --
