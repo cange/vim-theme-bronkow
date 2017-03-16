@@ -96,3 +96,17 @@ set guicursor+=r-cr:hor10-rCursor/block-lCursor
 set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
 set guicursor+=v:block-vCursor/lCursor-blinkon0
 
+" nerdtree-git-plugin
+let g:NERDTreeIndicatorMapCustom = {
+  \ 'Modified'  : '±',
+  \ 'Staged'    : '+',
+  \ 'Untracked' : '✪',
+  \ 'Renamed'   : '➲',
+  \ 'Unmerged'  : '≈',
+  \ 'Deleted'   : '×',
+  \ 'Dirty'     : '⬌',
+  \ 'Clean'     : '☑︎',
+  \ 'Ignored'   : '☒',
+  \ 'Unknown'   : '⍰'
+  \ }
+

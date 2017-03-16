@@ -9,10 +9,10 @@ call Converters#translate(g:colors)
 
 " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"
-  let &t_SI                       = "\<Esc>]12;" . g:colors.White.medium.gui . "\x7"
-  let &t_EI                       = "\<Esc>]12;" . g:colors.LightGreen.light.gui  . "\x7"
-  silent                    !echo -ne "\033]12;" . g:colors.Grey.light.gui   . "\007"
-  autocmd VimLeave * silent !echo -ne    "\033]" . g:colors.Grey.light.gui   . "\007"
+  let &t_SI                       = "\<Esc>]12;" . g:colors.white.medium.gui . "\x7"
+  let &t_EI                       = "\<Esc>]12;" . g:colors.lightGreen.light.gui  . "\x7"
+  silent                    !echo -ne "\033]12;" . g:colors.grey.light.gui   . "\007"
+  autocmd VimLeave * silent !echo -ne    "\033]" . g:colors.grey.light.gui   . "\007"
 endif
 
 " == UI ==

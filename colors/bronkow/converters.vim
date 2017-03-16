@@ -32,7 +32,7 @@ function! Converters#translate(colors)
     endfor
   endfor
 
-  let g:spRed     = "guisp=".g:colors.Red.dark.gui
-  let g:spOrangeD = "guisp=".g:colors.Orange.darker.gui
-  let g:spOrangeL = "guisp=".g:colors.Orange.light.gui
+  let g:spRed     = "guisp=".g:colors.red.dark.gui
+  let g:spOrangeD = "guisp=".g:colors.orange.darker.gui
+  let g:spOrangeL = "guisp=".g:colors.orange.light.gui
 endfunction

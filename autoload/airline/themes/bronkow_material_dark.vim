@@ -50,13 +50,13 @@ let g:airline#themes#bronkow_material_dark#palette = {}
 " to the dictionary.  The array is in the format:
 " [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list" for valid
 " values for the "opt" value.
-let s:normal1 = C('Shade dr', 'Shade lr')
-let s:normal2 = C('Shade lr', 'Shade l')
-let s:normal3 = C('Grey l', 'Shade d')
+let s:normal1 = C('shade dr', 'shade lr')
+let s:normal2 = C('shade lr', 'shade l')
+let s:normal3 = C('grey l', 'shade d')
 let s:normal_color_map = airline#themes#generate_color_map(s:normal1, s:normal2, s:normal3)
-let s:modified = { 'airline_c': C('LightBlue l', 'Shade d') }
-let s:error =    C('Grey lr', 'Red d')
-let s:warning =  C('Grey lr', 'Orange dr')
+let s:modified = { 'airline_c': C('lightBlue l', 'shade d') }
+let s:error =    C('grey lr', 'red d')
+let s:warning =  C('grey lr', 'orange dr')
 
 " Here we define overrides for when the buffer is modified.  This will be
 " applied after g:airline#themes#bronkow_material_dark#palette.normal, hence why only certain keys are
@@ -67,7 +67,7 @@ let s:palette = {
   \
   \'insert':           copy(s:normal_color_map),
   \'insert_modified':  copy(s:modified),
-  \'insert_paste':     { 'airline_c': C('Cyan d', 'Shade lr') },
+  \'insert_paste':     { 'airline_c': C('cyan d', 'shade lr') },
   \
   \'replace':          copy(s:normal_color_map),
   \'replace_modified': copy(s:modified),
@@ -75,9 +75,9 @@ let s:palette = {
   \'visual':           copy(s:normal_color_map),
   \'visual_modified':  copy(s:modified)
 \}
-let s:palette.insert.airline_a = C('Shade d', 'Cyan d')
-let s:palette.replace.airline_a = C('Shade d', 'Red d')
-let s:palette.visual.airline_a = C('Shade d', 'Orange l')
+let s:palette.insert.airline_a = C('shade d', 'cyan d')
+let s:palette.replace.airline_a = C('shade d', 'red d')
+let s:palette.visual.airline_a = C('shade d', 'orange l')
 
 let s:palette.normal.airline_warning = s:warning
 let s:palette.insert.airline_warning = s:warning
@@ -89,10 +89,10 @@ let s:palette.insert.airline_error = s:error
 let s:palette.visual.airline_error = s:error
 let s:palette.replace.airline_error = s:error
 
-let s:inactive1 = C('Shade dr', 'Shade dr')
-let s:inactive2 = C('Shade d', 'Shade d')
-let s:inactive3 = C('Grey d', 'Shade dr')
-let s:inactive_modified = C('Red d', 'Shade dr')
+let s:inactive1 = C('shade dr', 'shade dr')
+let s:inactive2 = C('shade d', 'shade d')
+let s:inactive3 = C('grey d', 'shade dr')
+let s:inactive_modified = C('red d', 'shade dr')
 let s:palette.inactive = airline#themes#generate_color_map(s:inactive1, s:inactive2, s:inactive3)
 let s:palette.inactive_modified = s:modified
 
@@ -103,7 +103,7 @@ let s:palette.inactive_modified = s:modified
 " this means is that regardless of which section the part is defined in, it
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
-let s:palette.accents = { 'red': C('Red d', 'Shade dr') }
+let s:palette.accents = { 'red': C('red d', 'shade dr') }
 
 " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
 " variable so that related functionality is loaded iff the user is using
@@ -114,9 +114,9 @@ if !get(g:, 'loaded_ctrlp', 0)
 endif
 
 let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-  \ C('Cyan dr',   'Shade dr'),
-  \ C('Orange lr', 'Cyan dr'),
-  \ C('Cyan dr',   'Orange l', 'bold')
+  \ C('cyan dr',   'shade dr'),
+  \ C('orange lr', 'cyan dr'),
+  \ C('cyan dr',   'orange l', 'bold')
   \)
 "
 " global export

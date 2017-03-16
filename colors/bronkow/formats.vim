@@ -20,17 +20,3 @@ exe "hi! htmlUnderline "           . g:underline
 exe "hi! htmlUnderlineBold "       . g:underlineBold
 exe "hi! htmlUnderlineBoldItalic " . g:underlineBoldItalic
 
-if exists('s:NERDTreeIndicatorMap')
-  let s:NERDTreeIndicatorMap = {
-    \ 'Modified'  : '±',
-    \ 'Staged'    : '+',
-    \ 'Untracked' : '✪',
-    \ 'Renamed'   : '➲',
-    \ 'Unmerged'  : '≈',
-    \ 'Deleted'   : '×',
-    \ 'Dirty'     : '⬌',
-    \ 'Clean'     : '☑︎',
-    \ 'Unknown'   : '⍰'
-    \ }
-endif
-
