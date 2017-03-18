@@ -5,7 +5,7 @@ ru colors/bronkow/material/colors.vim
 ru colors/bronkow/formats.vim
 ru colors/bronkow/converters.vim
 
-call Converters#translate(g:colors)
+call converters#Translate(g:colors)
 
 " ============================== define cursor ================================
 if &term =~ "xterm\\|rxvt"

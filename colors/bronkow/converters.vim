@@ -1,4 +1,4 @@
-function! Converters#capitalize(string)
+function! converters#Capitalize(string)
   let first = toupper(a:string[0])
   let rest = a:string[1:-1]
   return first.rest
@@ -12,7 +12,7 @@ let s:toneMapping = {
       \"lighter":  "Lr",
       \}
 
-function! Converters#translate(colors)
+function! converters#Translate(colors)
   for colorKey in keys(g:colors)
     let colorDict = g:colors[colorKey]
     let g:colors[colorKey].fg = {}
@@ -23,7 +23,7 @@ function! Converters#translate(colors)
       let toneDict = colorDict[toneKey]
 
       if !(toneKey == "fg" || toneKey == "bg")
-        let name = Converters#capitalize(colorKey)
+        let name = converters#Capitalize(colorKey)
         let label = s:toneMapping[toneKey]
         let g:["fg".name.label] = " guifg=". toneDict.gui ." ctermfg=". toneDict.cterm
         let g:["bg".name.label] = " guibg=". toneDict.gui ." ctermbg=". toneDict.cterm
