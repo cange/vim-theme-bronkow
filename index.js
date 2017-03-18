@@ -9,9 +9,9 @@ const COLORS = require('./lib/js/colors.js')
 
 const vimColorGenerator = new VimColorGenerator(COLORS)
 const svgPrinter = new SVGGenerator(COLORS)
-const themePath = './colors/bronkow/material'
+const themePath = './colors/bronkow'
 
-fs.writeFile(path.join(themePath, 'colors.vim'), vimColorGenerator.run(), (err) => {
+fs.writeFile(path.join('autoload', 'bronkow.vim'), vimColorGenerator.run(), (err) => {
   if (err) throw err
 
   console.log(chalk.grey('[1/3]'), 'Creating vim colors file...')

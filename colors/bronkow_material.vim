@@ -83,18 +83,12 @@ endif
 
 if g:bronkow_style == "material_dark"
   set background=dark
-  ru colors/bronkow/material/dark.vim
+  ru colors/bronkow/dark.vim
 " elseif g:bronkow_style == "material_light"
 "   set background=light
 "   ru colors/bronkow/material/light.vim
 endif
 
-" === Cursor shapes and behaviours =============================================
-set guicursor =n-c:block-Cursor
-set guicursor+=n-c:blinkon0
-set guicursor+=r-cr:hor10-rCursor/block-lCursor
-set guicursor+=i-ci:ver10-iCursor/lCursor-blinkwait150
-set guicursor+=v:block-vCursor/lCursor-blinkon0
 
 " nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {

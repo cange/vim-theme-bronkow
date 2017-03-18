@@ -34,8 +34,8 @@ function! C(fg_color, bg_color, ...)
   let bg_name = bg_split[0]
   let fg_tone = tones[fg_split[1]]
   let bg_tone = tones[bg_split[1]]
-  let fg = g:colors[fg_name][fg_tone]
-  let bg = g:colors[bg_name][bg_tone]
+  let fg = g:bronkow#colors[fg_name][fg_tone]
+  let bg = g:bronkow#colors[bg_name][bg_tone]
 
   let opts = a:0 > 0 ? a:1 : 'NONE'
 
@@ -119,7 +119,3 @@ endif
 
 " global export
 let g:airline#themes#bronkow_material_dark#palette = s:palette
-"
-" order of section
-let g:airline_section_a = airline#section#create(['mode', 'branch'])
-let g:airline_section_b = airline#section#create([])
