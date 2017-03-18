@@ -109,19 +109,17 @@ let s:palette.accents = { 'red': C('red d', 'shade dr') }
 " variable so that related functionality is loaded iff the user is using
 " ctrlp. Note that this is optional, and if you do not define ctrlp colors
 " they will be chosen automatically from the existing palette.
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
+if exists('g:loaded_ctrlp')
+  let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
+    \ C('cyan dr',   'shade dr'),
+    \ C('orange lr', 'cyan dr'),
+    \ C('cyan dr',   'orange l', 'bold')
+    \)
 endif
 
-let s:palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-  \ C('cyan dr',   'shade dr'),
-  \ C('orange lr', 'cyan dr'),
-  \ C('cyan dr',   'orange l', 'bold')
-  \)
-"
 " global export
 let g:airline#themes#bronkow_material_dark#palette = s:palette
 "
 " order of section
-let g:airline_section_a = airline#section#create(['branch'])
-let g:airline_section_b = airline#section#create([''])
+let g:airline_section_a = airline#section#create(['mode', 'branch'])
+let g:airline_section_b = airline#section#create([])

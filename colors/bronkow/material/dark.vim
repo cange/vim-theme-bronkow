@@ -116,7 +116,7 @@ hi link Repeat               Statement
 hi link MatchParen           Search
 exe "hi! Underlined            " . g:bgNone        . g:fgLightBlueD   . g:underline
 exe "hi! Label                 " . s:debugStyle
-exe "hi! SpecialChar           " . s:debugStyle
+exe "hi! SpecialChar           " . g:bgNone        . g:fgLightBlueD
 "exe "hi! Function              " . g:bgNone   . g:fgRedL    . g:none
 " -- CSS/SASS exceptions --
 hi link cssClassNameDot      Operator
@@ -155,7 +155,7 @@ exe "hi! NERDTreeGitStatusDirClean  " . g:fgLightGreenLr
 exe "hi! NERDTreeGitStatusDirDirty  " . g:fgOrangeL
 exe "hi! NERDTreeGitStatusModified  " . g:fgLightBlueLr
 exe "hi! NERDTreeGitStatusRenamed   " . g:fgRedL
-exe "hi! NERDTreeGitStatusStaged    " . g:fgShadeLr
+exe "hi! NERDTreeGitStatusStaged    " . g:fgLightGreenL
 exe "hi! NERDTreeGitStatusUnmerged  " . g:fgShadeLr
 exe "hi! NERDTreeGitStatusUntracked " . g:fgLightGreenD
 exe "hi! NERDTreeHelp               " . g:fgShadeLr

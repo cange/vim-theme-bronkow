@@ -33,15 +33,15 @@ let g:colors = {
 		\'medium':	{ 'cterm': 0,		'gui': '#000000' },
 	\},
 	\'shade': {
-		\'lighter':	{ 'cterm': 59,	'gui': '#3C4D56' },
-		\'light':		{ 'cterm': 23,	'gui': '#263238' },
-		\'dark':		{ 'cterm': 17,	'gui': '#212B30' },
-		\'darker':	{ 'cterm': 0,		'gui': '#1E272C' },
+		\'lighter':	{ 'cterm': 237,	'gui': '#3C4D56' },
+		\'light':		{ 'cterm': 235,	'gui': '#263238' },
+		\'dark':		{ 'cterm': 234,	'gui': '#212B30' },
+		\'darker':	{ 'cterm': 233,	'gui': '#1E272C' },
 	\},
 	\'grey': {
-		\'lighter':	{ 'cterm': 15,	'gui': '#EEEEEE' },
-		\'light':		{ 'cterm': 145,	'gui': '#BDBDBD' },
-		\'dark':		{ 'cterm': 59,	'gui': '#616161' },
+		\'lighter':	{ 'cterm': 255,	'gui': '#EEEEEE' },
+		\'light':		{ 'cterm': 249,	'gui': '#BDBDBD' },
+		\'dark':		{ 'cterm': 241,	'gui': '#616161' },
 	\},
 	\'white': {
 		\'medium':	{ 'cterm': 15,	'gui': '#FFFFFF' },

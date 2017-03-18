@@ -99,13 +99,13 @@ set guicursor+=v:block-vCursor/lCursor-blinkon0
 " nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {
   \ 'Modified'  : '±',
-  \ 'Staged'    : '+',
+  \ 'Staged'    : '✓',
   \ 'Untracked' : '✪',
   \ 'Renamed'   : '➲',
   \ 'Unmerged'  : '≈',
   \ 'Deleted'   : '×',
   \ 'Dirty'     : '⬌',
-  \ 'Clean'     : '☑︎',
+  \ 'Clean'     : '',
   \ 'Ignored'   : '☒',
   \ 'Unknown'   : '⍰'
   \ }

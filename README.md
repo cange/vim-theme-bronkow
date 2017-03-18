@@ -24,3 +24,8 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 ## Recommended iTerm2 theme
 - [iterm2-material-design](https://github.com/MartinSeeler/iterm2-material-design)
+
+## Development
+
+
+
