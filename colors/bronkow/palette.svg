@@ -7,7 +7,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #DCEDC8" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">green</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">green</text>
         </g>
       </g>
       
@@ -49,7 +49,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #B388FF" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">purple</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">purple</text>
         </g>
       </g>
       
@@ -67,7 +67,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #80D8FF" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">blue</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">blue</text>
         </g>
       </g>
       
@@ -101,7 +101,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #B2EBF2" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">cyan</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">cyan</text>
         </g>
       </g>
       
@@ -143,7 +143,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #E57373" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">red</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">red</text>
         </g>
       </g>
       
@@ -169,7 +169,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #FFE0B2" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">orange</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">orange</text>
         </g>
       </g>
       
@@ -211,7 +211,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #000000" />
         <g style="fill: white">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">black</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">black</text>
         </g>
       </g>
       
@@ -229,7 +229,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #eceff1" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">shade</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">shade</text>
         </g>
       </g>
       
@@ -295,7 +295,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #EEEEEE" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">grey</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">grey</text>
         </g>
       </g>
       
@@ -329,7 +329,7 @@
       <g>
         <rect class="tone-canvas" x="0" y="0" width="96" height="16" style="fill: #FFFFFF" />
         <g style="fill: black">
-          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 12)">white</text>
+          <text class="title" x="4" y="0" text-anchor="start" transform="translate(0, 10.672)">white</text>
         </g>
       </g>
       
