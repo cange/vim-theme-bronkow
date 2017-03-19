@@ -5,11 +5,13 @@ function! s:capitalize(string)
 endfunction
 
 let s:toneMapping = {
-      \'darker':  'Dr',
-      \'dark':    'D',
-      \'medium':  '',
-      \'light':   'L',
-      \'lighter': 'Lr',
+      \'lightest': 'Lst',
+      \'lighter':  'Lr',
+      \'light':    'L',
+      \'medium':   '',
+      \'dark':     'D',
+      \'darker':   'Dr',
+      \'darkest':  'Dst',
       \}
 
 function! bronkow#converters#translate(colors)
