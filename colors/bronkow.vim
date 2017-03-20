@@ -32,6 +32,7 @@ command! BronkowLight let g:bronkow_style = 'light' | colorscheme bronkow
 command! BronkowDark  let g:bronkow_style = 'dark'  | colorscheme bronkow
 " ==============================================================================
 hi clear
+
 if exists('syntax_on')
   syntax reset
 endif
@@ -50,4 +51,9 @@ elseif g:bronkow_style == 'light'
   set background=light
 endif
 
-ru colors/bronkow/default.vim
+" Check key colors with
+" :so $VIMRUNTIME/syntax/hitest.vim
+call bronkow#formats#setup()
+call bronkow#converters#translate(g:bronkow#colors)
+call bronkow#tones#map_generator(g:bronkow#colors, g:bronkow_style)
+call bronkow#ui#map_generator()

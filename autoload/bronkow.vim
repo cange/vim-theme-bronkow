@@ -7,16 +7,21 @@ let g:bronkow#colors = {
   \},
   \'purple': {
     \'lighter': { 'cterm': 141, 'gui': '#B388FF' },
+    \'light': { 'cterm': 99, 'gui': '#7C4DFF' },
+    \'dark': { 'cterm': 57, 'gui': '#651FFF' },
+    \'darker': { 'cterm': 56, 'gui': '#6200EA' },
   \},
   \'blue': {
     \'lighter': { 'cterm': 117, 'gui': '#80D8FF' },
     \'light': { 'cterm': 81, 'gui': '#40C4FF' },
     \'dark': { 'cterm': 39, 'gui': '#00B0FF' },
+    \'darker': { 'cterm': 32, 'gui': '#0091ea' },
   \},
   \'cyan': {
     \'lighter': { 'cterm': 159, 'gui': '#B2EBF2' },
-    \'light': { 'cterm': 116, 'gui': '#80DEEA' },
-    \'dark': { 'cterm': 37, 'gui': '#00ACC1' },
+    \'light': { 'cterm': 80, 'gui': '#4DD0E1' },
+    \'medium': { 'cterm': 38, 'gui': '#00BCD4' },
+    \'dark': { 'cterm': 31, 'gui': '#0097A7' },
     \'darker': { 'cterm': 23, 'gui': '#006064' },
   \},
   \'red': {
@@ -42,9 +47,13 @@ let g:bronkow#colors = {
     \'darkest': { 'cterm': 233, 'gui': '#1E272C' },
   \},
   \'grey': {
-    \'lighter': { 'cterm': 255, 'gui': '#EEEEEE' },
-    \'light': { 'cterm': 249, 'gui': '#BDBDBD' },
+    \'lightest': { 'cterm': 254, 'gui': '#fafafa' },
+    \'lighter': { 'cterm': 253, 'gui': '#f5f5f5' },
+    \'light': { 'cterm': 248, 'gui': '#e0e0e0' },
+    \'medium': { 'cterm': 247, 'gui': '#9E9E9E' },
     \'dark': { 'cterm': 241, 'gui': '#616161' },
+    \'darker': { 'cterm': 238, 'gui': '#424242' },
+    \'darkest': { 'cterm': 235, 'gui': '#212121' },
   \},
   \'white': {
     \'medium': { 'cterm': 15, 'gui': '#FFFFFF' },
