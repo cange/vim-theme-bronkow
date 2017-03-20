@@ -22,27 +22,14 @@
 " * #{color}Dst = darkest
 " * #{color}Dr  = darker
 " * #{color}D   = dark
-" * #{color}m   = medium
+" * #{color}    = medium
 " * #{color}L   = light
 " * #{color}Lr  = lighter
 " * #{color}Lst = lightest
-"
-" == Vimwiki Colors ==
-hi link VimwikiHeader1 BConstant
-hi link VimwikiHeader2 BIdentifier
-hi link VimwikiHeader3 BStatement
-hi link VimwikiHeader4 BSpecial
-hi link VimwikiHeader5 BPreProc
-hi link VimwikiHeader6 BType
-
-" == Tagbar Colors ==
-hi link TagbarAccessPublic Constant
-hi link TagbarAccessProtected Type
-hi link TagbarAccessPrivate PreProc
 
 " == Commands ==
-"command! BronkowLight let g:bronkow_style = 'light' | colorscheme bronkow
-command! BronkowDark let g:bronkow_style = 'dark' | colorscheme bronkow
+command! BronkowLight let g:bronkow_style = 'light' | colorscheme bronkow
+command! BronkowDark  let g:bronkow_style = 'dark'  | colorscheme bronkow
 " ==============================================================================
 hi clear
 if exists('syntax_on')
@@ -59,24 +46,8 @@ endif
 if g:bronkow_style == 'dark'
   set background=dark
   let g:airline_theme = 'bronkow_dark'
-  ru colors/bronkow/dark.vim
-" elseif g:bronkow_style == 'light'
-"   set background=light
-"   ru colors/bronkow/material/light.vim
+elseif g:bronkow_style == 'light'
+  set background=light
 endif
 
-
-" nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
-  \ 'Modified'  : '±',
-  \ 'Staged'    : '✓',
-  \ 'Untracked' : '✪',
-  \ 'Renamed'   : '➲',
-  \ 'Unmerged'  : '≈',
-  \ 'Deleted'   : '×',
-  \ 'Dirty'     : '⬌',
-  \ 'Clean'     : '',
-  \ 'Ignored'   : '☒',
-  \ 'Unknown'   : '⍰'
-  \ }
-
+ru colors/bronkow/default.vim

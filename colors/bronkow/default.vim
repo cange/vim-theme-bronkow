@@ -3,6 +3,7 @@
 
 call bronkow#formats#setup()
 call bronkow#converters#translate(g:bronkow#colors)
+call bronkow#converters#setup_shades(g:bronkow_style, g:bronkow#colors.shade)
 
 let s:debugStyle = g:bgRedD . g:fgOrangeL . g:underlineBoldItalic
 
@@ -10,35 +11,35 @@ let s:debugStyle = g:bgRedD . g:fgOrangeL . g:underlineBoldItalic
 "
 " Highlighting groups for various occasions
 " -----------------------------------------
-exe 'hi! SpecialKey            ' . g:bgNone         . g:fgShadeDr      . g:none
-exe 'hi! NonText               ' . g:bgNone         . g:fgShadeDr      . g:none
-exe 'hi! Directory             ' . g:bgNone         . g:fgGreyL        . g:none
-exe 'hi! ErrorMsg              ' . g:bgRedD         . g:fgShade       . g:none
+exe 'hi! SpecialKey            ' . g:bgNone        . g:fgShadeD        . g:none
+exe 'hi! NonText               ' . g:bgNone        . g:fgShadeD        . g:none
+exe 'hi! Directory             ' . g:bgNone        . g:fgGreyL         . g:none
+exe 'hi! ErrorMsg              ' . g:bgRedD        . g:fgShadeLr       . g:none
 " -- Selections --
-exe 'hi! IncSearch             ' . g:bgGreenL       . g:fgShadeDr      . g:none
-exe 'hi! Search                ' . g:bgShade        . g:fgGreenL       . g:none
+exe 'hi! IncSearch             ' . g:bgGreenL      . g:fgShadeD        . g:none
+exe 'hi! Search                ' . g:bgShadeLr     . g:fgGreenL        . g:none
 " --
-exe 'hi! MoreMsg               ' . g:bgNone         . g:fgBlueL        . g:none
+exe 'hi! MoreMsg               ' . g:bgNone        . g:fgBlueL         . g:none
 exe 'hi! ModeMsg               ' . g:bgNone                            . g:none
 " -- UI --
-exe 'hi! LineNr                ' . g:bgShadeDr      . g:fgShade        . g:none
-exe 'hi! CursorLineNr          ' . g:bgShadeDst     . g:fgShade        . g:bold
+exe 'hi! LineNr                ' . g:bgShadeD      . g:fgShadeLr       . g:none
+exe 'hi! CursorLineNr          ' . g:bgShadeDr     . g:fgShadeLr       . g:bold
 " --
-exe 'hi! Question              ' . g:bgNone         . g:fgGreenD       . g:none
+exe 'hi! Question              ' . g:bgNone        . g:fgGreenD        . g:none
 " -- UI --
-exe 'hi! StatusLine            ' . g:bgShadeDst     . g:fgShade        . g:none
-exe 'hi! StatusLineNC          ' . g:bgShadeDst     . g:fgNone         . g:none
-exe 'hi! VertSplit             ' . g:bgShadeDst     . g:fgShadeDst     . g:none
+exe 'hi! StatusLine            ' . g:bgShadeDr     . g:fgShadeLr       . g:none
+exe 'hi! StatusLineNC          ' . g:bgShadeDr     . g:fgNone          . g:none
+exe 'hi! VertSplit             ' . g:bgShadeDr     . g:fgShadeDr       . g:none
 " --
 exe 'hi! Title                 ' . g:bgNone        . g:fgNone          . g:bold
 " -- Selections --
-exe 'hi! Visual                ' . g:bgShade       . g:fgNone          . g:none
-exe 'hi! VisualNOS             ' . g:bgShade       . g:fgNone          . g:none
+exe 'hi! Visual                ' . g:bgShadeLr     . g:fgNone          . g:none
+exe 'hi! VisualNOS             ' . g:bgShadeLr     . g:fgNone          . g:none
 " --
 exe 'hi! WarningMsg            '                   . g:fgOrangeL       . g:none
-exe 'hi! WildMenu              ' . g:bgBlueD       . g:fgShade         . g:none
+exe 'hi! WildMenu              ' . g:bgBlueD       . g:fgShadeLr       . g:none
 " -- horizontal line --
-exe 'hi! Folded                ' . g:bgShadeDr     . g:fgOrangeL       . g:none
+exe 'hi! Folded                ' . g:bgShadeD      . g:fgOrangeL       . g:none
 exe 'hi! FoldColumn            ' . s:debugStyle
 " -- Diff --
 exe 'hi! DiffAdd               ' . g:bgNone        . g:fgGreenD        . g:none
@@ -53,24 +54,24 @@ exe 'hi! SpellCap              ' . g:bgNone        . g:fgNone          . g:under
 exe 'hi! SpellRare             ' . g:bgNone        . g:fgNone          . g:undercurl . g:spOrangeL
 exe 'hi! SpellLocal            ' . g:bgNone        . g:fgNone          . g:undercurl . g:spOrangeD
 " -- autocompletion dropdown --
-exe 'hi! PMenu                 ' . g:bgShadeDr     . g:fgBlueLr
-exe 'hi! PmenuSel              ' . g:bgShadeDst    . g:fgGreyLr        . g:bold
+exe 'hi! PMenu                 ' . g:bgShadeD      . g:fgBlueLr
+exe 'hi! PmenuSel              ' . g:bgShadeDr     . g:fgGreyLr        . g:bold
 exe 'hi! PMenuSbar             ' . g:bgShade
 exe 'hi! PMenuThumb            ' . g:bgShadeD
 " -- Status bars --
-exe 'hi! TabLine               ' . g:bgShadeDst    . g:fgShade         . g:none
-exe 'hi! TabLineFill           ' . g:bgShade       . g:fgShadeL         . g:none
-exe 'hi! TabLineSel            ' . g:bgBlueL       . g:fgShade         . g:none
+exe 'hi! TabLine               ' . g:bgShadeDr     . g:fgShadeLr       . g:none
+exe 'hi! TabLineFill           ' . g:bgShadeLr     . g:fgShadeL        . g:none
+exe 'hi! TabLineSel            ' . g:bgBlueL       . g:fgShadeLr       . g:none
 " -- Text Selection --
 exe 'hi! CursorColumn          ' . g:bgRedL        . g:fgNone          . g:none
-exe 'hi! CursorLine            ' . g:bgShadeDr     . g:fgNone          . g:bold
-exe 'hi! ColorColumn           ' . g:bgShadeDr     . g:fgNone          . g:none
+exe 'hi! CursorLine            ' . g:bgShadeD      . g:fgNone          . g:bold
+exe 'hi! ColorColumn           ' . g:bgShadeD      . g:fgNone          . g:none
 exe 'hi! Cursor                ' . g:bgGreyLr                          . g:none
 "
 " Syntax highlighting groups
 " --------------------------
 hi link MatchParen             Search
-exe 'hi! Normal                ' . g:bgShadeD      . g:fgGreyLr        . g:none
+exe 'hi! Normal                ' . g:bgShadeL      . g:fgGreyLr        . g:none
 exe 'hi! Error                 ' . g:bgNone        . g:fgRedL          . g:none
 exe 'hi! Constant              ' . g:bgNone        . g:fgOrangeL       . g:none
 exe 'hi! Special               ' . g:bgNone        . g:fgCyanL         . g:none
@@ -95,12 +96,12 @@ exe 'hi! Structure             ' . g:bgNone        . g:fgPurpleLr      . g:none
 exe 'hi! SpecialChar           ' . g:bgNone        . g:fgBlueD
 " TODO sort all items below in hitest order
 " -- UI – Git --
-exe 'hi! GitGutterAdd          ' . g:bgShadeDr     . g:fgGreenD        . g:none
-exe 'hi! GitGutterChange       ' . g:bgShadeDr     . g:fgOrangeL       . g:none
-exe 'hi! GitGutterDelete       ' . g:bgShadeDr     . g:fgRedD          . g:none
-exe 'hi! GitGutterChangeDelete ' . g:bgShadeDr     . g:fgRedL          . g:none
+exe 'hi! GitGutterAdd          ' . g:bgShadeD      . g:fgGreenD        . g:none
+exe 'hi! GitGutterChange       ' . g:bgShadeD      . g:fgOrangeL       . g:none
+exe 'hi! GitGutterDelete       ' . g:bgShadeD      . g:fgRedD          . g:none
+exe 'hi! GitGutterChangeDelete ' . g:bgShadeD      . g:fgRedL          . g:none
 " -- Misc --
-exe 'hi! SignColumn            ' . g:bgShadeDr     . g:fgShade         . g:none
+exe 'hi! SignColumn            ' . g:bgShadeD      . g:fgShadeLr        . g:none
 " -- Cursors --
 exe 'hi! rCursor               ' . g:bgGreyLr      . g:fgRedL          . g:none
 exe 'hi! iCursor               ' . g:bgGreenD                          . g:none
@@ -137,10 +138,10 @@ hi link jsThis                 Constant
 
 " === Plugins ===
 " -- NERDTree --
-exe 'hi! NERDTreeBookmark           ' . g:fgShade
-exe 'hi! NERDTreeLinkFile           ' . g:fgShade
+exe 'hi! NERDTreeBookmark           ' . g:fgShadeLr
+exe 'hi! NERDTreeLinkFile           ' . g:fgShadeLr
 hi link NERDTreeBookmarkName Underlined
-exe 'hi! NERDTreeBookmarksHeader    ' . g:bgShade        . g:fgShadeD  . g:bold
+exe 'hi! NERDTreeBookmarksHeader    ' . g:bgShadeLr      . g:fgShadeL  . g:bold
 exe 'hi! NERDTreeCWD                ' . g:fgBlueLr       . g:bold
 exe 'hi! NERDTreeClosable           ' . g:fgShade
 exe 'hi! NERDTreeDir                ' . g:fgCyanL        . g:bold
