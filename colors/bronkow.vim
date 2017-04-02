@@ -1,5 +1,5 @@
 " Maintainer: Christian Angermann
-" Version: 1.1.0
+" Version: 2.0.0
 
 " Bronkow Colorscheme for Vim
 "
@@ -39,21 +39,21 @@ endif
 
 let colors_name='bronkow'
 
-" set default theme
+"set default theme
 if !exists('g:bronkow_style')
-  let g:bronkow_style='dark'
+  let g:bronkow_style = 'dark'
 endif
 
 if g:bronkow_style == 'dark'
   set background=dark
-  let g:airline_theme = 'bronkow_dark'
 elseif g:bronkow_style == 'light'
   set background=light
 endif
 
-" Check key colors with
-" :so $VIMRUNTIME/syntax/hitest.vim
-call bronkow#formats#setup()
-call bronkow#converters#translate(g:bronkow#colors)
-call bronkow#tones#map_generator(g:bronkow#colors, g:bronkow_style)
-call bronkow#ui#map_generator()
+"let g:bronkow_debug = 1
+
+if get(g:, 'bronkow_debug', 0) == 1
+  ru autoload/bronkow/theme.vim
+endif
+
+call bronkow#theme#init(g:bronkow#colors)

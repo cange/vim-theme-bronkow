@@ -43,13 +43,15 @@ function! s:color(fg_color, bg_color, ...)
   let bg_tone = tones[bg_split[1]]
   let fg = g:bronkow#colors[fg_name][fg_tone]
   let bg = g:bronkow#colors[bg_name][bg_tone]
-
   let opts = a:0 > 0 ? a:1 : 'NONE'
+  let result = [ fg.gui, bg.gui, fg.cterm, bg.cterm, opts ]
+  echo 'airline color'
+  echo result
 
-  return [ fg.gui, bg.gui, fg.cterm, bg.cterm, opts ]
+  return result
 endfunction
 
-let g:airline#themes#bronkow_dark#palette = {}
+let g:airline#themes#bronkow#palette = {}
 
 " First let's define some arrays. The s: is just a VimL thing for scoping the
 " variables to the current script. Without this, these variables would be
@@ -66,7 +68,7 @@ let s:error =    s:color('shade lr', 'red d')
 let s:warning =  s:color('shade lr', 'orange dr')
 
 " Here we define overrides for when the buffer is modified. This will be
-" applied after g:airline#themes#bronkow_dark#palette.normal, hence why only certain keys are
+" applied after g:airline#themes#bronkow#palette.normal, hence why only certain keys are
 " declared.
 let s:palette = {
   \'normal':           copy(s:normal_color_map),
@@ -125,4 +127,4 @@ if exists('g:loaded_ctrlp')
 endif
 
 " global export
-let g:airline#themes#bronkow_dark#palette = s:palette
+let g:airline#themes#bronkow#palette = s:palette
