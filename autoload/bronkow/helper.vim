@@ -32,25 +32,25 @@ fun! s:color_translate(colors)
   let g:sp_orange_light= 'guisp=' . a:colors.orange.light.gui
 endfun
 
-fun! s:color_map(fg_color, bg_color, opts)
-  let fg_color = a:fg_color == 'none' ? '' : g:['fg_'.a:fg_color]
-  let bg_color = a:bg_color == 'none' ? '' : g:['bg_'.a:bg_color]
+fun! s:color_map(fg, bg, opts)
+  let fg = a:fg == 'none' ? '' : g:['fg_'.a:fg]
+  let bg = a:bg == 'none' ? '' : g:['bg_'.a:bg]
   let opts = a:opts == 'none' ? '' : g:[a:opts]
 
-  call s:log('color_map', fg_color . ' '. bg_color .' '. opts)
-  return fg_color .' '. bg_color .' '. opts
+  call s:log('color_map', fg . ' '. bg .' '. opts)
+  return fg .' '. bg .' '. opts
 endfun
 "
 " public
 "
 let s:prototype = {}
-" arguments, helper: group_name, fg_color, bg_color, opts
+" arguments, helper: group_name, fg, bg, opts
 " example: call helper_instance.hilight_group('title', 'blue4', 'shade1', 'bold')
 fun! s:prototype.hilight(name, ...) dict
-  let fg_color = a:0 > 0 ? a:1 : 'none'
-  let bg_color = a:0 > 1 ? a:2 : 'none'
+  let fg = a:0 > 0 ? a:1 : 0
+  let bg = a:0 > 1 ? a:2 : 'none'
   let opts = a:0 > 2 ? a:3 : 'none'
-  let color_map = s:color_map(fg_color, bg_color, opts)
+  let color_map = s:color_map(fg, bg, opts)
   let hilight = 'hi! '.a:name.'		'.color_map
 
   call s:log('hilight', hilight)
@@ -58,12 +58,12 @@ fun! s:prototype.hilight(name, ...) dict
 endfun
 
 " TODO set up airline styles for light and dark
-" Arguments: fg_color, bg_color, opts
+" Arguments: fg, bg, opts
 " Example: call helper_instance.airline_set('title', 'blue4', 'shade1', 'bold')
 " Returns: attr-list: [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list"
-fun! s:prototype.airline_set(fg_color, bg_color, ...) dict
-  let fg_name = a:fg_color
-  let bg_name = a:bg_color
+fun! s:prototype.airline_set(fg, bg, ...) dict
+  let fg_name = a:fg
+  let bg_name = a:bg
   " let fg = s:set_tone[fg_name]
   " let bg = s:set_tone[bg_name]
   "

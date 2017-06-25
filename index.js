@@ -14,7 +14,7 @@ const themePath = './colors/bronkow'
 fs.writeFile(path.join('autoload', 'bronkow.vim'), vimColorGenerator.run(), (err) => {
   if (err) throw err
 
-  console.log(chalk.grey('[1/3]'), 'Creating vim colors file...')
+  console.log(chalk.grey('[1/3]'), 'Creating VIM palette file...')
   createSVG(path.join(themePath, 'palette.svg'), createPNG)
 })
 

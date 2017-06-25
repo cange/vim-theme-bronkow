@@ -26,34 +26,31 @@
 " * #{color}L   = light
 " * #{color}Lr  = lighter
 " * #{color}Lst = lightest
-
-" == Commands ==
-command! BronkowLight let g:bronkow_style = 'light' | colorscheme bronkow
-command! BronkowDark  let g:bronkow_style = 'dark'  | colorscheme bronkow
 " ==============================================================================
-hi clear
 
-if exists('syntax_on')
-  syntax reset
+" Global Settings: {{{
+
+if version > 580
+  hi clear
+  if exists('syntax_on')
+    syntax reset
+  endif
 endif
 
 let colors_name='bronkow'
 
-"set default theme
-if !exists('g:bronkow_style')
-  let g:bronkow_style = 'dark'
+if !has('gui_running') && &t_Co != 256
+  finish
 endif
 
-if g:bronkow_style == 'dark'
-  set background=dark
-elseif g:bronkow_style == 'light'
-  set background=light
-endif
+let s:is_dark = (&background == 'dark')
 
-"let g:bronkow_debug = 1
+command! BronkowLight let s:is_dark = 0 | call bronkow#style#update(s:is_dark) | colorscheme bronkow
+command! BronkowDark  let s:is_dark = 1 | call bronkow#style#update(s:is_dark) | colorscheme bronkow
 
-if get(g:, 'bronkow_debug', 0) == 1
-  ru autoload/bronkow/theme.vim
-endif
+" }}}
+" Initialisation: {{{
 
-call bronkow#theme#init(g:bronkow#colors)
+call bronkow#theme#init(g:bronkow#colors, s:is_dark)
+
+" }}}

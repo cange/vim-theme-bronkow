@@ -2,24 +2,21 @@ fun! s:set_tone(name, tone)
   call bronkow#helper#set_tone(a:name, a:tone)
 endfun
 
-fun! bronkow#style#init(colors)
-  if get(g:, 'bronkow_style', 0) == 0
-    let g:bronkow_style = 'dark'
-  endif
-
-  let blue = a:colors.blue
-  let cyan = a:colors.cyan
-  let green = a:colors.green
-  let grey = a:colors.grey
-  let orange = a:colors.orange
-  let purple = a:colors.purple
-  let red = a:colors.red
-  let shade = a:colors.shade
+fun! bronkow#style#update(is_dark)
+  let blue = g:bronkow#colors.blue
+  let cyan = g:bronkow#colors.cyan
+  let green = g:bronkow#colors.green
+  let grey = g:bronkow#colors.grey
+  let orange = g:bronkow#colors.orange
+  let purple = g:bronkow#colors.purple
+  let red = g:bronkow#colors.red
+  let shade = g:bronkow#colors.shade
 
   " dark is the default style
   call s:set_tone('blue1',   blue.lighter)
   call s:set_tone('blue2',   blue.light)
   call s:set_tone('blue3',   blue.dark)
+  call s:set_tone('blue4',   blue.darker)
 
   call s:set_tone('green1',  green.lighter)
   call s:set_tone('green2',  green.light)
@@ -50,10 +47,11 @@ fun! bronkow#style#init(colors)
   call s:set_tone('red1', red.light)
   call s:set_tone('red2', red.dark)
 
-  if (g:bronkow_style == 'light')
+  if !a:is_dark
     call s:set_tone('blue1', blue.darker)
     call s:set_tone('blue2', blue.dark)
     call s:set_tone('blue3', blue.light)
+    call s:set_tone('blue4', blue.lighter)
 
     call s:set_tone('cyan1',  cyan.darker)
     call s:set_tone('cyan2',  cyan.dark)
@@ -84,3 +82,5 @@ fun! bronkow#style#init(colors)
 
   let g:bronkow_style_loaded = 1
 endfun
+
+" }}}

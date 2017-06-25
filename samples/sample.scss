@@ -479,12 +479,14 @@ a.important {
 
 @mixin adjust-location($x, $y) {
   @if unitless($x) {
-    @error "$x may not be unitless, was #{$x}.":
+    @error "$x may not be unitless, was #{$x}.";
   }
   @if unitless($y) {
     @error "$y may not be unitless, was #{$y}.";
   }
-  position: relative; left: $x, top: $y;
+  position: relative;
+  left: $x;
+  top: $y;
 }
 
 // @if
@@ -511,11 +513,15 @@ p {
 // @for
 
 @for $i from 1 through 3 {
-  .item-#{$1} { width: 2em * $i; }
+  .item-#{$i} {
+    width: 2em * $i;
+  }
 }
 
 @for $i from 1 to 3 {
-  .item-#{$1} { width: 2em * $i; }
+  .item-#{$i} {
+    width: 2em * $i;
+  }
 }
 
 // @each
@@ -545,9 +551,9 @@ p {
 // @while
 
 $i: 6;
-@while $1 > 0 {
+@while $i > 0 {
   .item-#{$i} { width: 2em * $i; }
-  $i: $1 - 2;
+  $i: $i - 2;
 }
 
 // Defining a Mixin: @mixin
