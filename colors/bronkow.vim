@@ -28,8 +28,8 @@
 " * #{color}Lst = lightest
 
 " == Commands ==
-command! BronkowLight let g:bronkow_style = 'light' | colorscheme bronkow
-command! BronkowDark  let g:bronkow_style = 'dark'  | colorscheme bronkow
+command! BronkowLight let g:bronkow_style = 'light' | ru autoload/bronkow/theme.vim | colorscheme bronkow
+command! BronkowDark  let g:bronkow_style = 'dark'  | ru autoload/bronkow/theme.vim | colorscheme bronkow
 " ==============================================================================
 hi clear
 

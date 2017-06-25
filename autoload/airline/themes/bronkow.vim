@@ -45,8 +45,6 @@ function! s:color(fg_color, bg_color, ...)
   let bg = g:bronkow#colors[bg_name][bg_tone]
   let opts = a:0 > 0 ? a:1 : 'NONE'
   let result = [ fg.gui, bg.gui, fg.cterm, bg.cterm, opts ]
-  echo 'airline color'
-  echo result
 
   return result
 endfunction
