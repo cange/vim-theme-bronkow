@@ -125,4 +125,6 @@ fun! s:mapping(colors)
   hi link jsDestructuringBlock   String
   hi link jsObjectProp           Identifier
   hi link jsThis                 Constant
+  " -- vim-illuminate --
+  call h.hilight('illuminatedWord', 0, 'grey4')
 endfun

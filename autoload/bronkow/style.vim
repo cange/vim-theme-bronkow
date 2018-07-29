@@ -26,6 +26,7 @@ fun! bronkow#style#update(is_dark)
   call s:set_tone('grey1',   grey.lighter)
   call s:set_tone('grey2',   grey.light)
   call s:set_tone('grey3',   grey.dark)
+  call s:set_tone('grey4',   grey.darker)
 
   call s:set_tone('purple1', purple.lighter)
 
@@ -66,6 +67,7 @@ fun! bronkow#style#update(is_dark)
     call s:set_tone('grey1', grey.darkest)
     call s:set_tone('grey2', grey.darker)
     call s:set_tone('grey3', grey.dark)
+    call s:set_tone('grey4', grey.medium)
 
     call s:set_tone('orange1', orange.darker)
     call s:set_tone('orange2', orange.dark)
